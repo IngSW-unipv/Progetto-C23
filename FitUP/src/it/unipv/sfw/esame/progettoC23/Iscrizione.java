@@ -3,8 +3,8 @@ import java.util.*;
 
 import java.text.DateFormat; // mettere formato data short!!
 
-public class GestioneIscrizione {
-	private String CodiceBadge; 
+public class Iscrizione {
+	protected String CodiceBadge; 
 	private String Rinnovo;
 	protected Persona Iscritto;
 	protected Calendar PrimaIscrizione;
@@ -13,7 +13,7 @@ public class GestioneIscrizione {
 	private final String CodicePalestra = "FitUp";
 	
 	
-	public GestioneIscrizione(Persona iscritto,TipoAbbonamento abbonamento) 
+	public Iscrizione(Persona iscritto,TipoAbbonamento abbonamento) 
 	{
 	this.Iscritto = iscritto;
 	this.PrimaIscrizione =  Calendar.getInstance(TimeZone.getTimeZone("Europe/Rome"), Locale.ITALY);
@@ -22,6 +22,11 @@ public class GestioneIscrizione {
 	}
 	
 	
+	public Iscrizione() {
+		// TODO Auto-generated constructor stub
+	}
+
+
 	public Calendar getPrimaIscrizione () {
 		return PrimaIscrizione;
 	}
