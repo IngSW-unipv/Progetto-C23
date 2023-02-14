@@ -1,9 +1,7 @@
 # Progetto-C23 
 Progetto Gruppo D.R.V.S.
 
-![f3ac1dfd-d604-4104-b5fe-2019df9196f2](https://user-images.githubusercontent.com/119804491/218866123-a1d2ce72-0078-4a64-affa-18be95241f66.jpeg)
-
-
+<img width="241" alt="Immagine 2023-02-14 223455 jpeg" src="https://user-images.githubusercontent.com/119804491/218867670-aa9883f7-32ee-471b-a761-a3a3dc669f7b.png">
 
 Il software proposto ha lo scopo di ottimizzare il sistema di gestione di una palestra, nello specifico per i seguenti aspetti:
 
