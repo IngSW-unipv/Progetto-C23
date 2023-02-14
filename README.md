@@ -1,6 +1,10 @@
 # Progetto-C23 
 Progetto Gruppo D.R.V.S.
 
+![f3ac1dfd-d604-4104-b5fe-2019df9196f2](https://user-images.githubusercontent.com/119804491/218866123-a1d2ce72-0078-4a64-affa-18be95241f66.jpeg)
+
+
+
 Il software proposto ha lo scopo di ottimizzare il sistema di gestione di una palestra, nello specifico per i seguenti aspetti:
 
 ISCRIZIONE: viene data la possibilità ad una qualsiasi persona, previa presentazione delle proprie generalità, di iscriversi alla struttura, in modo da poter usufruire degli svariati servizi che essa offre.
