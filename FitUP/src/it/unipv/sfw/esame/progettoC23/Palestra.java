@@ -14,15 +14,11 @@ public class Palestra {
 			
 	}
 	
-	public void IscrizioneCorso (Iscrizione CodiceBadge, Corso NomeCorso) {
-		
+	public void IscrizioneCorso( GestioneIscrizione CodiceBadge, Corso NomeCorso){
+		// CodiceBadge CF+"FU" a piacere di Rebecca 
 	}
-	public void PrenotazioneVisita( Iscrizione CodiceBadge, TipoVisita VisitaScelta){
-		
-	}
-	public void ManutenzioneMacchinario(){
-		
-	}
+	public void PrenotazioneVisita(GestioneIscrizione CodiceBadge, TipoVisita VisitaScelta){}
+	public void ManutenzioneMacchinario(){}
 	
 
 }

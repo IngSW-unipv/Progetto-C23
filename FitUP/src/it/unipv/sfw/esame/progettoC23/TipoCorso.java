@@ -1,7 +1,6 @@
 package it.unipv.sfw.esame.progettoC23;
 
 public enum TipoCorso {
-	
-	CROSSFIT, YOGA, ZUMBA, PILATES;
+	CROSSFIT,YOGA,ZUMBA,PILATES;
 
 }
