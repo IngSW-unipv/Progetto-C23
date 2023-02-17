@@ -5,27 +5,38 @@ import java.text.DateFormat; // mettere formato data short!!
 
 public class Iscrizione {
 	protected String CodiceBadge; 
+	protected String CF;
+	protected String Nome;
 	private String Rinnovo;
-	protected Persona Iscritto;
-	protected Calendar PrimaIscrizione;
+	//protected Persona Iscritto; per ora non serve, ho deciso di usare solo CF nel costruttore
+	protected Calendar PrimaIscrizione = Calendar.getInstance(TimeZone.getTimeZone("Europe/Rome"), Locale.ITALY);
 	protected Calendar DataRinnovo;
 	protected TipoAbbonamento Abbonamento; 
 	private final String CodicePalestra = "FitUp";
 	
 	
-	public Iscrizione(Persona iscritto,TipoAbbonamento abbonamento) 
-	{
-	this.Iscritto = iscritto;
-	this.PrimaIscrizione =  Calendar.getInstance(TimeZone.getTimeZone("Europe/Rome"), Locale.ITALY);
-	this.Abbonamento = abbonamento; 
-	
+	public Iscrizione(String CF, String Nome) {
+	this.CF = CF;
+	this.Nome=Nome;
 	}
 	
-	
-	public Iscrizione() {
-		// TODO Auto-generated constructor stub
+	public String getCF() {
+		return CF;
 	}
 
+	public void setCF(String cF) {
+		CF = cF;
+	}
+	
+	
+	
+	public String getNome() {
+		return Nome;
+	}
+
+	public void setNome(String nome) {
+		Nome = nome;
+	}
 
 	public Calendar getPrimaIscrizione () {
 		return PrimaIscrizione;
@@ -62,6 +73,11 @@ public class Iscrizione {
 	
 	public Calendar getDataRinnovo() {
 		return PrimaIscrizione;
+	}
+	
+	@Override
+	public String toString() {
+		return "Iscritto: ("+CF+", "+Nome+")";
 	}
 	
 	

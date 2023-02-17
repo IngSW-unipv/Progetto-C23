@@ -16,6 +16,10 @@ public class Persona {
 		return CF;
 	}
 
+	public String getNome() {
+		return Nome;
+	}
+
 	
 
 }

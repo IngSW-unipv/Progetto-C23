@@ -1,21 +1,21 @@
 package it.unipv.sfw.esame.progettoC23;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-
-// classe che va cretata per consentire la connessione con un db
+import java.sql.*;
+import java.io.FileInputStream;
 
 public class Connessione {
 	
-	public static Connection iniziaConnessione(Connection conn, String schema) {
+	
+	private static String username;
+	private static String password;
+	//private static String DbDriver;
+	private static String DbURL;
+	private static Connessione conn;
+	
+	
+	public static Connection startConnection(Connection conn, String schema) {
 		
-		String DbDriver = null;
-		String DbURL = null;
-		String username = null;
-		String password = null;
-		
-		DbDriver = "com.mysql.jdbc.Driver";
-		DbURL = "jdbc:mysql://jdbc:mysql://localhost:3306/?user=root/"+schema;
+		//DbDriver = "com.mysql.cj.jdbc.Driver";
+		DbURL = "jdbc:mysql://34.154.26.76:3306/"+schema;
 		username = "root";
 		password = "";
 		
@@ -44,7 +44,7 @@ public class Connessione {
 			return true;
 	}
 
-	private static Connection closeConnection(Connection conn) {
+	static Connection closeConnection(Connection conn) {
 		if (!isOpen (conn))
 			return null;
 		try {
