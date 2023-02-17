@@ -24,9 +24,18 @@ public class Tester {
 		
 		IscrizioneDAO id = new IscrizioneDAO();
 		Persona p = new Persona ("Rebecca", "Maccagni", "E801D", "05/06/2000");
+		Persona p1 = new Persona ("Denise", "Vaccarella", "A302B", "11/09/2001");
 		Iscrizione g = new Iscrizione (p.getCF(),p.getNome());
 		System.out.println(id.selectAll());
 		System.out.println(id.insertIscritto(g));
+		
+		IscrizioneCorso c = new IscrizioneCorso (p.getCF(), TipoCorso.CROSSFIT);
+		IscrizioneCorso c1 = new IscrizioneCorso (p1.getCF(), TipoCorso.CROSSFIT);
+		System.out.println("Gli iscritti al corso di Crossfit sono: " );
+		c.riempiElenco(TipoCorso.CROSSFIT);
+		c1.riempiElenco(TipoCorso.CROSSFIT);
+		
+		
 		
 		
 		
