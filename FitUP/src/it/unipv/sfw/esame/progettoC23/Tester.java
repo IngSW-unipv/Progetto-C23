@@ -1,12 +1,7 @@
 package it.unipv.sfw.esame.progettoC23;
-import java.sql.SQLException;
+import java.sql.*;
 import java.text.DateFormat;
 import java.util.*;
-
-import it.unipv.sfw.esame.progettoC23.Connessione;
-import it.unipv.sfw.esame.progettoC23.Iscrizione;
-import it.unipv.sfw.esame.progettoC23.IscrizioneDAO;
-import it.unipv.sfw.esame.progettoC23.Persona;
 
 
 public class Tester {
@@ -23,17 +18,19 @@ public class Tester {
 	
 		
 		IscrizioneDAO id = new IscrizioneDAO();
-		Persona p = new Persona ("Rebecca", "Maccagni", "E801D", "05/06/2000");
-		Persona p1 = new Persona ("Denise", "Vaccarella", "A302B", "11/09/2001");
-		Iscrizione g = new Iscrizione (p.getCF(),p.getNome());
+		Persona p = new Persona ("LUCA", "ROSSI", "RSSLCC", "01/01/2000");
+		Persona p1 = new Persona ("MARIO", "VERDI", "VRDMRR", "01/01/2002");
+		Badge b = new Badge();
+		b.setCodiceBadge(p);
+		Iscrizione g = new Iscrizione (p.getCF(),p.getNome(),p.getCognome(),p.getDataNascita(), b.getCodiceBadge());
 		System.out.println(id.selectAll());
-		System.out.println(id.insertIscritto(g));
+		System.out.println(id.insertIscritto(g,b));
 		
-		IscrizioneCorso c = new IscrizioneCorso (p.getCF(), TipoCorso.CROSSFIT);
-		IscrizioneCorso c1 = new IscrizioneCorso (p1.getCF(), TipoCorso.CROSSFIT);
-		System.out.println("Gli iscritti al corso di Crossfit sono: " );
-		c.riempiElenco(TipoCorso.CROSSFIT);
-		c1.riempiElenco(TipoCorso.CROSSFIT);
+		//IscrizioneCorso c = new IscrizioneCorso (p.getCF(), TipoCorso.CROSSFIT);
+		//IscrizioneCorso c1 = new IscrizioneCorso (p1.getCF(), TipoCorso.CROSSFIT);
+		//System.out.println("Gli iscritti al corso di Crossfit sono: " );
+		//c.riempiElenco(TipoCorso.CROSSFIT);
+		//c1.riempiElenco(TipoCorso.CROSSFIT);
 		
 		
 		

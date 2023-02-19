@@ -1,23 +1,28 @@
 package it.unipv.sfw.esame.progettoC23;
 import java.util.*;
+import java.sql.Date;
 
-import java.text.DateFormat; // mettere formato data short!!
+import java.text.DateFormat;
+import java.time.LocalDateTime; 
 
-public class Iscrizione {
-	protected String CodiceBadge; 
+public class Iscrizione{
 	protected String CF;
 	protected String Nome;
+	protected String Cognome;
+	protected String DatadiNascita;
+	protected String CodiceBadge;
 	private String Rinnovo;
-	//protected Persona Iscritto; per ora non serve, ho deciso di usare solo CF nel costruttore
 	protected Calendar PrimaIscrizione = Calendar.getInstance(TimeZone.getTimeZone("Europe/Rome"), Locale.ITALY);
 	protected Calendar DataRinnovo;
 	protected TipoAbbonamento Abbonamento; 
-	private final String CodicePalestra = "FitUp";
 	
+	public Iscrizione(String CF, String Nome, String Cognome, String DatadiNascita, String CodiceBadge) {
 	
-	public Iscrizione(String CF, String Nome) {
 	this.CF = CF;
 	this.Nome=Nome;
+	this.Cognome=Cognome;
+	this.DatadiNascita = DatadiNascita;
+	
 	}
 	
 	public String getCF() {
@@ -27,8 +32,7 @@ public class Iscrizione {
 	public void setCF(String cF) {
 		CF = cF;
 	}
-	
-	
+
 	
 	public String getNome() {
 		return Nome;
@@ -37,19 +41,30 @@ public class Iscrizione {
 	public void setNome(String nome) {
 		Nome = nome;
 	}
+	
+
+	public String getCognome() {
+		return Cognome;
+	}
+
+	public void setCognome(String cognome) {
+		Cognome = cognome;
+	}
+
+	public String getDatadiNascita() {
+		return DatadiNascita;
+	}
+
+	public void setDatadiNascita(String datadiNascita) {
+		DatadiNascita = datadiNascita;
+	}
+	
+	
 
 	public Calendar getPrimaIscrizione () {
 		return PrimaIscrizione;
 	}
 
-	public void setCodiceBadge(Persona iscritto) {
-		CodiceBadge = iscritto.getCF() + CodicePalestra ;
-	}
-
-
-	public String getCodiceBadge() {
-		return CodiceBadge;
-	}
 	
 	public void setDataRinnovo(TipoAbbonamento Abbonamento) {
 		
@@ -77,7 +92,7 @@ public class Iscrizione {
 	
 	@Override
 	public String toString() {
-		return "Iscritto: ("+CF+", "+Nome+")";
+		return "Iscritto: ("+CF+", "+Nome+", "+Cognome+", "+DatadiNascita+", "+CodiceBadge+")" + "\n";
 	}
 	
 	
