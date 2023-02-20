@@ -1,10 +1,14 @@
-package it.unipv.sfw.esame.progettoC23;
+package it.unipv.sfw.esame.progettoC23.controller;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.JOptionPane;
+
+import it.unipv.sfw.esame.progettoC23.Badge;
+import it.unipv.sfw.esame.progettoC23.Rinnovo;
+import it.unipv.sfw.esame.progettoC23.view.IscrittoView;
 
 public class IscrittoContoller {
 	

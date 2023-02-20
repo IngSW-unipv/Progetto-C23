@@ -1,4 +1,4 @@
-package it.unipv.sfw.esame.progettoC23;
+package it.unipv.sfw.esame.progettoC23.view;
 import java.awt.*;
 import java.sql.Date;
 import java.util.Calendar;
