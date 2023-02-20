@@ -1,5 +1,9 @@
-package it.unipv.sfw.esame.progettoC23;
+package it.unipv.sfw.esame.progettoC23.jdbc.bean;
 import java.util.*;
+
+import it.unipv.sfw.esame.progettoC23.TipoAbbonamento;
+
+//DA SISTEMARE PER RISPETTARE PATTERN DAO
 import java.sql.Date;
 
 import java.text.DateFormat;

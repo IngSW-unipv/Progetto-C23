@@ -1,20 +1,21 @@
-package it.unipv.sfw.esame.progettoC23;
+package it.unipv.sfw.esame.progettoC23.jdbc.bean;
 import java.sql.*;
 import java.sql.Date;
 import java.util.*;
 
-public class IscrizioneDAO {
+public class IscrizioneDAO implements IIscrizioneDAO {
 	
 	private Connection connDB;
 	private String schema;
 	ArrayList<Iscrizione> iscr;
 	
 	public IscrizioneDAO() {
-		
+		super();
 		this.schema = "palestra";	
 		
 	}
 	
+	@Override
 	public ArrayList<Iscrizione> selectAll() {
 		
 			iscr= new ArrayList<>();	
@@ -38,6 +39,8 @@ public class IscrizioneDAO {
 			return iscr;
 	}
 	
+	
+	@Override
 	public boolean insertIscritto(Iscrizione i, Badge b)   {
 		
 		connDB = Connessione.startConnection(connDB, schema);

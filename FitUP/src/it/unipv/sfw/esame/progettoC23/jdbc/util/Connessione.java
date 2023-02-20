@@ -1,4 +1,4 @@
-package it.unipv.sfw.esame.progettoC23;
+package it.unipv.sfw.esame.progettoC23.jdbc.util;
 import java.sql.*;
 import java.io.FileInputStream;
 
