@@ -27,7 +27,7 @@ public void setIDMacchinario(Macchinario Macchinario) {
 }
 
 public Macchinario getDataAcquisto() {
-	return DataAcquisto;
+	return DataAcquisto; 
 }
 
 public Macchinario getDataUltimaManutenzione() {
