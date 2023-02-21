@@ -4,14 +4,14 @@ import java.util.*;
 
 public class IscrizioneCorso {
 	
-	private String CF;
+	private String CodiceBadge;
 	private TipoCorso CorsoScelto;
 	private int N_Iscritti = 0;
 	
 	
-	public IscrizioneCorso (String CF, TipoCorso CorsoScelto) {
+	public IscrizioneCorso (String CodiceBadge, TipoCorso CorsoScelto) {
 		
-		this.CF = CF;
+		this.CodiceBadge = CodiceBadge;
 		this.CorsoScelto = CorsoScelto;
 	} 
 	
@@ -28,54 +28,119 @@ public class IscrizioneCorso {
 		switch (CorsoScelto) {
 		
 		case CROSSFIT:
-			N_Iscritti = ++ N_Iscritti;
-			ElencoCrossfit.add(CF);	
+			
+			ElencoCrossfit.add(CodiceBadge);
+			
+			System.out.println(CodiceBadge);
+			
+			System.out.println(ElencoCrossfit);
 			
 			if (ElencoCrossfit.size() >= 30) {
 				
 				throw new IllegalArgumentException("Raggiunto il numero massimo di iscritti a questo corso.");
 			}
 			
-			System.out.println(N_Iscritti + ")");
-			System.out.println(CF);
-			
 			break;
 			
 		case YOGA:
-			ElencoYoga.add(CF);
+			ElencoYoga.add(CodiceBadge);
+			
+			System.out.println(ElencoYoga);
 			
 			if (ElencoYoga.size() >= 30) {
 				
 				throw new IllegalArgumentException("Raggiunto il numero massimo di iscritti a questo corso.");
 			}
 			
-			System.out.println("Gli iscritti al corso di Yoga sono: " + CF);
 			break;
 		
 		case ZUMBA:
-			ElencoZumba.add(CF);
+			ElencoZumba.add(CodiceBadge);
+			
+			System.out.println(ElencoZumba);
 			
 			if (ElencoZumba.size() >= 30) {
 				
 				throw new IllegalArgumentException("Raggiunto il numero massimo di iscritti a questo corso.");
 			}
 			
-			System.out.println("Gli iscritti al corso di Zumba sono: " + CF);
 			break;
 		
 		case PILATES:
-			ElencoPilates.add(CF);
+			ElencoPilates.add(CodiceBadge);
+			
+			System.out.println(ElencoPilates);
 			
 			if (ElencoPilates.size() >= 30) {
 				
 				throw new IllegalArgumentException("Raggiunto il numero massimo di iscritti a questo corso.");
 			}
 			
-			System.out.println("Gli iscritti al corso di Pilates sono: " + CF);
 			break;
 			
 		}
 		
+	}
+	
+	public void svuotaElenco (TipoCorso CorsoScelto) {
+		
+		this.CorsoScelto = CorsoScelto;
+		
+		switch (CorsoScelto) {
+		
+		case CROSSFIT:
+			
+			ElencoCrossfit.remove(CodiceBadge);	
+			
+			System.out.println(ElencoCrossfit);
+			
+			if (ElencoCrossfit.size() >= 30) {
+				
+				throw new IllegalArgumentException("Raggiunto il numero massimo di iscritti a questo corso.");
+			}
+			
+			break;
+			
+		case YOGA:
+			
+			ElencoYoga.remove(CodiceBadge);	
+			
+			System.out.println(ElencoYoga);
+			
+			if (ElencoYoga.size() >= 30) {
+				
+				throw new IllegalArgumentException("Raggiunto il numero massimo di iscritti a questo corso.");
+			}
+			
+			break;
+		
+		case ZUMBA:
+			
+			ElencoZumba.remove(CodiceBadge);	
+			
+			System.out.println(ElencoZumba);
+			
+			if (ElencoZumba.size() >= 30) {
+				
+				throw new IllegalArgumentException("Raggiunto il numero massimo di iscritti a questo corso.");
+			}
+			
+			break;
+		
+		case PILATES:
+			
+			ElencoPilates.remove(CodiceBadge);	
+			
+			System.out.println(ElencoPilates);
+			
+			if (ElencoPilates.size() >= 30) {
+				
+				throw new IllegalArgumentException("Raggiunto il numero massimo di iscritti a questo corso.");
+			}
+			
+			break;
+			
+		}
 	}
 
 }
