@@ -1,5 +1,4 @@
 package it.unipv.sfw.esame.progettoC23.controller;
-
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -53,6 +52,8 @@ public class IscrittoContoller {
 			}
 			
 		});
+		
+		
 	}
 	
 
