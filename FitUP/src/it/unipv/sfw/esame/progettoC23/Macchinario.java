@@ -37,10 +37,6 @@ public class Macchinario {
 		return NomeMacchinario;
 	}
 	
-	/* public void setDataUltimaManutenzione(String dataUltimaManutenzione) {
-		Calendar DataUltimaManutenzione = Calendar.getInstance(TimeZone.getTimeZone("Europe/Rome"), Locale.ITALY);
-	} */
-	
 	/* discutere degli attributi */
 
 }
