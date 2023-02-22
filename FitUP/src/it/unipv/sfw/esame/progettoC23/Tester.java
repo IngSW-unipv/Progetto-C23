@@ -5,9 +5,11 @@ import java.util.*;
 
 import javax.swing.JFrame;
 
+import it.unipv.sfw.esame.progettoC23.controller.CorsoController;
 import it.unipv.sfw.esame.progettoC23.controller.IscrittoContoller;
 import it.unipv.sfw.esame.progettoC23.jdbc.bean.Iscrizione;
 import it.unipv.sfw.esame.progettoC23.jdbc.bean.IscrizioneDAO;
+import it.unipv.sfw.esame.progettoC23.view.CorsoView;
 import it.unipv.sfw.esame.progettoC23.view.IscrittoView;
 
 
@@ -55,12 +57,11 @@ public class Tester {
 		iv.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		iv.setVisible(true);*/
 		
+		CorsoView cv = new CorsoView();
+		CorsoController cc = new CorsoController(cv);
+		cv.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		cv.setVisible(true);
 		
-		
-		
-		
-		
-
 	}
 
 }
