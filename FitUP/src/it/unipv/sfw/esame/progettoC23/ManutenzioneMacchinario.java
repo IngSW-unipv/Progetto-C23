@@ -6,10 +6,8 @@ public class ManutenzioneMacchinario {
 	private Calendar DataUltimaManutenzione;
 	private StatoAttuale Stato;
 	
-	
 	public ManutenzioneMacchinario(String IDMacchinario) {
 	}
-
 
 	public void setDataUltimaManutenzione(StatoAttuale Stato) {
 		this.Stato = Stato;

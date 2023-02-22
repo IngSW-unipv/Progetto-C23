@@ -65,7 +65,6 @@ public void setDataUltimaManutenzione(StatoAttuale Stato) {
 		break;
 	    }
     }
-
 @Override
 public String toString() {
 DataUltimaManutenzione = Calendar.getInstance(TimeZone.getTimeZone("Europe/Rome"), Locale.ITALY);
