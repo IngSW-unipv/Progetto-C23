@@ -6,13 +6,20 @@ public class Macchinario {
 	  private Calendar DataAcquisto; 
 	  private TipoMacchinario NomeMacchinario;
 	  private String DataUltimaManutenzione;
-	 
 	  
-	  public Macchinario(String dataAcquisto, TipoMacchinario nomeMacchinario, String dataUltimaManutenzione) {
-		DataAcquisto = Calendar.getInstance(TimeZone.getTimeZone("Europe/Rome"), Locale.ITALY);
+	  public Macchinario(Calendar dataAcquisto, TipoMacchinario nomeMacchinario, String dataUltimaManutenzione) {
+		DataAcquisto = dataAcquisto;
 		NomeMacchinario = nomeMacchinario;
-		this.DataUltimaManutenzione = "N/A"; //data non ancora disponibile visto che la prima manutenzione
-		                                     // non è ancora avvenuta
+		DataUltimaManutenzione = dataUltimaManutenzione;
+	}
+
+	  
+	public Calendar getDataAcquisto() {
+		return DataAcquisto;
+	}
+
+	public void setDataAcquisto(Calendar dataAcquisto) {
+		DataAcquisto = Calendar.getInstance(TimeZone.getTimeZone("Europe/Rome"), Locale.ITALY);
 	}
 
 
@@ -20,14 +27,20 @@ public class Macchinario {
 		return DataUltimaManutenzione;
 	}
 	
+	
 	public void setDataUltimaManutenzione(String dataUltimaManutenzione) {
+		DataUltimaManutenzione = "N/A";
+	}
+
+
+	public TipoMacchinario getNomeMacchinario() {
+		return NomeMacchinario;
+	}
+	
+	/* public void setDataUltimaManutenzione(String dataUltimaManutenzione) {
 		Calendar DataUltimaManutenzione = Calendar.getInstance(TimeZone.getTimeZone("Europe/Rome"), Locale.ITALY);
-	}
-
-
-	public String getNomeMacchinario() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	} */
+	
+	/* discutere degli attributi */
 
 }
