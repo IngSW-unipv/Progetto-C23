@@ -15,7 +15,7 @@ public class Connessione {
 	public static Connection startConnection(Connection conn, String schema) {
 		
 		//DbDriver = "com.mysql.cj.jdbc.Driver";
-		DbURL = "jdbc:mysql://34.154.156.117:3306/"+schema;
+		DbURL = "jdbc:mysql://34.154.26.76:3306/"+schema;
 		username = "root";
 		password = "";
 		
@@ -44,7 +44,7 @@ public class Connessione {
 			return true;
 	}
 
-	static Connection closeConnection(Connection conn) {
+	public static Connection closeConnection(Connection conn) {
 		if (!isOpen (conn))
 			return null;
 		try {

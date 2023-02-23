@@ -3,40 +3,32 @@ import java.util.*;
 
 public class Macchinario {
 	
-	  private Calendar DataAcquisto; 
-	  private TipoMacchinario NomeMacchinario;
-	  private String DataUltimaManutenzione;
+	private String NomeMacchinario;
+	public String DataAcquisto;
 	  
-	  public Macchinario(Calendar dataAcquisto, TipoMacchinario nomeMacchinario, String dataUltimaManutenzione) {
-		DataAcquisto = dataAcquisto;
-		NomeMacchinario = nomeMacchinario;
-		DataUltimaManutenzione = dataUltimaManutenzione;
+	 public Macchinario(String nomeMacchinario, String DataAcquisto) {
+	  NomeMacchinario = nomeMacchinario;
+	  this.DataAcquisto = DataAcquisto;
 	}
 
 	  
-	public Calendar getDataAcquisto() {
+	 public String getDataAcquisto() {
 		return DataAcquisto;
 	}
+	 
 
-	public void setDataAcquisto(Calendar dataAcquisto) {
-		DataAcquisto = Calendar.getInstance(TimeZone.getTimeZone("Europe/Rome"), Locale.ITALY);
+	public void setDataAcquisto(String dataAcquisto) {
+		DataAcquisto = dataAcquisto;
 	}
 
 
-	public String getDataUltimaManutenzione() {
-		return DataUltimaManutenzione;
-	}
-	
-	
-	public void setDataUltimaManutenzione(String dataUltimaManutenzione) {
-		DataUltimaManutenzione = "N/A";
-	}
-
-
-	public TipoMacchinario getNomeMacchinario() {
+	public String getNomeMacchinario() {
 		return NomeMacchinario;
 	}
 	
-	/* discutere degli attributi */
+	@Override
+	public String toString() {
+		return "Macchinario: ("+NomeMacchinario+", "+DataAcquisto+")" + "\n";
+	}
 
 }
