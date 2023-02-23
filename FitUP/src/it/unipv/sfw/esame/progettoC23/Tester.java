@@ -29,11 +29,11 @@ public class Tester {
 		Badge b = new Badge();
 		Badge b1 = new Badge();
 		Badge b2 = new Badge ();
-		b.setCodiceBadge(p);
+		b.setCodiceBadge(p.getCF());
 
 
-		b1.setCodiceBadge(p1);
-		b2.setCodiceBadge(p2);
+		b1.setCodiceBadge(p1.getCF());
+		b2.setCodiceBadge(p2.getCF());
 
 		//Iscrizione g = new Iscrizione (p.getCF(),p.getNome(),p.getCognome(),p.getDataNascita(), b.getCodiceBadge());
 		Rinnovo r = new Rinnovo(b.getCodiceBadge());
@@ -48,13 +48,9 @@ public class Tester {
 		System.out.println("Gli iscritti al corso di Crossfit sono: " );
 		c.riempiElenco(TipoCorso.CROSSFIT);
 		c1.riempiElenco(TipoCorso.CROSSFIT);*/
-		
-		IscrittoView iv = new IscrittoView();
-		IscrittoContoller ic = new IscrittoContoller(r,iv,b);
-		iv.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		iv.setVisible(true);
+	
 
-		IscrizioneCorso c = new IscrizioneCorso ();
+		//IscrizioneCorso c = new IscrizioneCorso ();
 		
 		/*System.out.println("Gli iscritti al corso di Crossfit sono: " );
 		c.riempiElenco(b.getCodiceBadge(), TipoCorso.CROSSFIT);
@@ -65,10 +61,10 @@ public class Tester {
 		c.svuotaElenco(b.getCodiceBadge(), TipoCorso.CROSSFIT);*/
 		
 		
-		/*IscrittoView iv = new IscrittoView();
+		IscrittoView iv = new IscrittoView();
 		IscrittoContoller ic = new IscrittoContoller(r,iv,b);
 		iv.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		iv.setVisible(true);*/
+		iv.setVisible(true);
 
 		
 		
