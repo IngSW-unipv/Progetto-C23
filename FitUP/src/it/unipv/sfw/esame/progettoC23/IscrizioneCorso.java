@@ -7,7 +7,6 @@ public class IscrizioneCorso {
 	
 	private String CodiceBadge;
 	private TipoCorso CorsoScelto;
-	private int N_Iscritti = 0;
 	
 	
 	public IscrizioneCorso () {
@@ -15,9 +14,9 @@ public class IscrizioneCorso {
 	} 
 	
 	static List <String> ElencoCrossfit = new ArrayList <String> (30);
-	List <String> ElencoYoga = new ArrayList <String> (30);
-	List <String> ElencoZumba= new ArrayList <String> (30);
-	List <String> ElencoPilates = new ArrayList <String> (30);
+	static List <String> ElencoYoga = new ArrayList <String> (30);
+	static List <String> ElencoZumba= new ArrayList <String> (30);
+	static List <String> ElencoPilates = new ArrayList <String> (30);
 	
 	
 	public void riempiElenco (String CodiceBadge, TipoCorso CorsoScelto) {
@@ -29,63 +28,55 @@ public class IscrizioneCorso {
 		
 		case CROSSFIT:
 			
-			ElencoCrossfit.add(CodiceBadge);			
-			N_Iscritti = N_Iscritti + 1;
+			ElencoCrossfit.add(CodiceBadge);	
 			
-			if (N_Iscritti >= 30) {
+			if (ElencoCrossfit.size() >= 30) {
 				
 				throw new ArrayIndexOutOfBoundsException("Raggiunto il numero massimo di iscritti a questo corso.");
 			}
 			
-			System.out.println(N_Iscritti + ")" + CodiceBadge);
+			System.out.println(CodiceBadge);
+			// System.out.println(ElencoCrossfit);
 			
 			break;
 			
 		case YOGA:
 			
 			ElencoYoga.add(CodiceBadge);
-			N_Iscritti = N_Iscritti + 1;
 			
-			System.out.println(ElencoYoga);
-			
-			if (N_Iscritti >= 30) {
+			if (ElencoYoga.size() >= 30) {
 				
 				throw new ArrayIndexOutOfBoundsException("Raggiunto il numero massimo di iscritti a questo corso.");
 			}
 			
-			System.out.println(N_Iscritti + ")" + CodiceBadge);
+			System.out.println(CodiceBadge);
 			
 			break;
 		
 		case ZUMBA:
 			
 			ElencoZumba.add(CodiceBadge);
-			N_Iscritti = N_Iscritti + 1;
 			
-			System.out.println(ElencoZumba);
-			
-			if (N_Iscritti >= 30) {
+			if (ElencoZumba.size() >= 30) {
 				
 				throw new ArrayIndexOutOfBoundsException("Raggiunto il numero massimo di iscritti a questo corso.");
 			}
 			
-			System.out.println(N_Iscritti + ")" + CodiceBadge);
+			System.out.println(CodiceBadge);
+			// System.out.println(ElencoZumba);
 			
 			break;
 		
 		case PILATES:
 			
 			ElencoPilates.add(CodiceBadge);
-			N_Iscritti = N_Iscritti + 1;
 			
-			System.out.println(ElencoPilates);
-			
-			if (N_Iscritti >= 30) {
+			if (ElencoPilates.size() >= 30) {
 				
 				throw new ArrayIndexOutOfBoundsException("Raggiunto il numero massimo di iscritti a questo corso.");
 			}
 			
-			System.out.println(N_Iscritti + ")" + CodiceBadge);
+			System.out.println(CodiceBadge);
 			
 			break;
 			
@@ -103,47 +94,46 @@ public class IscrizioneCorso {
 			
 			ElencoCrossfit.remove(CodiceBadge);	
 			System.out.println(ElencoCrossfit);
-			
-			N_Iscritti = N_Iscritti - 1;
-			System.out.println("Il nuovo numero di iscritti è: " + N_Iscritti);
-			
 			break;
 			
 		case YOGA:
 			
 			ElencoYoga.remove(CodiceBadge);	
 			System.out.println(ElencoYoga);
-			
-			N_Iscritti = N_Iscritti - 1;
-			System.out.println("Il nuovo numero di iscritti è: " + N_Iscritti);
-			
 			break;
 		
 		case ZUMBA:
 			
 			ElencoZumba.remove(CodiceBadge);	
 			System.out.println(ElencoZumba);
-			
-			N_Iscritti = N_Iscritti - 1;
-			System.out.println("Il nuovo numero di iscritti è: " + N_Iscritti);
-			
 			break;
 		
 		case PILATES:
 			
 			ElencoPilates.remove(CodiceBadge);	
 			System.out.println(ElencoPilates);
-			
-			N_Iscritti = N_Iscritti - 1;
-			System.out.println("Il nuovo numero di iscritti è: " + N_Iscritti);
-			
 			break;
 			
 		}
 	}
 	
-	public static List<String> Stampa () {
+	public static List<String> StampaCrossfit () {
 		
 		return ElencoCrossfit;
 	}
+	
+	public static List<String> StampaYoga () {
+		
+		return ElencoYoga;
+	}
+	
+	public static List<String> StampaZumba () {
+		
+		return ElencoZumba;
+	}
+
+	public static List<String> StampaPilates () {
+	
+		return ElencoPilates;
+	}	
 }

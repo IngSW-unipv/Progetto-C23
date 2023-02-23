@@ -15,10 +15,7 @@ import javax.swing.*;
 public class CorsoController {
 	
 	private final CorsoView view;
-		
-	String s[] = {"Elenco di Crossfit", "Elenco di Yoga", "Elenco di Zumba", "Elenco di Pilates" } ;
-	
-	JComboBox Elenco = new JComboBox(s);
+	private CorsoView cv;
 	
 	public CorsoController (CorsoView view) {
 		
@@ -34,29 +31,27 @@ public class CorsoController {
 			
 	        public void actionPerformed(ActionEvent event) {
 
-	            int selezione = Elenco.getSelectedIndex();
+	            int selezione = view.Elenco.getSelectedIndex();
 	            
 	            switch (selezione) {
 	            
 	                case 0:
-
-	                	view.StampaLista(IscrizioneCorso.Stampa());
+	                	view.StampaLista(IscrizioneCorso.StampaCrossfit());
+	                	break;
 	                	
-	                    break;
 	                case 1:
-	                	
-	                    
+	                	view.StampaLista(IscrizioneCorso.StampaYoga());
 	                    break;
 
 	                case 2:
+	                	view.StampaLista(IscrizioneCorso.StampaZumba());
 	                    break;
 	                    
 	                case 3:
+	                	view.StampaLista(IscrizioneCorso.StampaPilates());
 	                	break;
 	            }
 	        }
-	    });
-		
-		
+	    });	
 	}
 }

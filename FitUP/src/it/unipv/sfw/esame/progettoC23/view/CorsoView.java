@@ -1,10 +1,7 @@
 package it.unipv.sfw.esame.progettoC23.view;
 
-import java.awt.Color;
-import java.awt.Container;
-import java.awt.Dimension;
-import java.awt.FlowLayout;
-import java.util.ArrayList;
+import java.awt.*;
+import java.util.*;
 import java.util.List;
 
 import javax.swing.*;
@@ -14,7 +11,7 @@ public class CorsoView extends JFrame {
 	private JFrame f;
 	private JLabel l;
 	private JLabel l1;
-	private JComboBox Elenco;
+	public JComboBox Elenco;
 	public static final int altezza = 200;
 	public static final int lunghezza = 350;
 	public static final int lunghezza_e = 200;
@@ -42,10 +39,10 @@ public class CorsoView extends JFrame {
 		
 		Elenco = new JComboBox(s);
 		Elenco.setPreferredSize(new Dimension(lunghezza_e,altezza_e));
-		Elenco.setActionCommand("Vedi qui data del rinnovo");
 		c.add(Elenco);
 		
-	}	  
+		
+	}
 	
 	public JComboBox getElenco() {
 		
