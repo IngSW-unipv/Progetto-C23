@@ -17,6 +17,7 @@ public class GestioneMacchinario {
     private String IDMacchinario;
     private LocalDate DataManutenzione;
     private StatoAttuale Stato;
+	public LocalDate getDataAcquisto;
 	   
 
 public GestioneMacchinario(String nomeMacchinario, String iDMacchinario, String dataAcquisto) {
@@ -29,9 +30,9 @@ public String getDataAcquisto() {
 	return DataAcquisto; 
 }
 
-public String setDataAcquisto(Macchinario M) {
+public LocalDate setDataAcquisto(Macchinario M) {
     LocalTime.parse(DataAcquisto);
-	return DataAcquisto;
+	return getDataAcquisto;
 }
 
 
@@ -42,6 +43,11 @@ public String getNomeMacchinario() {
 
 public void setNomeMacchinario(String nomeMacchinario) {
 	NomeMacchinario = nomeMacchinario;
+}
+
+public String getIDMacchinario() {
+	// TODO Auto-generated method stub
+	return null;
 }
 
 public void setDataManutenzione(StatoAttuale Stato) {
@@ -68,6 +74,5 @@ public String toString() {
 	//DataManutenzione = Calendar.getInstance(TimeZone.getTimeZone("Europe/Rome"), Locale.ITALY);
 	return "Macchinario: ("+NomeMacchinario+", "+IDMacchinario+", "+DataAcquisto+")" +"\n";
 }
-
 
 }

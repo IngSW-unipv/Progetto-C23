@@ -25,7 +25,7 @@ public class Tester {
 		//System.out.println("La data di rinnovo è: " + g.getDataRinnovo().getTime());
 	
 		
-		IscrizioneDAO id = new IscrizioneDAO();
+		/* IscrizioneDAO id = new IscrizioneDAO();
 		Persona p = new Persona ("LUCA", "ROSSI", "RSSLCC", "01/01/2000");
 		Persona p1 = new Persona ("MARIO", "VERDI", "VRDMRR", "01/01/2002");
 		Persona p2 = new Persona ("LUIGI", "BIANCHI", "BNCLGG", "01/02/2000");
@@ -94,7 +94,7 @@ public class Tester {
 		cv.setVisible(true); */
 			
 			//Testing Macchinario
-			Macchinario m = new Macchinario ("PANCHE", "23/02/2023");
+			/*Macchinario m = new Macchinario ("PANCHE", "23/02/2023");
 			Macchinario m1 = new Macchinario ("PANCHE", "15/04/2012");
 			
 			IDMacchinario id = new IDMacchinario();
@@ -104,20 +104,20 @@ public class Tester {
 			
 			GestioneMacchinario g = new GestioneMacchinario (m.getNomeMacchinario(), id.getIDMacchinario(), m.getDataAcquisto());
 			GestioneMacchinario g1 = new GestioneMacchinario (m1.getNomeMacchinario(), id1.getIDMacchinario(), m1.getDataAcquisto());
-			// ManutenzioneMacchinario s = new ManutenzioneMacchinario (g.getIDMacchinario(), g.getDataAcquisto());
-			//s.setDataManutenzione(StatoAttuale.FUNZIONANTE); 
+			ManutenzioneMacchinario s = new ManutenzioneMacchinario (g.getIDMacchinario(), g.getDataAcquisto());
+			s.setDataManutenzione(StatoAttuale.FUNZIONANTE); 
 			
 	
 			System.out.println("ID Macchinario: " + id.getIDMacchinario() + "\n" + "Data Acquisto: " + g.getDataAcquisto());
-			System.out.println("ID Macchinario: " + id1.getIDMacchinario() + "\n" + "Data Acquisto: " + g1.getDataAcquisto());
+			System.out.println("ID Macchinario: " + id1.getIDMacchinario() + "\n" +"Data Acquisto: " + g1.getDataAcquisto());
 
 			
 			
-			//System.out.println("Manutenzione prevista: " + s.getDataManutenzione());
+			System.out.println("Manutenzione prevista: " + s.getDataManutenzione());
 			
-			//GestioneMacchinarioDAO gm = new GestioneMacchinarioDAO();
-			//System.out.println(gm.selectAll());
-			//System.out.println(gm.insertMacchinario(g, id));
+			GestioneMacchinarioDAO gm = new GestioneMacchinarioDAO();
+			System.out.println(gm.selectAll());
+			System.out.println(gm.insertMacchinario(g, id)); */
 
 		
 		
