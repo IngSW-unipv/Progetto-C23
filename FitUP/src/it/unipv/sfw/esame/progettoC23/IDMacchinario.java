@@ -9,20 +9,16 @@ public class IDMacchinario {
 	public IDMacchinario() {
 	}
 
-
 	public String setIDMacchinario(Macchinario Macchinario) {
 		
-		for (int i = 00; i < 20 ; i++) {
-			IDMacchinario = Macchinario.getNomeMacchinario() + String.valueOf(count);
-			//System.out.println("ID Macchinario: " + IDMacchinario);
+		for (int count = 00; count <= 03; count++) {
+			IDMacchinario = Macchinario.getNomeMacchinario() + String.format("%02d",count);
 			count++;
-			
+			break;
 	        }
 		//count++;
-		//System.out.println(IDMacchinario);
-		return IDMacchinario;
+		return null;
     }
-
 
 	public String getIDMacchinario() {
 		return IDMacchinario;
