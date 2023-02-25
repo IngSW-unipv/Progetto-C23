@@ -3,7 +3,6 @@ import java.util.*;
 
 import it.unipv.sfw.esame.progettoC23.Macchinario;
 import it.unipv.sfw.esame.progettoC23.StatoAttuale;
-import it.unipv.sfw.esame.progettoC23.TipoMacchinario;
 
 import java.time.*;
 import java.time.format.DateTimeFormatter;
@@ -16,7 +15,7 @@ public class GestioneMacchinario {
     private String ManutenzioneMacchinario;
     private String IDMacchinario;
     private LocalDate DataManutenzione;
-    private StatoAttuale Stato;
+    private static StatoAttuale Stato;
 	public LocalDate getDataAcquisto;
 	   
 
@@ -46,8 +45,11 @@ public void setNomeMacchinario(String nomeMacchinario) {
 }
 
 public String getIDMacchinario() {
-	// TODO Auto-generated method stub
-	return null;
+	return IDMacchinario;
+}
+
+public static StatoAttuale getStato() {
+	return Stato;
 }
 
 public void setDataManutenzione(StatoAttuale Stato) {
@@ -73,6 +75,6 @@ public  LocalDate getDataManutenzione() {
 public String toString() {
 	//DataManutenzione = Calendar.getInstance(TimeZone.getTimeZone("Europe/Rome"), Locale.ITALY);
 	return "Macchinario: ("+NomeMacchinario+", "+IDMacchinario+", "+DataAcquisto+")" +"\n";
-}
+    }
 
 }

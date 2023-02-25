@@ -6,11 +6,13 @@ import java.util.*;
 import javax.swing.JFrame;
 
 import it.unipv.sfw.esame.progettoC23.controller.IscrittoContoller;
+import it.unipv.sfw.esame.progettoC23.controller.MacchinarioController;
 import it.unipv.sfw.esame.progettoC23.jdbc.bean.GestioneMacchinario;
 import it.unipv.sfw.esame.progettoC23.jdbc.bean.GestioneMacchinarioDAO;
 import it.unipv.sfw.esame.progettoC23.jdbc.bean.Iscrizione;
 import it.unipv.sfw.esame.progettoC23.jdbc.bean.IscrizioneDAO;
 import it.unipv.sfw.esame.progettoC23.view.IscrittoView;
+import it.unipv.sfw.esame.progettoC23.view.MacchinarioView;
 import it.unipv.sfw.esame.progettoC23.ManutenzioneMacchinario;
 
 
@@ -37,26 +39,26 @@ public class Tester {
 		b.setCodiceBadge(p);
 
 		b1.setCodiceBadge(p1);
-		b2.setCodiceBadge(p2);
+		b2.setCodiceBadge(p2); */
 
-		Iscrizione g = new Iscrizione (p.getCF(),p.getNome(),p.getCognome(),p.getDataNascita(), b.getCodiceBadge());
+		/*Iscrizione g = new Iscrizione (p.getCF(),p.getNome(),p.getCognome(),p.getDataNascita(), b.getCodiceBadge());
 		Rinnovo r = new Rinnovo(b.getCodiceBadge());
-		//r.setDataRinnovo(TipoAbbonamento.MENSILE);
+		r.setDataRinnovo(TipoAbbonamento.MENSILE);
 		//System.out.println("Il rinnovo è previsto per il giorno: "+r.getDataRinnovo().getTime());
 		//System.out.println(id.selectAll());
 		//System.out.println(id.insertIscritto(g,b));
 		
 
-		//IscrizioneCorso c = new IscrizioneCorso (p.getCF(), TipoCorso.CROSSFIT);
-		//IscrizioneCorso c1 = new IscrizioneCorso (p1.getCF(), TipoCorso.CROSSFIT);
+		/*IscrizioneCorso c = new IscrizioneCorso (p.getCF(), TipoCorso.CROSSFIT);
+		IscrizioneCorso c1 = new IscrizioneCorso (p1.getCF(), TipoCorso.CROSSFIT);
 		System.out.println("Gli iscritti al corso di Crossfit sono: " );
-		//c.riempiElenco(TipoCorso.CROSSFIT);
-		//c1.riempiElenco(TipoCorso.CROSSFIT);*/
+		c.riempiElenco(TipoCorso.CROSSFIT);
+		c1.riempiElenco(TipoCorso.CROSSFIT);*/
 		
-		//IscrittoView iv = new IscrittoView();
-		//IscrittoContoller ic = new IscrittoContoller(r,iv,b);
-		//iv.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		//iv.setVisible(true);
+		/*IscrittoView iv = new IscrittoView();
+		IscrittoContoller ic = new IscrittoContoller(r,iv,b);
+	    iv.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		iv.setVisible(true); */
 
 		/* IscrizioneCorso c = new IscrizioneCorso ();
 		
@@ -82,10 +84,10 @@ public class Tester {
 
 		
 		
-		IscrittoView iv = new IscrittoView();
+		/*IscrittoView iv = new IscrittoView();
 		IscrittoContoller ic = new IscrittoContoller(r,iv,b);
 		iv.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		iv.setVisible(true); */
+		iv.setVisible(true); 
 
 	
 		/* CorsoView cv = new CorsoView();
@@ -94,30 +96,37 @@ public class Tester {
 		cv.setVisible(true); */
 			
 			//Testing Macchinario
-			/*Macchinario m = new Macchinario ("PANCHE", "23/02/2023");
-			Macchinario m1 = new Macchinario ("PANCHE", "15/04/2012");
+			Macchinario m = new Macchinario ("PANCA", "23/02/2023");
+			//Macchinario m1 = new Macchinario ("LEGPRESS", "15/04/2012");
 			
 			IDMacchinario id = new IDMacchinario();
-			IDMacchinario id1 = new IDMacchinario();
+			//IDMacchinario id1 = new IDMacchinario();
 			id.setIDMacchinario(m);
-			id1.setIDMacchinario(m1);
+			//id1.setIDMacchinario(m1);
 			
 			GestioneMacchinario g = new GestioneMacchinario (m.getNomeMacchinario(), id.getIDMacchinario(), m.getDataAcquisto());
-			GestioneMacchinario g1 = new GestioneMacchinario (m1.getNomeMacchinario(), id1.getIDMacchinario(), m1.getDataAcquisto());
+			//GestioneMacchinario g1 = new GestioneMacchinario (m1.getNomeMacchinario(), id1.getIDMacchinario(), m1.getDataAcquisto());
 			ManutenzioneMacchinario s = new ManutenzioneMacchinario (g.getIDMacchinario(), g.getDataAcquisto());
+			//ManutenzioneMacchinario s1 = new ManutenzioneMacchinario (g1.getIDMacchinario(), g1.getDataAcquisto());
+			
 			s.setDataManutenzione(StatoAttuale.FUNZIONANTE); 
-			
-	
 			System.out.println("ID Macchinario: " + id.getIDMacchinario() + "\n" + "Data Acquisto: " + g.getDataAcquisto());
-			System.out.println("ID Macchinario: " + id1.getIDMacchinario() + "\n" +"Data Acquisto: " + g1.getDataAcquisto());
-
-			
-			
 			System.out.println("Manutenzione prevista: " + s.getDataManutenzione());
 			
-			GestioneMacchinarioDAO gm = new GestioneMacchinarioDAO();
+			//s1.setDataManutenzione(StatoAttuale.GUASTO);
+			//System.out.println("ID Macchinario: " + id1.getIDMacchinario() + "\n" +"Data Acquisto: " + g1.getDataAcquisto());
+			//System.out.println("Manutenzione prevista: " + s1.getDataManutenzione());
+			
+			/*GestioneMacchinarioDAO gm = new GestioneMacchinarioDAO();
 			System.out.println(gm.selectAll());
 			System.out.println(gm.insertMacchinario(g, id)); */
+		
+		MacchinarioView M = new MacchinarioView();
+		MacchinarioController mc = new MacchinarioController(s, M, id);
+		//MacchinarioController mc1 = new MacchinarioController(s1, M, id1);
+		M.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		M.setVisible(true);
+		
 
 		
 		

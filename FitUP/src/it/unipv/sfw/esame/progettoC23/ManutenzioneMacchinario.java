@@ -1,5 +1,8 @@
 package it.unipv.sfw.esame.progettoC23;
 import java.util.*;
+
+import it.unipv.sfw.esame.progettoC23.jdbc.bean.GestioneMacchinario;
+
 import java.time.*;
 import java.time.format.DateTimeFormatter;
 import java.text.*;
@@ -7,12 +10,13 @@ import java.text.*;
 
 public class ManutenzioneMacchinario {
 	// private String DataAcquisto;
-    private String DataAcquisto;
+    public String DataAcquisto;
     //private Date format;
-    private Calendar DataManutenzione;
+    private static Calendar DataManutenzione;
+    private String NomeMacchinario;
 	private String IDMacchinario;
    // private  LocalDate DAq; 
-	private StatoAttuale Stato;
+	public static StatoAttuale Stato;
 	
 	public ManutenzioneMacchinario(String IDMacchinario, String DataAcquisto) {
 		this.IDMacchinario = IDMacchinario;
@@ -20,13 +24,6 @@ public class ManutenzioneMacchinario {
 	}	
 	
 	 public String getDataAcquisto() {
-		/*  Calendar cal = Calendar.getInstance();
-			SimpleDateFormat sdf = new SimpleDateFormat("dd/mm/yyyy", Locale.ITALY);
-			try {
-				cal.setTime(sdf.parse(DataAcquisto));
-			} catch (ParseException e) {
-				e.printStackTrace();
-			} */
 		return DataAcquisto; 
 	}
 
@@ -34,12 +31,17 @@ public class ManutenzioneMacchinario {
 	}
 	
 
-	public Calendar getDataManutenzione() {
+	public static Calendar getDataManutenzione() {
 		
 		return DataManutenzione;
 	    }
 
+	public static StatoAttuale getStato() {
+		return Stato;
+	}
+
 	public Calendar setDataManutenzione(StatoAttuale Stato) {
+		this.Stato = Stato;
 		
 		switch(Stato) {
 		case FUNZIONANTE:
@@ -59,6 +61,16 @@ public class ManutenzioneMacchinario {
 			System.out.println( "Macchinario guasto, chiamare l'assistenza");
 		    }
 		return DataManutenzione;
+	}
+
+	public String getNomeMacchinario() {
+		// TODO Auto-generated method stub
+		return NomeMacchinario;
+	}
+
+	public String getIDMacchinario() {
+		// TODO Auto-generated method stub
+		return IDMacchinario;
 	}
 	
 }

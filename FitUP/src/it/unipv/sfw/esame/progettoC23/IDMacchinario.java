@@ -3,7 +3,7 @@ package it.unipv.sfw.esame.progettoC23;
 import java.time.LocalDate;
 
 public class IDMacchinario {
-	private String IDMacchinario;
+	private static String IDMacchinario;
 	private String DataAcquisto;
 	
 	public IDMacchinario() {
@@ -21,7 +21,7 @@ public class IDMacchinario {
 		IDMacchinario = M.getNomeMacchinario() +  M.DataAcquisto.replace("/","");
 	    }
 	
-	public String getIDMacchinario() {
+	public static String getIDMacchinario() {
 		return IDMacchinario;
 	}
 
