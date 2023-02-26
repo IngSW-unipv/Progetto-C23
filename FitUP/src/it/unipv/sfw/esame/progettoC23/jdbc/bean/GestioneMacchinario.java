@@ -10,7 +10,7 @@ import java.text.*;
 
 public class GestioneMacchinario {
     private String NomeMacchinario;
-    private String DataAcquisto;
+    public String DataAcquisto;
     private LocalDate DAq; 
     private String ManutenzioneMacchinario;
     private String IDMacchinario;
@@ -29,9 +29,9 @@ public String getDataAcquisto() {
 	return DataAcquisto; 
 }
 
-public LocalDate setDataAcquisto(Macchinario M) {
-    LocalTime.parse(DataAcquisto);
-	return getDataAcquisto;
+public String setDataAcquisto(Macchinario M) {
+    LocalDate.parse(M.DataAcquisto);
+	return DataAcquisto;
 }
 
 
@@ -57,7 +57,7 @@ public void setDataManutenzione(StatoAttuale Stato) {
 	
 	switch(Stato) {
 	case FUNZIONANTE:
-		DAq.plusMonths(6);
+		getDataAcquisto.plusMonths(6);
 		break;
 		
 	case GUASTO:
@@ -67,8 +67,8 @@ public void setDataManutenzione(StatoAttuale Stato) {
     }
 
 
-public  LocalDate getDataManutenzione() {
-	return DAq; 
+public  String getDataManutenzione() {
+	return DataAcquisto; 
 }
 
 @Override

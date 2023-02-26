@@ -9,13 +9,11 @@ import java.text.*;
 
 
 public class ManutenzioneMacchinario {
-	// private String DataAcquisto;
     public String DataAcquisto;
-    //private Date format;
-    private static Calendar DataManutenzione;
+    private static LocalDate DataManutenzione;
     private String NomeMacchinario;
 	private String IDMacchinario;
-   // private  LocalDate DAq; 
+    private  LocalDate DAq; 
 	public static StatoAttuale Stato;
 	
 	public ManutenzioneMacchinario(String IDMacchinario, String DataAcquisto) {
@@ -27,12 +25,13 @@ public class ManutenzioneMacchinario {
 		return DataAcquisto; 
 	}
 
-	public void setDataAcquisto() {
+	public LocalDate setDataAcquisto(GestioneMacchinario GM) {
+		this.DAq = LocalDate.parse(GM.getDataAcquisto());
+		return DAq;
 	}
 	
 
-	public static Calendar getDataManutenzione() {
-		
+	public static LocalDate getDataManutenzione() {
 		return DataManutenzione;
 	    }
 
@@ -40,22 +39,14 @@ public class ManutenzioneMacchinario {
 		return Stato;
 	}
 
-	public Calendar setDataManutenzione(StatoAttuale Stato) {
+	public LocalDate setDataManutenzione(StatoAttuale Stato) {
 		this.Stato = Stato;
+		//this.DAq = LocalDate.parse(getDataAcquisto());
 		
 		switch(Stato) {
 		case FUNZIONANTE:
-			 Calendar cal = Calendar.getInstance();
-				SimpleDateFormat sdf = new SimpleDateFormat("dd/mm/yyyy", Locale.ITALY);
-				try {
-					cal.setTime(sdf.parse(DataAcquisto));
-				} catch (ParseException e) {
-					e.printStackTrace();
-				}
-			
-	        cal.add(Calendar.MONTH, +6);
-			System.out.println("Macchinario funzionante, manutenzione tra sei mesi");
-	        return cal;
+			//DAq.plusMonths(6);
+			break;
 			
 		case GUASTO:
 			System.out.println( "Macchinario guasto, chiamare l'assistenza");

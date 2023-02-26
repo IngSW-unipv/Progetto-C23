@@ -18,11 +18,16 @@ public class IDMacchinario {
 
 	public void setIDMacchinario(Macchinario M) {
 	
-		IDMacchinario = M.getNomeMacchinario() +  M.DataAcquisto.replace("/","");
+		IDMacchinario = M.getNomeMacchinario() +  M.DataAcquisto.replace("/", "");
 	    }
 	
 	public static String getIDMacchinario() {
 		return IDMacchinario;
 	}
+	
+	/*@Override
+	public String toString() {
+		return "DataAcquisto: ("+DataAcquisto+")" + "\n";
+	}*/
 
 }

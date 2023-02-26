@@ -9,6 +9,7 @@ import it.unipv.sfw.esame.progettoC23.ManutenzioneMacchinario;
 import it.unipv.sfw.esame.progettoC23.jdbc.bean.GestioneMacchinario;
 import it.unipv.sfw.esame.progettoC23.view.MacchinarioView;
 import javax.swing.JOptionPane;
+import java.util.*;
 
 public class MacchinarioController {
 	private final ManutenzioneMacchinario dataAcquisto;
@@ -20,16 +21,33 @@ public class MacchinarioController {
 		this.dataAcquisto = dataAcquisto;
 		this.view = view;
 		this.idMacchinario = idMacchinario;
+	
+		/*Scanner scanner = new Scanner(System.in);
+		NomeMacchinario = scanner.nextLine();
+		
+		Scanner scanner1 = new Scanner(System.in);
+		dataAcquisto = scanner1.nextLine();*/
 		
 		setListeners();
 	}
 
 	private void setListeners() {
 		view.getNuovoMacchinario().addActionListener(new ActionListener() {
+			//private String NomeMacchinario, dataAcquisto; 
 			
 			@Override
 			public void actionPerformed (ActionEvent e) {
-				view.setIDMacchinario(getIDMacchinario());
+				
+				if (idMacchinario != null) {
+				view.uscita1.setText("Macchinario già esistente");
+			} else {
+				view.setNuovoMacchinario(getIDMacchinario());
+			}
+			}
+
+			private GestioneMacchinario getIDMacchinario() {
+				// TODO Auto-generated method stub
+				return null;
 			}
 			
 		});
@@ -38,18 +56,13 @@ public class MacchinarioController {
 			
 			@Override
 			public void actionPerformed (ActionEvent e) {
-				view.setDataManutenzione(dataAcquisto);
 				
-			/*@Override
-			public void actionPerformed (ActionEvent e) {
-				view.get
-			}*/
+				if (idMacchinario != null) {
+				view.setDataManutenzione(dataAcquisto);
+				} else {
+					view.uscita1.setText("Macchinario non trovato");
+				}
 			}
 		});
-	}
-
-	protected IDMacchinario getIDMacchinario() {
-		// TODO Auto-generated method stub
-		return idMacchinario;
-	} 		
+	}	
 }

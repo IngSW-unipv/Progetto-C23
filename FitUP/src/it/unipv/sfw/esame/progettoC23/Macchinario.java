@@ -1,9 +1,10 @@
 package it.unipv.sfw.esame.progettoC23;
+import java.time.LocalDate;
 import java.util.*;
 
 public class Macchinario {
 	
-	private String NomeMacchinario;
+	public String NomeMacchinario;
 	public String DataAcquisto;
 	  
 	 public Macchinario(String nomeMacchinario, String DataAcquisto) {
@@ -17,9 +18,9 @@ public class Macchinario {
 	}
 	 
 
-	public void setDataAcquisto(String dataAcquisto) {
+	/*public void setDataAcquisto(String dataAcquisto) {
 		DataAcquisto = dataAcquisto;
-	}
+	} */
 
 
 	public String getNomeMacchinario() {
