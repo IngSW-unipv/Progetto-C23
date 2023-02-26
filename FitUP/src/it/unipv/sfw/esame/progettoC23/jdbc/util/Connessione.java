@@ -1,4 +1,5 @@
 package it.unipv.sfw.esame.progettoC23.jdbc.util;
+import it.unipv.sfw.esame.progettoC23.controller.*;
 import java.sql.*;
 import java.io.FileInputStream;
 
@@ -15,7 +16,7 @@ public class Connessione {
 	public static Connection startConnection(Connection conn, String schema) {
 		
 		//DbDriver = "com.mysql.cj.jdbc.Driver";
-		DbURL = "jdbc:mysql://34.154.26.76:3306/"+schema;
+		DbURL = "jdbc:mysql://34.154.46.196:3306/"+schema;
 		username = "root";
 		password = "";
 		
@@ -60,10 +61,7 @@ public class Connessione {
 		
 	}
 
-	public static Connessione startConnection(Connessione conn, String schema) {
-		
-		return null;
-	}
+
 	
 	
 
