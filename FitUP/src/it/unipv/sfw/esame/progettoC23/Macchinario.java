@@ -16,11 +16,6 @@ public class Macchinario {
 	 public String getDataAcquisto() {
 		return DataAcquisto;
 	}
-	 
-
-	/*public void setDataAcquisto(String dataAcquisto) {
-		DataAcquisto = dataAcquisto;
-	} */
 
 
 	public String getNomeMacchinario() {

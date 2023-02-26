@@ -16,7 +16,6 @@ public class GestioneMacchinario {
     private String IDMacchinario;
     private LocalDate DataManutenzione;
     private static StatoAttuale Stato;
-	public LocalDate getDataAcquisto;
 	   
 
 public GestioneMacchinario(String nomeMacchinario, String iDMacchinario, String dataAcquisto) {
