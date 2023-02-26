@@ -23,21 +23,21 @@ public class Tester {
 	
 		
 		//IscrizioneDAO id = new IscrizioneDAO();
-		Persona p = new Persona ("LUCA", "ROSSI", "RSSLCC", "01/01/2000");
-		Persona p1 = new Persona ("MARIO", "VERDI", "VRDMRR", "01/01/2002");
-		Persona p2 = new Persona ("LUIGI", "BIANCHI", "BNCLGG", "01/02/2000");
-		Badge b = new Badge();
-		Badge b1 = new Badge();
-		Badge b2 = new Badge ();
-		b.setCodiceBadge(p.getCF());
+		//Persona p = new Persona ("LUCA", "ROSSI", "RSSLCC", "01/01/2000");
+		//Persona p1 = new Persona ("MARIO", "VERDI", "VRDMRR", "01/01/2002");
+		//Persona p2 = new Persona ("LUIGI", "BIANCHI", "BNCLGG", "01/02/2000");
+		//Badge b = new Badge();
+		//Badge b1 = new Badge();
+		//Badge b2 = new Badge ();
+		//b.setCodiceBadge(p.getCF());
 
 
-		b1.setCodiceBadge(p1.getCF());
-		b2.setCodiceBadge(p2.getCF());
+		//b1.setCodiceBadge(p1.getCF());
+		//b2.setCodiceBadge(p2.getCF());
 
 		//Iscrizione g = new Iscrizione (p.getCF(),p.getNome(),p.getCognome(),p.getDataNascita(), b.getCodiceBadge());
-		Rinnovo r = new Rinnovo(b.getCodiceBadge());
-		r.setDataRinnovo(TipoAbbonamento.MENSILE);
+		//Rinnovo r = new Rinnovo(b.getCodiceBadge());
+		//r.setDataRinnovo(TipoAbbonamento.MENSILE);
 		//System.out.println("Il rinnovo è previsto per il giorno: "+r.getDataRinnovo().getTime());
 		//System.out.println(id.selectAll());
 		//System.out.println(id.insertIscritto(g,b));
@@ -62,9 +62,15 @@ public class Tester {
 		
 		
 		IscrittoView iv = new IscrittoView();
-		IscrittoContoller ic = new IscrittoContoller(r,iv,b);
+		IscrittoContoller ic = new IscrittoContoller(iv);
 		iv.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		iv.setVisible(true);
+		
+		
+		
+		
+		
+		
 
 		
 		
