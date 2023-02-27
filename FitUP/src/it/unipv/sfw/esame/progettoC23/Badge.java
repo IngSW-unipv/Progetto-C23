@@ -4,18 +4,28 @@ public class Badge {
 	
 	protected String CodiceBadge; 
 	private final String CodicePalestra = "FitUp";
+	protected String CF;
 	
 	public Badge() {	
 	}
 	
-	public void setCodiceBadge(Persona iscritto) {
-		 CodiceBadge = iscritto.getCF() + CodicePalestra ;
+	public void setCodiceBadge(String CF) {
+			this.CF = CF;
+			CodiceBadge = CF + CodicePalestra ;
 	}
 
 
 	public String getCodiceBadge() {
 		return CodiceBadge;
 	}
+	
+	public String getCF() {
+		return CF;
+	}
+
+	
+	
+	
 	
 
 }
