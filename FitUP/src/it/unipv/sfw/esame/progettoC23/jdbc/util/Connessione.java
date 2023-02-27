@@ -44,7 +44,7 @@ public class Connessione {
 			return true;
 	}
 
-	static Connection closeConnection(Connection conn) {
+	public static Connection closeConnection(Connection conn) {
 		if (!isOpen (conn))
 			return null;
 		try {
@@ -60,10 +60,7 @@ public class Connessione {
 		
 	}
 
-	public static Connessione startConnection(Connessione conn, String schema) {
-		
-		return null;
-	}
+
 	
 	
 

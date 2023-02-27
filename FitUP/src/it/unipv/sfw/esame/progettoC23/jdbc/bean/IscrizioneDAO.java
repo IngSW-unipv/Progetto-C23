@@ -3,6 +3,9 @@ import java.sql.*;
 import java.sql.Date;
 import java.util.*;
 
+import it.unipv.sfw.esame.progettoC23.Badge;
+import it.unipv.sfw.esame.progettoC23.jdbc.util.Connessione;
+
 public class IscrizioneDAO implements IIscrizioneDAO {
 	
 	private Connection connDB;
@@ -31,7 +34,6 @@ public class IscrizioneDAO implements IIscrizioneDAO {
 				
 				while(rs1.next())
 				{
-					Calendar cal = Calendar.getInstance(TimeZone.getTimeZone("Europe/Rome"), Locale.ITALY);
 					Iscrizione i = new Iscrizione(rs1.getString(1), rs1.getString(2), rs1.getString(3),rs1.getString(4),rs1.getString(5));
 					iscr.add(i);
 				}

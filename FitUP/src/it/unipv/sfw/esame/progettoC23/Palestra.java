@@ -2,6 +2,8 @@ package it.unipv.sfw.esame.progettoC23;
 
 import java.util.Date;
 
+import it.unipv.sfw.esame.progettoC23.jdbc.bean.Iscrizione;
+
 public class Palestra {
 	//private
 	//private

@@ -2,7 +2,6 @@ package it.unipv.sfw.esame.progettoC23.view;
 import java.awt.*;
 import java.sql.Date;
 import java.util.Calendar;
-
 import javax.swing.*;
 
 public class IscrittoView extends JFrame {
@@ -11,6 +10,7 @@ public class IscrittoView extends JFrame {
 	private JButton VediBadge;
 	private JLabel uscita1;
 	private JLabel uscita2;
+	private JTextField cf;
 	public static final int altezza = 300;
 	public static final int lunghezza = 200;
 	public static final int altezzab = 150;
@@ -18,28 +18,36 @@ public class IscrittoView extends JFrame {
 	
 	public IscrittoView() {
 		
-		setLayout(new FlowLayout());
+		setLayout(new BorderLayout());
 		setSize(altezza,lunghezza);
 		setTitle("Informazioni su di te");
-		//JPanel p = new JPanel();
-		Container c=getContentPane();
+		JPanel sp = new JPanel();
+		sp.setBackground(new Color(255,0,0));
+		add(sp, BorderLayout.SOUTH);
+		JPanel cp = new JPanel();
+		cp.setBackground(new Color(255,0,0));
+		add(cp, BorderLayout.CENTER);
+		//Container c=getContentPane();
 		//c.add(p);
 		
 		uscita1 = new JLabel();
-		c.add(uscita1);
+		cp.add(uscita1);
 		
 		uscita2 = new JLabel();
-		c.add(uscita2);
+		cp.add(uscita2);
+		
+		cf = new JTextField ("Inserire codice fiscale");
+		cp.add(cf);
 		
 		Vedi = new JButton("RINNOVO");
 		Vedi.setPreferredSize(new Dimension(altezzab,lunghezzab));
 		Vedi.setActionCommand("Vedi qui data del rinnovo");
-		c.add(Vedi);
+		sp.add(Vedi);
 		
 		VediBadge = new JButton("BADGE");
 		VediBadge.setPreferredSize(new Dimension(altezzab,lunghezzab));
 		VediBadge.setActionCommand("Vedi qui il tuo codice badge");
-		c.add(VediBadge);
+		sp.add(VediBadge);
 	}
 
 	public JButton getVedi() {
@@ -61,6 +69,13 @@ public class IscrittoView extends JFrame {
 		uscita2.setText("Questo è il codice badge: "+bad);
 		
 	}
+	
+	public JTextField getCf() {
+		
+		return cf;
+	}
+	
+	
 	
 	
 

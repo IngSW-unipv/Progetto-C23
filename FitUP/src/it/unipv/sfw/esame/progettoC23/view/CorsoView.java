@@ -51,7 +51,6 @@ public class CorsoView extends JFrame {
 	
 	public void StampaLista (List<String> list) {
 		
-		
 		l.setText("L'elenco agli iscritti a questo corso è: ");
 		l1.setText("\n" + list);
 		

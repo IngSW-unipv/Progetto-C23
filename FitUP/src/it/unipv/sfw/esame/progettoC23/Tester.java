@@ -60,9 +60,6 @@ public class Tester {
 		/* System.out.println("Il nuovo elenco del corso di Crossfit è: " );
 		c.svuotaElenco(b.getCodiceBadge(), TipoCorso.CROSSFIT); */
 		
-		
-		
-		
 		/*IscrittoView iv = new IscrittoView();
 		IscrittoContoller ic = new IscrittoContoller(r,iv,b);
 		iv.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
