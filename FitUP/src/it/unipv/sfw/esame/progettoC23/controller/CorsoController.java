@@ -20,7 +20,6 @@ public class CorsoController {
 	public CorsoController (CorsoView view) {
 		
 		this.view = view;
-		
 		setListeners();
 		
 	}

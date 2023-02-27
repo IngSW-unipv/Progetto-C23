@@ -36,7 +36,6 @@ public class IscrizioneCorso {
 			}
 			
 			System.out.println(CodiceBadge);
-			// System.out.println(ElencoCrossfit);
 			
 			break;
 			
