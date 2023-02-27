@@ -4,27 +4,27 @@ import java.util.*;
 
 public class Macchinario {
 	
-	public String nomeMacchinario;
-	public String dataAcquisto;
+	public String NomeMacchinario;
+	public String DataAcquisto;
 	  
 	 public Macchinario(String nomeMacchinario, String DataAcquisto) {
-	  this.nomeMacchinario = nomeMacchinario;
-	  this.dataAcquisto = DataAcquisto;
+	  NomeMacchinario = nomeMacchinario;
+	  this.DataAcquisto = DataAcquisto;
 	}
 
 	  
 	 public String getDataAcquisto() {
-		return dataAcquisto;
+		return DataAcquisto;
 	}
 
 
 	public String getNomeMacchinario() {
-		return nomeMacchinario;
+		return NomeMacchinario;
 	}
 	
 	@Override
 	public String toString() {
-		return "Macchinario: ("+nomeMacchinario+", "+dataAcquisto+")" + "\n";
+		return "Macchinario: ("+NomeMacchinario+", "+DataAcquisto+")" + "\n";
 	}
 
 }

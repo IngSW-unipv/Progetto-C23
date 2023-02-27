@@ -10,7 +10,7 @@ import java.text.*;
 
 public class ManutenzioneMacchinario {
     public String DataAcquisto;
-    private String DataManutenzione;
+    private static LocalDate DataManutenzione;
     private String NomeMacchinario;
 	private String IDMacchinario;
     private  LocalDate DAq; 
@@ -31,7 +31,7 @@ public class ManutenzioneMacchinario {
 	}
 	
 
-	public String getDataManutenzione() {
+	public static LocalDate getDataManutenzione() {
 		return DataManutenzione;
 	    }
 
@@ -39,42 +39,17 @@ public class ManutenzioneMacchinario {
 		return Stato;
 	}
 
-	public String setDataManutenzione(StatoAttuale Stato) {
+	public LocalDate setDataManutenzione(StatoAttuale Stato) {
 		this.Stato = Stato;
+		//this.DAq = LocalDate.parse(getDataAcquisto());
 		
 		switch(Stato) {
 		case FUNZIONANTE:
-			String arr[];
-			int mese, anno;
-			if (DataManutenzione == null) {
-				arr = DataAcquisto.split("/");
-				 mese = Integer.parseInt(arr[1]);
-				 anno = Integer.parseInt(arr[2]);
-				
-				mese+=6;
-				
-				if (mese > 12) {
-					mese-=12;
-					anno++;
-				}
-			} else {
-					 arr = DataManutenzione.split("/");
-					 mese = Integer.parseInt(arr[1]);
-					 anno = Integer.parseInt(arr[2]);
-					
-					mese+=6;
-					
-					if (mese > 12) {
-						mese-=12;
-						anno++; 
-						}
-			} 
-			DataManutenzione = arr[0] +"/" + mese + "/" + anno;
+			//DAq.plusMonths(6);
 			break;
 			
 		case GUASTO:
 			System.out.println( "Macchinario guasto, chiamare l'assistenza");
-			DataManutenzione = "Da definire";
 		    }
 		return DataManutenzione;
 	}

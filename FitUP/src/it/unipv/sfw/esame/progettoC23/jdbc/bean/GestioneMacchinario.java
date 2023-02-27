@@ -14,7 +14,7 @@ public class GestioneMacchinario {
     private LocalDate DAq; 
     private String ManutenzioneMacchinario;
     private String IDMacchinario;
-    private String DataManutenzione;
+    private LocalDate DataManutenzione;
     private static StatoAttuale Stato;
 	   
 
@@ -29,7 +29,7 @@ public String getDataAcquisto() {
 }
 
 public String setDataAcquisto(Macchinario M) {
-    LocalDate.parse(M.dataAcquisto);
+    LocalDate.parse(M.DataAcquisto);
 	return DataAcquisto;
 }
 
@@ -56,37 +56,11 @@ public void setDataManutenzione(StatoAttuale Stato) {
 	
 	switch(Stato) {
 	case FUNZIONANTE:
-		String arr[];
-		int mese, anno;
-		if (DataManutenzione == null) {
-			arr = DataAcquisto.split("/");
-			 mese = Integer.parseInt(arr[1]);
-			 anno = Integer.parseInt(arr[2]);
-			
-			mese+=6;
-			
-			if (mese > 12) {
-				mese-=12;
-				anno++;
-			}
-		} else {
-				 arr = DataManutenzione.split("/");
-				 mese = Integer.parseInt(arr[1]);
-				 anno = Integer.parseInt(arr[2]);
-				
-				mese+=6;
-				
-				if (mese > 12) {
-					mese-=12;
-					anno++; 
-					}
-		} 
-		DataManutenzione = arr[0] + "/"+  mese + "/" + anno;
+		getDataAcquisto.plusMonths(6);
 		break;
 		
 	case GUASTO:
 		System.out.println( "Macchinario guasto, chiamare l'assistenza");
-		DataManutenzione = "Da definire";
 		break;
 	    }
     }

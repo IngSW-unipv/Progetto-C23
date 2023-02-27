@@ -1,5 +1,6 @@
 package it.unipv.sfw.esame.progettoC23;
 
+import java.time.LocalDate;
 
 public class IDMacchinario {
 	private static String IDMacchinario;
@@ -17,11 +18,16 @@ public class IDMacchinario {
 
 	public void setIDMacchinario(Macchinario M) {
 	
-		IDMacchinario = M.getNomeMacchinario() +  M.dataAcquisto.replace("/", "");
+		IDMacchinario = M.getNomeMacchinario() +  M.DataAcquisto.replace("/", "");
 	    }
 	
 	public static String getIDMacchinario() {
 		return IDMacchinario;
 	}
+	
+	/*@Override
+	public String toString() {
+		return "DataAcquisto: ("+DataAcquisto+")" + "\n";
+	}*/
 
 }
