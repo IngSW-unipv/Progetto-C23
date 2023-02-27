@@ -16,7 +16,6 @@ public class Rinnovo {
 	public void setDataRinnovo(TipoAbbonamento Abbonamento) {
 		
 		this.Abbonamento = Abbonamento;
-		//this.PrimaIscrizione = PrimaIscrizione;
 			
 			
 		switch (Abbonamento) {
