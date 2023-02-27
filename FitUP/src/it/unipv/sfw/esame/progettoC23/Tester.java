@@ -27,6 +27,8 @@ public class Tester {
 		Persona p1 = new Persona ("MARIO", "VERDI", "VRDMRR", "01/01/2002");
 		Badge b = new Badge();
 		b.setCodiceBadge(p);
+		Badge b1 = new Badge();
+		b1.setCodiceBadge(p1);
 		//Iscrizione g = new Iscrizione (p.getCF(),p.getNome(),p.getCognome(),p.getDataNascita(), b.getCodiceBadge());
 		Rinnovo r = new Rinnovo(b.getCodiceBadge());
 		r.setDataRinnovo(TipoAbbonamento.MENSILE);
@@ -40,17 +42,42 @@ public class Tester {
 		c.riempiElenco(TipoCorso.CROSSFIT);
 		c1.riempiElenco(TipoCorso.CROSSFIT);*/
 		
-		IscrittoView iv = new IscrittoView();
+/*		IscrittoView iv = new IscrittoView();
 		IscrittoContoller ic = new IscrittoContoller(r,iv,b);
 		iv.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		iv.setVisible(true);
 		
-		
-		
-		
-		
-		
+*/	
+		try {
+		Calendar c =Calendar.getInstance();
+		c.set(2023,02,28,12, 0);
+		Visita visit= new Visita(b, TipoVisita.OBBLIGATORIA ,c);
+		Calendar c1 =Calendar.getInstance();
+		c1.set(2023,02,19,15, 0);
+		Visita visit1= new Visita(b1, TipoVisita.OBBLIGATORIA ,c1);
+		GestioneVisite pren= new GestioneVisite();
+		pren.inserisciVisita(visit);
+		pren.inserisciVisita(visit1);
 
-	}
+		Calendar c2 =Calendar.getInstance();
+		c2.set(2023,02,28,11, 0);
 
+		Visita visit2= new Visita(b1, TipoVisita.OSTEOPATICA ,c2);
+		pren.inserisciVisita(visit2);
+
+		Calendar c3 =Calendar.getInstance();
+		c3.set(2023,02,20,11, 0);
+
+		Visita visit3= new Visita(b1, TipoVisita.OSTEOPATICA ,c3);
+		pren.inserisciVisita(visit3);
+		pren.cancellaVisitaPerData(c3);
+		System.out.println(pren.cercaVisitaPerBadge("RSSLCCFitUp").toString());
+		} catch( Exception e){
+			System.out.println(e.getMessage());
+		}
+	//	 System.out.println(pren.getElencoVisite().toString());
+//cercaVisitaPerBadge("RSSLCCFitUp").toString()
+		
+}
+	
 }
