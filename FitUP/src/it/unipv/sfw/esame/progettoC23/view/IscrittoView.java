@@ -44,6 +44,7 @@ public class IscrittoView extends JFrame {
 		JPanel np= new JPanel();
 		np.setBackground(new Color(255,0,0));
 		add(np, BorderLayout.NORTH);
+
 		//Container c=getContentPane();
 		//c.add(p);
 		
@@ -129,7 +130,6 @@ public class IscrittoView extends JFrame {
 		return rinnovo.getText();
 	} 
 	
-	
 	public void setBadge(String codice) {
 		uscita2.setText("Questo è il codice badge: "+ codice + "FitUp");
 		
@@ -157,23 +157,7 @@ public class IscrittoView extends JFrame {
 		
 		
 	}
-	public void setPopolaVettore() {
 		
 		
 		
-		
-		
-	}
-	
-	
-
-
-	
-	
-	
-	
-	
-	
-	
-
 }

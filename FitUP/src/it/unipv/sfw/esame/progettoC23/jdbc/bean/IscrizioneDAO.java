@@ -34,6 +34,7 @@ public class IscrizioneDAO implements IIscrizioneDAO {
 				
 				while(rs1.next())
 				{
+
 					Iscrizione i = new Iscrizione(rs1.getString(1), rs1.getString(2), rs1.getString(3),rs1.getString(4));
 					iscr.add(i);
 				}
