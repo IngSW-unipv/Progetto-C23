@@ -10,8 +10,7 @@ import java.text.*;
 
 public class GestioneMacchinario {
     private String NomeMacchinario;
-    public String DataAcquisto;
-    private LocalDate DAq; 
+    public String DataAcquisto; 
     private String ManutenzioneMacchinario;
     private String IDMacchinario;
     private String DataManutenzione;
@@ -29,7 +28,6 @@ public String getDataAcquisto() {
 }
 
 public String setDataAcquisto(Macchinario M) {
-    LocalDate.parse(M.dataAcquisto);
 	return DataAcquisto;
 }
 

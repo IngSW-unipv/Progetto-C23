@@ -69,7 +69,7 @@ public class Tester {
 		iv.setVisible(true);*/
 		
 		//Testing Macchinario
-		/* Macchinario m = new Macchinario ("PANCA", "30/12/1995");
+		/*Macchinario m = new Macchinario ("PANCA", "30/12/1995");
 		Macchinario m1 = new Macchinario ("LEGPRESS", "15/04/2012");
 		
 		IDMacchinario id = new IDMacchinario();

@@ -13,7 +13,6 @@ public class ManutenzioneMacchinario {
     private String DataManutenzione;
     private String NomeMacchinario;
 	private String IDMacchinario;
-    private  LocalDate DAq; 
 	public static StatoAttuale Stato;
 	
 	public ManutenzioneMacchinario(String IDMacchinario, String DataAcquisto) {
@@ -25,9 +24,8 @@ public class ManutenzioneMacchinario {
 		return DataAcquisto; 
 	}
 
-	public LocalDate setDataAcquisto(GestioneMacchinario GM) {
-		this.DAq = LocalDate.parse(GM.getDataAcquisto());
-		return DAq;
+	public String setDataAcquisto(GestioneMacchinario GM) {
+		return DataAcquisto;
 	}
 	
 
