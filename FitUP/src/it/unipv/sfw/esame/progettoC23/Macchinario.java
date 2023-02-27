@@ -1,28 +1,30 @@
 package it.unipv.sfw.esame.progettoC23;
+import java.time.LocalDate;
 import java.util.*;
 
 public class Macchinario {
 	
-	  private Calendar DataAcquisto; 
-	  private TipoMacchinario NomeMacchinario;
-	  private String DataUltimaManutenzione;
-	 
+	public String NomeMacchinario;
+	public String DataAcquisto;
 	  
-	public Macchinario(String dataAcquisto, TipoMacchinario nomeMacchinario, String DataUltimaManutenzione) {
-		DataAcquisto = DataAcquisto;
-		NomeMacchinario = nomeMacchinario;
-		this.DataUltimaManutenzione = "N/A"; //data non ancora disponibile visto che la prima manutenzione
-		                                     // non è ancora avvenuta
+	 public Macchinario(String nomeMacchinario, String DataAcquisto) {
+	  NomeMacchinario = nomeMacchinario;
+	  this.DataAcquisto = DataAcquisto;
+	}
+
+	  
+	 public String getDataAcquisto() {
+		return DataAcquisto;
 	}
 
 
-	public TipoMacchinario getNomeMacchinario() {
+	public String getNomeMacchinario() {
 		return NomeMacchinario;
 	}
-
-	//public void getDataUltimaManutenzione(Calendar dataUltimaManutenzione) {
-		//DataUltimaManutenzione = DataAcquisto;
-	//}
 	
+	@Override
+	public String toString() {
+		return "Macchinario: ("+NomeMacchinario+", "+DataAcquisto+")" + "\n";
+	}
 
 }

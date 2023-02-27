@@ -16,7 +16,7 @@ public class Iscrizione{
 	protected String DatadiNascita;
 	protected String CodiceBadge;
 	
-	public Iscrizione(String CF, String Nome, String Cognome, String DatadiNascita, String CodiceBadge) {
+	public Iscrizione(String CF, String Nome, String Cognome, String DatadiNascita) {
 	
 	this.CF = CF;
 	this.Nome=Nome;
@@ -61,7 +61,7 @@ public class Iscrizione{
 	
 	@Override
 	public String toString() {
-		return "Iscritto: ("+CF+", "+Nome+", "+Cognome+", "+DatadiNascita+", "+CodiceBadge+")" + "\n";
+		return "Iscritto: ("+CF+", "+Nome+", "+Cognome+", "+DatadiNascita+")" + "\n";
 	}
 	
 	

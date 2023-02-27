@@ -34,7 +34,8 @@ public class IscrizioneDAO implements IIscrizioneDAO {
 				
 				while(rs1.next())
 				{
-					Iscrizione i = new Iscrizione(rs1.getString(1), rs1.getString(2), rs1.getString(3),rs1.getString(4),rs1.getString(5));
+
+					Iscrizione i = new Iscrizione(rs1.getString(1), rs1.getString(2), rs1.getString(3),rs1.getString(4));
 					iscr.add(i);
 				}
 			}catch (Exception e) {e.printStackTrace();}
@@ -43,7 +44,7 @@ public class IscrizioneDAO implements IIscrizioneDAO {
 	
 	
 	@Override
-	public boolean insertIscritto(Iscrizione i, Badge b)   {
+	public boolean insertIscritto(Iscrizione i)   {
 		
 		connDB = Connessione.startConnection(connDB, schema);
 		PreparedStatement st1;
@@ -52,14 +53,13 @@ public class IscrizioneDAO implements IIscrizioneDAO {
 		
 		try
 		{
-			String query= "INSERT INTO ISCRITTO(CF,NOME,COGNOME,DATADINASCITA,CODICEBADGE) VALUES(?,?,?,?,?)";
+			String query= "INSERT INTO ISCRITTO(CF,NOME,COGNOME,DATADINASCITA) VALUES(?,?,?,?)";
 			
 			st1=connDB.prepareStatement(query);
 			st1.setString(1, i.getCF());
 			st1.setString(2, i.getNome());
 			st1.setString(3, i.getCognome());
 			st1.setString(4, i.getDatadiNascita());
-			st1.setString(5, b.getCodiceBadge());
 
 			st1.executeUpdate();
 			
