@@ -1,5 +1,5 @@
 package it.unipv.sfw.esame.progettoC23;
-
+import it.unipv.ingsfw.esame.progettoC23.exception.*;
 import java.util.*;
 
 public class GestioneVisite {
@@ -24,16 +24,19 @@ public class GestioneVisite {
 	// To be entered, the visit must:
 	// do not start before 10 and not after 16 and not be at 13
 	// do not overlap with other visits already entered
-/*	public boolean inserisciVisita(Visita v) {
+	public boolean inserisciVisita(Visita v) throws HourException, DayException {
 		Calendar day0,day1;
 		int day = v.getGiornoSett();
 		int inizio = v.getInizio();
 		day0 = v.getDay_visit();
 		
 		// Control over working hours and day
-		if (inizio < INIZIO_GIORNATA || inizio > ULTIMO_GIORNATA || inizio == PAUSA_PRANZO || day == GIORNO_FESTIVO) {
-		//	throw new  VisitException("Orario non lavorativo o giorno festivo");
-		} else {
+		if (inizio < INIZIO_GIORNATA || inizio > ULTIMO_GIORNATA || inizio == PAUSA_PRANZO) {
+			throw new  HourException();
+			
+		}else if( day == GIORNO_FESTIVO) {
+			throw new  DayException();
+		}else {
 			// NO OVERLAP OF VIEWS
 			for (Visita v1 : elencoVisite) {
 				day1 = v1.getDay_visit();
@@ -47,7 +50,7 @@ public class GestioneVisite {
 			return true;
 		}
     }
-*/
+
 // Search for a visit by Badge
 	public ArrayList<Visita> cercaVisitaPerBadge(String codicebadge) {
 		ArrayList<Visita> tmp = new ArrayList<>();
