@@ -2,7 +2,7 @@ package it.unipv.sfw.esame.progettoC23;
 
 
 public class IDMacchinario {
-	private static String IDMacchinario;
+	private String IDMacchinario;
 	private String DataAcquisto;
 	
 	public IDMacchinario() {
@@ -20,7 +20,7 @@ public class IDMacchinario {
 		IDMacchinario = M.getNomeMacchinario() +  M.dataAcquisto.replace("/", "");
 	    }
 	
-	public static String getIDMacchinario() {
+	public String getIDMacchinario() {
 		return IDMacchinario;
 	}
 

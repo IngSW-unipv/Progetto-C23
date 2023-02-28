@@ -1,24 +1,23 @@
 package it.unipv.sfw.esame.progettoC23;
-import java.util.*;
 
 import it.unipv.sfw.esame.progettoC23.jdbc.bean.GestioneMacchinario;
-
-import java.time.*;
-import java.time.format.DateTimeFormatter;
-import java.text.*;
 
 
 public class ManutenzioneMacchinario {
     public String DataAcquisto;
     private String DataManutenzione;
-    private String NomeMacchinario;
 	private String IDMacchinario;
-	public static StatoAttuale Stato;
+	public StatoAttuale Stato;
 	
 	public ManutenzioneMacchinario(String IDMacchinario, String DataAcquisto) {
 		this.IDMacchinario = IDMacchinario;
 		this.DataAcquisto = DataAcquisto;
 	}	
+	
+	 public String getIDMacchinario() {
+		return IDMacchinario;
+	}
+	
 	
 	 public String getDataAcquisto() {
 		return DataAcquisto; 
@@ -33,7 +32,7 @@ public class ManutenzioneMacchinario {
 		return DataManutenzione;
 	    }
 
-	public static StatoAttuale getStato() {
+	public StatoAttuale getStato() {
 		return Stato;
 	}
 
@@ -49,7 +48,7 @@ public class ManutenzioneMacchinario {
 				 mese = Integer.parseInt(arr[1]);
 				 anno = Integer.parseInt(arr[2]);
 				
-				mese+=6;
+				mese+=06;
 				
 				if (mese > 12) {
 					mese-=12;
@@ -60,7 +59,7 @@ public class ManutenzioneMacchinario {
 					 mese = Integer.parseInt(arr[1]);
 					 anno = Integer.parseInt(arr[2]);
 					
-					mese+=6;
+					mese+=06;
 					
 					if (mese > 12) {
 						mese-=12;
@@ -76,15 +75,4 @@ public class ManutenzioneMacchinario {
 		    }
 		return DataManutenzione;
 	}
-
-	public String getNomeMacchinario() {
-		// TODO Auto-generated method stub
-		return NomeMacchinario;
-	}
-
-	public String getIDMacchinario() {
-		// TODO Auto-generated method stub
-		return IDMacchinario;
-	}
-	
 }
