@@ -1,47 +1,36 @@
 package it.unipv.sfw.esame.progettoC23;
 
-import java.sql.Date;
-import java.text.DateFormat;
-
 public class Persona {
-	private String Nome,Cognome,CF;
-	private String DataNascita;
-	
-	public Persona(String CF, String Nome, String Cognome, String DataNascita) {
-		this.Nome = Nome;
-		this.Cognome = Cognome;
-		this.CF = CF;
-		this.DataNascita = DataNascita;
-	}
+    private String nome, cognome, CF;
+    private String dataNascita;
 
-	public String getCF() {
-		return CF;
-	}
+    public Persona(String CF, String nome, String cognome, String dataNascita) {
+        this.nome = nome;
+        this.cognome = cognome;
+        this.CF = CF;
+        this.dataNascita = dataNascita;
+    }
 
-	public String getNome() {
-		return Nome;
-	}
+    public String getCF() {
+        return CF;
+    }
 
-	public String getCognome() {
-		return Cognome;
-	}
+    public String getNome() {
+        return nome;
+    }
 
-	public String getDataNascita() {
-		return DataNascita;
-	}
-	
-	@Override
-	public String toString() {
-		return "Persona: ("+CF+", "+Nome+", "+Cognome+", "+DataNascita+")" + "\n";
-	}
-	
+    public String getCognome() {
+        return cognome;
+    }
 
-	
-	
-	
-	
-	
+    public String getDataNascita() {
+        return dataNascita;
+    }
 
-	
+    @Override
+    public String toString() {
+        return "Persona: (" + CF + ", " + nome + ", " + cognome + ", " + dataNascita + ")" + "\n";
+    }
+
 
 }
