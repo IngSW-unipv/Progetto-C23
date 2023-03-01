@@ -91,22 +91,22 @@ public class BenvenutoController {
 	            
 	                case 0:
 	                	p.riempiElenco(view.getCf(), "CROSSFIT");
-	                	view.StampaLista(p.StampaCrossfit());
+	                	view.StampaLista(p.stampaCrossfit());
 	                	break;
 	                	
 	                case 1:
 	                	p.riempiElenco(view.getCf(), "YOGA");
-	                	view.StampaLista(p.StampaYoga());
+	                	view.StampaLista(p.stampaYoga());
 	                    break;
 
 	                case 2:
 	                	p.riempiElenco(view.getCf(), "ZUMBA");
-	                	view.StampaLista(p.StampaZumba());
+	                	view.StampaLista(p.stampaZumba());
 	                    break;
 	                    
 	                case 3:
 	                	p.riempiElenco(view.getCf(), "PILATES");
-	                	view.StampaLista(p.StampaPilates());
+	                	view.StampaLista(p.stampaPilates());
 	                	break;
 	            }
 	        }

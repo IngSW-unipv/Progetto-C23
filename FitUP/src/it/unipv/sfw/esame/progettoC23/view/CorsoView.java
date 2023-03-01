@@ -8,15 +8,13 @@ public class CorsoView extends JFrame {
 	
 	private JLabel l;
 	private JLabel l1;
-	public JComboBox Elenco;
+	private JComboBox Elenco;
 	public static final int altezza = 200;
 	public static final int lunghezza = 350;
 	public static final int lunghezza_e = 200;
 	public static final int altezza_e = 20;
 	
 	public CorsoView() {
-		
-		
 		setLayout(new FlowLayout());
 		setSize(lunghezza,altezza);
 		setTitle("Elenco dei corsi:");
@@ -42,11 +40,10 @@ public class CorsoView extends JFrame {
 	
 	
 	public JComboBox getElenco() {
-		
 		return Elenco;
 	}
 	
-	public void StampaLista (List<String> list) {
+	public void stampaLista(List<String> list) {
 		
 		l.setText("L'elenco agli iscritti a questo corso è: ");
 		l1.setText("\n" + list);

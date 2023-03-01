@@ -1,9 +1,8 @@
 package it.unipv.sfw.esame.progettoC23.controller;
 
-import it.unipv.sfw.esame.progettoC23.Persona;
+import it.unipv.sfw.esame.progettoC23.model.Persona;
 import it.unipv.sfw.esame.progettoC23.jdbc.bean.Iscrizione;
 import it.unipv.sfw.esame.progettoC23.jdbc.bean.IscrizioneDAO;
-import it.unipv.sfw.esame.progettoC23.view.IscrittoView;
 
 
 import java.awt.event.ActionEvent;
@@ -19,7 +18,6 @@ import it.unipv.sfw.esame.progettoC23.jdbc.bean.IscrizioneDAO;
 import it.unipv.sfw.esame.progettoC23.jdbc.util.*;
 import it.unipv.sfw.esame.progettoC23.model.Badge;
 import it.unipv.sfw.esame.progettoC23.model.IscrizioneCorso;
-import it.unipv.sfw.esame.progettoC23.model.IscrizioneCorsoP;
 import it.unipv.sfw.esame.progettoC23.model.Persona;
 import it.unipv.sfw.esame.progettoC23.model.Rinnovo;
 import it.unipv.sfw.esame.progettoC23.view.BenvenutoView;
@@ -30,9 +28,9 @@ public class IscrizioneController {
 	private  Rinnovo rinnovo;
 	private  BenvenutoView view;
 	private  Badge badge;
-	private IscrizioneCorsoP p;
+	private IscrizioneCorso p;
 	private Calendar PrimaIscrizione = Calendar.getInstance(TimeZone.getTimeZone("Europe/Rome"), Locale.ITALY);
-	public IscrizioneController (BenvenutoView view, Badge badge, Rinnovo rinnovo, IscrizioneCorsoP p) {
+	public IscrizioneController (BenvenutoView view, Badge badge, Rinnovo rinnovo, IscrizioneCorso p) {
 		
 		this.rinnovo=rinnovo;
 		this.view=view;

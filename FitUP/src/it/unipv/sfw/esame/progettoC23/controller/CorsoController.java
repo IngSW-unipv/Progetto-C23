@@ -1,6 +1,6 @@
 package it.unipv.sfw.esame.progettoC23.controller;
 
-import it.unipv.sfw.esame.progettoC23.IscrizioneCorso;
+import it.unipv.sfw.esame.progettoC23.model.IscrizioneCorso;
 import it.unipv.sfw.esame.progettoC23.view.CorsoView;
 
 import java.awt.event.ActionEvent;
@@ -25,24 +25,24 @@ public class CorsoController {
 
             public void actionPerformed(ActionEvent event) {
 
-                int selezione = view.elenco.getSelectedIndex();
+                int selezione = view.getElenco().getSelectedIndex();
 
                 switch (selezione) {
 
                     case 0:
-                        view.stampaLista(IscrizioneCorso.stampaCrossfit());
+                        view.stampaLista(IscrizioneCorso.getInstance().stampaCrossfit());
                         break;
 
                     case 1:
-                        view.stampaLista(IscrizioneCorso.stampaYoga());
+                        view.stampaLista(IscrizioneCorso.getInstance().stampaYoga());
                         break;
 
                     case 2:
-                        view.stampaLista(IscrizioneCorso.stampaZumba());
+                        view.stampaLista(IscrizioneCorso.getInstance().stampaZumba());
                         break;
 
                     case 3:
-                        view.stampaLista(IscrizioneCorso.stampaPilates());
+                        view.stampaLista(IscrizioneCorso.getInstance().stampaPilates());
                         break;
                 }
             }

@@ -1,4 +1,3 @@
-FitUP/src/it/unipv/sfw/esame/progettoC23/model/ManutenzioneMacchinario.java
 package it.unipv.sfw.esame.progettoC23.model;
 import java.util.*;
 

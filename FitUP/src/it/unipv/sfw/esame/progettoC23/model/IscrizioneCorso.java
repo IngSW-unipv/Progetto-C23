@@ -1,30 +1,34 @@
 package it.unipv.sfw.esame.progettoC23.model;
 
-import java.sql.ResultSet;
-import java.sql.Statement;
-import java.util.*;
-import java.util.function.Consumer;
 import java.util.ArrayList;
 import java.util.List;
 
-import it.unipv.sfw.esame.progettoC23.jdbc.bean.Iscrizione;
-import it.unipv.sfw.esame.progettoC23.jdbc.util.Connessione;
-
 public class IscrizioneCorso {
-	
+	private static volatile IscrizioneCorso INSTANCE = null;
 	private String CF;
 	private String CorsoScelto;
-	
-	
-	public IscrizioneCorso () {
-		
-	} 
-	
-	static List <String> ElencoCrossfit = new ArrayList <String> (30);
-	static List <String> ElencoYoga = new ArrayList <String> (30);
-	static List <String> ElencoZumba= new ArrayList <String> (30);
-	static List <String> ElencoPilates = new ArrayList <String> (30);
-	
+	private static List <String> ElencoCrossfit = new ArrayList <String> (30);
+	private static List <String> ElencoYoga = new ArrayList <String> (30);
+	private static List <String> ElencoZumba= new ArrayList <String> (30);
+	private static List <String> ElencoPilates = new ArrayList <String> (30);
+
+	private IscrizioneCorso () {
+		ElencoCrossfit = new ArrayList <String> (30);
+		ElencoYoga = new ArrayList <String> (30);
+		ElencoZumba = new ArrayList <String> (30);
+		ElencoPilates = new ArrayList <String> (30);
+	}
+
+	public static IscrizioneCorso getInstance() {
+		if (INSTANCE == null) {
+			synchronized (IscrizioneCorso.class) {
+				if (INSTANCE == null) {
+					INSTANCE = new IscrizioneCorso();
+				}
+			}
+		}
+		return INSTANCE;
+	}
 	
 	public void riempiElenco (String CF, String CorsoScelto) {
 		
@@ -91,22 +95,22 @@ public class IscrizioneCorso {
 	}
 	
 	
-	public   List<String> StampaCrossfit () {
+	public List<String> stampaCrossfit() {
 		
 		return ElencoCrossfit;
 	}
 	
-	public   List<String> StampaYoga () {
+	public   List<String> stampaYoga() {
 		
 		return ElencoYoga;
 	}
 	
-	public   List<String> StampaZumba () {
+	public List<String> stampaZumba() {
 		
 		return ElencoZumba;
 	}
 
-	public   List<String> StampaPilates () {
+	public List<String> stampaPilates() {
 	
 		return ElencoPilates;
 	}	
