@@ -68,7 +68,7 @@ public class GestioneVisite {
     }
 
     // Search for a visit by Badge
-    public ArrayList<Visita> cercaVisitaPerBadge(String codicebadge) {
+    public ArrayList<Visita> cercaVisitaPerCf(String codicebadge) {
         ArrayList<Visita> tmp = new ArrayList<>();
         for (Visita v1 : elencoVisite) {
             String badgeTrovato = v1.getPaziente().getCodiceBadge();

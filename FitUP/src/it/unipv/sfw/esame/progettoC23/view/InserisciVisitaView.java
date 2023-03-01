@@ -6,6 +6,7 @@ import com.jgoodies.forms.layout.FormSpecs;
 import com.jgoodies.forms.layout.RowSpec;
 import com.toedter.calendar.JCalendar;
 import it.unipv.sfw.esame.progettoC23.controller.VisitaController;
+import it.unipv.sfw.esame.progettoC23.model.TipoVisita;
 
 import javax.swing.*;
 import java.awt.*;
@@ -14,13 +15,15 @@ public class InserisciVisitaView extends JFrame {
 
     private JButton submit, vediData;
     private JLabel uscita;
-    private JTextField badge;
+    private JTextField cf_insert;
     private JComboBox<Integer> orario;
     public static final int altezza = 300;
     public static final int lunghezza = 200;
-    private JTextArea txtrOra, txtrCodicebadge, txtrData, txtrInserisciIDati;
+    private JTextArea txtrOra, txtrCf, txtrData, txtrInserisciIDati;
     private JCalendar calendar;
     private VisitaController controller;
+    private JComboBox<String[]> tipovisit; 
+    private JTextArea txtrTipoVisita;
 
 
     public InserisciVisitaView() {
@@ -31,39 +34,50 @@ public class InserisciVisitaView extends JFrame {
         Container c = getContentPane();
         controller = new VisitaController(this);
 
-        getContentPane().setLayout(new FormLayout(new ColumnSpec[]{
-                ColumnSpec.decode("79px:grow"),
-                ColumnSpec.decode("7px"),
-                FormSpecs.LABEL_COMPONENT_GAP_COLSPEC,
-                ColumnSpec.decode("29px:grow"),
-                FormSpecs.LABEL_COMPONENT_GAP_COLSPEC,
-                ColumnSpec.decode("77px"),
-                FormSpecs.LABEL_COMPONENT_GAP_COLSPEC,
-                ColumnSpec.decode("1px"),
-                FormSpecs.RELATED_GAP_COLSPEC,
-                FormSpecs.DEFAULT_COLSPEC,
-                FormSpecs.RELATED_GAP_COLSPEC,
-                FormSpecs.DEFAULT_COLSPEC,},
-                new RowSpec[]{
-                        FormSpecs.RELATED_GAP_ROWSPEC,
-                        RowSpec.decode("default:grow"),
-                        FormSpecs.RELATED_GAP_ROWSPEC,
-                        RowSpec.decode("21px:grow"),
-                        FormSpecs.RELATED_GAP_ROWSPEC,
-                        FormSpecs.DEFAULT_ROWSPEC,
-                        FormSpecs.RELATED_GAP_ROWSPEC,
-                        RowSpec.decode("default:grow"),
-                        FormSpecs.RELATED_GAP_ROWSPEC,
-                        RowSpec.decode("default:grow"),
-                        FormSpecs.RELATED_GAP_ROWSPEC,
-                        FormSpecs.DEFAULT_ROWSPEC,}));
+        getContentPane().setLayout(new FormLayout(new ColumnSpec[] {
+        		ColumnSpec.decode("79px:grow"),
+        		ColumnSpec.decode("7px"),
+        		FormSpecs.LABEL_COMPONENT_GAP_COLSPEC,
+        		ColumnSpec.decode("29px:grow"),
+        		FormSpecs.LABEL_COMPONENT_GAP_COLSPEC,
+        		ColumnSpec.decode("77px"),
+        		FormSpecs.LABEL_COMPONENT_GAP_COLSPEC,
+        		ColumnSpec.decode("1px"),
+        		FormSpecs.RELATED_GAP_COLSPEC,
+        		ColumnSpec.decode("default:grow"),
+        		FormSpecs.RELATED_GAP_COLSPEC,
+        		FormSpecs.DEFAULT_COLSPEC,},
+        	new RowSpec[] {
+        		FormSpecs.RELATED_GAP_ROWSPEC,
+        		RowSpec.decode("default:grow"),
+        		FormSpecs.RELATED_GAP_ROWSPEC,
+        		RowSpec.decode("21px:grow"),
+        		FormSpecs.RELATED_GAP_ROWSPEC,
+        		RowSpec.decode("default:grow"),
+        		FormSpecs.RELATED_GAP_ROWSPEC,
+        		RowSpec.decode("default:grow"),
+        		FormSpecs.RELATED_GAP_ROWSPEC,
+        		RowSpec.decode("default:grow"),
+        		FormSpecs.RELATED_GAP_ROWSPEC,
+        		FormSpecs.DEFAULT_ROWSPEC,}));
 
 
         txtrInserisciIDati = new JTextArea();
         txtrInserisciIDati.setBackground(new Color(255, 255, 255));
-        txtrInserisciIDati.setFont(new Font("Monospaced", Font.PLAIN, 12));
+        txtrInserisciIDati.setFont(new Font("Monospaced", Font.BOLD, 14));
         txtrInserisciIDati.setText("Inserisci i dati necessari");
         getContentPane().add(txtrInserisciIDati, "1, 2, 6, 1, fill, fill");
+        
+                txtrCf = new JTextArea();
+                txtrCf.setFont(new Font("Monospaced", Font.PLAIN, 12));
+                txtrCf.setText("Codice fiscale");
+                getContentPane().add(txtrCf, "1, 4, fill, fill");
+        
+                cf_insert = new JTextField();
+                cf_insert.setToolTipText("");
+                cf_insert.setBackground(Color.LIGHT_GRAY);
+                cf_insert.setText("here");
+                c.add(cf_insert, "4, 4, left, center");
 
         uscita = new JLabel();
         c.add(uscita, "8, 4, left, center");
@@ -72,17 +86,16 @@ public class InserisciVisitaView extends JFrame {
         for (int i = 0; i < 23; i++) {
             orario.addItem(i);
         }
-
-        txtrCodicebadge = new JTextArea();
-        txtrCodicebadge.setFont(new Font("Monospaced", Font.PLAIN, 12));
-        txtrCodicebadge.setText("CodiceBadge");
-        getContentPane().add(txtrCodicebadge, "1, 6, fill, fill");
-
-        badge = new JTextField();
-        badge.setToolTipText("");
-        badge.setBackground(Color.LIGHT_GRAY);
-        badge.setText("here");
-        c.add(badge, "4, 6, 3, 1, left, center");
+        orario.setSelectedIndex(11);
+        
+        txtrTipoVisita = new JTextArea();
+        txtrTipoVisita.setText("Tipo visita:");
+        getContentPane().add(txtrTipoVisita, "1, 6, fill, fill");
+        
+        tipovisit = new JComboBox<>();
+        tipovisit.addItem(TipoVisita.getNames(TipoVisita.class));
+        getContentPane().add(tipovisit, "4, 6, fill, default");
+        tipovisit.setSelectedIndex(0);
 
         txtrData = new JTextArea();
         txtrData.setBackground(Color.WHITE);
@@ -118,11 +131,16 @@ public class InserisciVisitaView extends JFrame {
         return calendar;
     }
 
-    public JTextArea getTxtrCodicebadge() {
-        return txtrCodicebadge;
+    public JTextArea getTxtrCf() {
+        return txtrCf;
     }
 
-    public Object getSelectedItemCombo() {
-        return orario.getSelectedItem();
+    public int getHourItemCombo() {
+        return (int)orario.getSelectedItem();
+    }
+    
+    public TipoVisita getTipoVisitaItemCombo() {
+    	return TipoVisita.valueOf((String)tipovisit.getSelectedItem());
+    	
     }
 }
