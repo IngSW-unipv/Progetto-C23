@@ -1,4 +1,5 @@
 package it.unipv.sfw.esame.progettoC23.model;
+
 import java.sql.*;
 
 import javax.swing.JFrame;
@@ -8,9 +9,16 @@ import it.unipv.sfw.esame.progettoC23.view.OpenView;
 
 
 
+import it.unipv.sfw.esame.progettoC23.controller.BenvenutoController;
+import it.unipv.sfw.esame.progettoC23.view.BenvenutoView;
+
+
+import javax.swing.*;
+import java.sql.SQLException;
+
 
 public class Tester {
-	
+
 
 		public static void main(String[] args) throws SQLException {
 		
@@ -19,7 +27,7 @@ public class Tester {
 		ov.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		ov.setVisible(true);
 			
-		
+
 		/*Testing Macchinario
 		Macchinario m = new Macchinario ("PANCA", "30/12/1995");
 		Macchinario m1 = new Macchinario ("LEGPRESS", "15/04/2012");
@@ -54,6 +62,8 @@ public class Tester {
 	MacchinarioController mc1 = new MacchinarioController(s1, M1, id1);
 	M.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	M.setVisible(true); */
-	}
+        
+        
+    }
 
 }

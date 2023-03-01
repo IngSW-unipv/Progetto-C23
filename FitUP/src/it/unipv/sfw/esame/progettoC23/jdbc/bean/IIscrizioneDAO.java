@@ -1,11 +1,13 @@
 package it.unipv.sfw.esame.progettoC23.jdbc.bean;
-import java.util.*;
 
-import it.unipv.sfw.esame.progettoC23.model.Badge;
+import java.util.ArrayList;
 
 public interface IIscrizioneDAO {
-	
-	public ArrayList<Iscrizione> selectAll();
-	public boolean insertIscritto(Iscrizione i);
+
+    ArrayList<Iscrizione> selectAll();
+
+    Iscrizione getFromCF(String CF);
+
+    boolean insertIscritto(Iscrizione i);
 
 }

@@ -1,8 +1,12 @@
 package it.unipv.sfw.esame.progettoC23.controller;
 
-import java.awt.*;
+import it.unipv.sfw.esame.progettoC23.model.IDMacchinario;
+import it.unipv.sfw.esame.progettoC23.model.ManutenzioneMacchinario;
+import it.unipv.sfw.esame.progettoC23.view.MacchinarioView;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
 
 import it.unipv.sfw.esame.progettoC23.jdbc.bean.GestioneMacchinario;
 import it.unipv.sfw.esame.progettoC23.jdbc.bean.GestioneMacchinarioDAO;
@@ -20,12 +24,20 @@ public class MacchinarioController {
 	
 	private  MacchinarioView view;
 	
+
+    public MacchinarioController(ManutenzioneMacchinario dataAcquisto, MacchinarioView view, IDMacchinario idMacchinario) {
+
+        this.dataAcquisto = dataAcquisto;
+        this.view = view;
+        this.idMacchinario = idMacchinario;
+
 	
 	public MacchinarioController(MacchinarioView view) {
 	
 		
 		this.view = view;
 		
+
 		
 		setListeners();
 	}
@@ -50,4 +62,4 @@ public class MacchinarioController {
 		
 	
 	}	
-}
+

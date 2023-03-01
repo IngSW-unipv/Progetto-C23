@@ -1,19 +1,11 @@
 package it.unipv.sfw.esame.progettoC23.view;
-import java.awt.*;
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.sql.Date;
-import java.util.*;
 
-import javax.imageio.ImageIO;
-import javax.swing.*;
-import java.awt.font.*;
-
-import it.unipv.sfw.esame.progettoC23.jdbc.bean.GestioneMacchinario;
 import it.unipv.sfw.esame.progettoC23.model.IDMacchinario;
 import it.unipv.sfw.esame.progettoC23.model.Macchinario;
 import it.unipv.sfw.esame.progettoC23.model.ManutenzioneMacchinario;
-import it.unipv.sfw.esame.progettoC23.model.StatoAttuale;
+
+import javax.swing.*;
+import java.awt.*;
 
 public class MacchinarioView extends JFrame {
 	
@@ -81,4 +73,25 @@ public class MacchinarioView extends JFrame {
 	}
 	
 	
+
+
+
+/*    public void setNuovoMacchinario(GestioneMacchinario macchinario) {
+        uscita1.setText("IDMacchinario: " + macchinario.getNomeMacchinario() + macchinario.getDataAcquisto().replace("/", "") + "\n");
+    }*/
+
+    public void setNuovoMacchinario(String idMacchinario) {
+        uscita1.setText("IDMacchinario: " + idMacchinario);
+    }
+
+    public String getIDMacchinario() {
+        return null;
+    }
+
+    public void setDataManutenzione(ManutenzioneMacchinario m) {
+        uscita1.setText("IDMacchinario: " + id.getIDMacchinario() + "  " + "Data Acquisto: " + m.getDataAcquisto());
+        uscita2.setText("  DataManutenzione: " + m.getDataManutenzione() + "\n");
+        uscita3.setText("  Stato: " + m.getStato() + "\n");
+    }
+
 }
