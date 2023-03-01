@@ -30,8 +30,6 @@ public class BenvenutoView extends JFrame {
 	private JLabel l;
 	private JLabel l1;
 	public JComboBox Elenco;
-	public static final int altezza = 1000;
-	public static final int lunghezza = 1000;
 	public static final int altezzab = 150;
 	public static final int lunghezzab = 100;
 	public static final int lunghezzad = 200;
@@ -40,7 +38,7 @@ public class BenvenutoView extends JFrame {
 	public BenvenutoView() {
 		
 		setLayout(new BorderLayout());
-		setSize(altezza,lunghezza);
+		setSize(500,500);
 		setTitle("Iscriviti alla FitUP!");
 		JPanel sp = new JPanel();
 		sp.setBackground(new Color(255,0,0));

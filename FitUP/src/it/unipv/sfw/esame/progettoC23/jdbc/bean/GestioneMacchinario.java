@@ -1,6 +1,4 @@
 package it.unipv.sfw.esame.progettoC23.jdbc.bean;
-
-
 import it.unipv.sfw.esame.progettoC23.model.Macchinario;
 import it.unipv.sfw.esame.progettoC23.model.StatoAttuale;
 
@@ -12,10 +10,9 @@ public class GestioneMacchinario {
     private String IDMacchinario;
 	   
 
-public GestioneMacchinario(String nomeMacchinario, String iDMacchinario, String dataAcquisto) {
+public GestioneMacchinario(String nomeMacchinario,String dataAcquisto) {
 	this.NomeMacchinario = nomeMacchinario;
 	this.DataAcquisto = dataAcquisto;
-	this.IDMacchinario = iDMacchinario; 
 }
 
 public String getDataAcquisto() {
@@ -46,8 +43,7 @@ public void setIDMacchinario(Macchinario M) {
 
 @Override
 public String toString() {
-	//DataManutenzione = Calendar.getInstance(TimeZone.getTimeZone("Europe/Rome"), Locale.ITALY);
-	return "Macchinario: ("+NomeMacchinario+", "+IDMacchinario+", "+DataAcquisto+")" +"\n";
+	return "Macchinario: ("+NomeMacchinario+", "+DataAcquisto+")" +"\n";
     }
 
 }

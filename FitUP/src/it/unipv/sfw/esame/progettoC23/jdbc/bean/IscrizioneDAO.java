@@ -1,12 +1,13 @@
 package it.unipv.sfw.esame.progettoC23.jdbc.bean;
 import java.sql.*;
+
 import java.sql.Date;
 import java.util.*;
 
 import it.unipv.sfw.esame.progettoC23.jdbc.util.Connessione;
 import it.unipv.sfw.esame.progettoC23.model.Badge;
 
-public class IscrizioneDAO implements IIscrizioneDAO {
+public class IscrizioneDAO<Connection> implements IIscrizioneDAO {
 	
 	private Connection connDB;
 	private String schema;

@@ -1,22 +1,11 @@
 package it.unipv.sfw.esame.progettoC23.model;
 import java.sql.*;
 
-import java.text.DateFormat;
-import java.util.*;
-
 import javax.swing.JFrame;
 
-import it.unipv.sfw.esame.progettoC23.controller.BenvenutoController;
-import it.unipv.sfw.esame.progettoC23.controller.CorsoController;
-import it.unipv.sfw.esame.progettoC23.controller.IscrizioneController;
-import it.unipv.sfw.esame.progettoC23.controller.MacchinarioController;
-import it.unipv.sfw.esame.progettoC23.jdbc.bean.ControlloDAO;
-import it.unipv.sfw.esame.progettoC23.jdbc.bean.GestioneMacchinario;
-import it.unipv.sfw.esame.progettoC23.jdbc.bean.Iscrizione;
-import it.unipv.sfw.esame.progettoC23.jdbc.bean.IscrizioneDAO;
-import it.unipv.sfw.esame.progettoC23.view.BenvenutoView;
-import it.unipv.sfw.esame.progettoC23.view.CorsoView;
-import it.unipv.sfw.esame.progettoC23.view.IscrizioneView;
+import it.unipv.sfw.esame.progettoC23.controller.OpenController;
+import it.unipv.sfw.esame.progettoC23.view.OpenView;
+
 
 
 
@@ -24,35 +13,14 @@ public class Tester {
 	
 
 		public static void main(String[] args) throws SQLException {
+		
+		OpenView ov = new OpenView();
+		OpenController oc= new OpenController(ov);
+		ov.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		ov.setVisible(true);
 			
-		Badge b = new Badge();
-		Rinnovo r = new Rinnovo();
-		IscrizioneCorso p= new IscrizioneCorso();
-			
-		BenvenutoView iv = new BenvenutoView();
-		BenvenutoController ic = new BenvenutoController(iv,b,r,p);
-		iv.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		iv.setVisible(true);
 		
-		/*b.setCodiceBadge("mccrcc");
-		
-		IscrizioneCorso c = new IscrizioneCorso ();
-		
-		System.out.println("Gli iscritti al corso di Crossfit sono: " );
-		c.riempiElenco(b.getCodiceBadge(), TipoCorso.CROSSFIT);
-		//c.riempiElenco(b1.getCodiceBadge(), TipoCorso.CROSSFIT);
-		//c.riempiElenco(b2.getCodiceBadge(), TipoCorso.CROSSFIT);
-		
-		//System.out.println("Il nuovo elenco del corso di Crossfit è: " );
-		//c.svuotaElenco(b.getCodiceBadge(), TipoCorso.CROSSFIT);
-		
-		/*CorsoView cv = new CorsoView();
-		CorsoController cc = new CorsoController(cv);
-		cv.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		cv.setVisible(true);
-		
-		
-		//Testing Macchinario
+		/*Testing Macchinario
 		Macchinario m = new Macchinario ("PANCA", "30/12/1995");
 		Macchinario m1 = new Macchinario ("LEGPRESS", "15/04/2012");
 		

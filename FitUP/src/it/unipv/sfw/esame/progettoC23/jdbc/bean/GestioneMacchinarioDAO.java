@@ -12,7 +12,7 @@ import java.util.TimeZone;
 import it.unipv.sfw.esame.progettoC23.jdbc.util.Connessione;
 import it.unipv.sfw.esame.progettoC23.model.IDMacchinario;
 
-public class GestioneMacchinarioDAO implements IGestioneMacchinarioDAO {
+public class GestioneMacchinarioDAO<Connection> implements IGestioneMacchinarioDAO {
 	private Connection connDB;
 	private String schema;
 	ArrayList<GestioneMacchinario> gm;
@@ -39,7 +39,7 @@ public class GestioneMacchinarioDAO implements IGestioneMacchinarioDAO {
 				
 				while(rs1.next())
 				{
-					GestioneMacchinario gest = new GestioneMacchinario(rs1.getString(1), rs1.getString(2), rs1.getString(3));
+					GestioneMacchinario gest = new GestioneMacchinario(rs1.getString(1), rs1.getString(2));
 					gm.add(gest);
 				}
 			}catch (Exception e) {e.printStackTrace();}
@@ -48,7 +48,7 @@ public class GestioneMacchinarioDAO implements IGestioneMacchinarioDAO {
 	
 	
 	@Override
-	public boolean insertMacchinario(GestioneMacchinario gm, IDMacchinario id)   {
+	public boolean insertMacchinario(GestioneMacchinario gm)   {
 		
 		connDB = Connessione.startConnection(connDB, schema);
 		PreparedStatement st1;
@@ -57,12 +57,11 @@ public class GestioneMacchinarioDAO implements IGestioneMacchinarioDAO {
 		
 		try
 		{
-			String query= "INSERT INTO MACCHINARIO(NOME, IDMACCHINARIO, DATAACQUISTO) VALUES(?,?,?)";
+			String query= "INSERT INTO MACCHINARIO(NOME,DATAACQUISTO) VALUES(?,?)";
 			
 			st1=connDB.prepareStatement(query);
 			st1.setString(1, gm.getNomeMacchinario());
-			st1.setString(2, id.getIDMacchinario());
-			st1.setString(3, gm.getDataAcquisto());
+			st1.setString(2, gm.getDataAcquisto());
 
 			st1.executeUpdate();
 			

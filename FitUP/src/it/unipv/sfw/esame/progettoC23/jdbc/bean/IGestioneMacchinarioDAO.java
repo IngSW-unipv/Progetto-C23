@@ -8,5 +8,5 @@ import it.unipv.sfw.esame.progettoC23.model.Macchinario;
 
 public interface IGestioneMacchinarioDAO {
 	public ArrayList<GestioneMacchinario> selectAll();
-	public boolean insertMacchinario(GestioneMacchinario gm, IDMacchinario id);
+	public boolean insertMacchinario(GestioneMacchinario gm);
 }
