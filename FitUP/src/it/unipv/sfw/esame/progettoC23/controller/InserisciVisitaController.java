@@ -14,11 +14,11 @@ import javax.swing.*;
 import java.util.Calendar;
 import java.util.Date;
 
-public class VisitaController {
+public class InserisciVisitaController {
 	private final InserisciVisitaView inserisciVisitaView;
 	private GestioneVisite gestioneVisite;
 
-	public VisitaController(InserisciVisitaView inserisciVisitaView) {
+	public InserisciVisitaController(InserisciVisitaView inserisciVisitaView) {
 		this.inserisciVisitaView = inserisciVisitaView;
 		this.gestioneVisite = GestioneVisite.getInstance();
 		setListeners();
