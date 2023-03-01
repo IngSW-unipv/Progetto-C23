@@ -53,7 +53,7 @@ public class Tester {
 		
 		
 		//Testing Macchinario
-		/*Macchinario m = new Macchinario ("PANCA", "30/12/1995");
+		Macchinario m = new Macchinario ("PANCA", "30/12/1995");
 		Macchinario m1 = new Macchinario ("LEGPRESS", "15/04/2012");
 		
 		IDMacchinario id = new IDMacchinario();
@@ -67,12 +67,14 @@ public class Tester {
 		ManutenzioneMacchinario s1 = new ManutenzioneMacchinario (g1.getIDMacchinario(), g1.getDataAcquisto());
 		
 		s.setDataManutenzione(StatoAttuale.FUNZIONANTE); 
-		System.out.println("ID Macchinario: " + id.getIDMacchinario() + "\n" + "Data Acquisto: " + g.getDataAcquisto());
+		System.out.println("ID Macchinario: " + g.getIDMacchinario() + "\n" + "Data Acquisto: " + g.getDataAcquisto());
 		System.out.println("Manutenzione prevista: " + s.getDataManutenzione());
-		
+		System.out.println("Stato Macchinario: " + s.Stato);
+		System.out.println("");
 		s1.setDataManutenzione(StatoAttuale.GUASTO);
-		System.out.println("ID Macchinario: " + id1.getIDMacchinario() + "\n" +"Data Acquisto: " + g1.getDataAcquisto());
-		System.out.println("Manutenzione prevista: " + s1.getDataManutenzione()); */
+		System.out.println("ID Macchinario: " + g1.getIDMacchinario() + "\n" +"Data Acquisto: " + g1.getDataAcquisto());
+		System.out.println("Manutenzione prevista: " + s1.getDataManutenzione());
+		System.out.println("Stato Macchinario: " + s1.Stato);
 		
 		/*GestioneMacchinarioDAO gm = new GestioneMacchinarioDAO();
 		System.out.println(gm.selectAll());
