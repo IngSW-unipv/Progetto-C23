@@ -7,14 +7,6 @@ import it.unipv.sfw.esame.progettoC23.view.MacchinarioView;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import it.unipv.sfw.esame.progettoC23.jdbc.bean.GestioneMacchinario;
-import it.unipv.sfw.esame.progettoC23.model.IDMacchinario;
-import it.unipv.sfw.esame.progettoC23.model.Macchinario;
-import it.unipv.sfw.esame.progettoC23.model.ManutenzioneMacchinario;
-import it.unipv.sfw.esame.progettoC23.view.MacchinarioView;
-import javax.swing.JOptionPane;
-import java.util.*;
-
 public class MacchinarioController {
     private final ManutenzioneMacchinario dataAcquisto;
     private final MacchinarioView view;

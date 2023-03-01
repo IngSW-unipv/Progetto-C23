@@ -2,8 +2,6 @@ package it.unipv.sfw.esame.progettoC23.jdbc.bean;
 
 
 import it.unipv.sfw.esame.progettoC23.model.Macchinario;
-import it.unipv.sfw.esame.progettoC23.model.StatoAttuale;
-
 
 
 public class GestioneMacchinario {

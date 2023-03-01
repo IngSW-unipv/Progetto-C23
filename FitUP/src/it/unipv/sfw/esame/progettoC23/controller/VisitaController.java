@@ -2,12 +2,12 @@ package it.unipv.sfw.esame.progettoC23.controller;
 
 import it.unipv.ingsfw.esame.progettoC23.exception.DayException;
 import it.unipv.ingsfw.esame.progettoC23.exception.HourException;
+import it.unipv.sfw.esame.progettoC23.jdbc.bean.Iscrizione;
+import it.unipv.sfw.esame.progettoC23.jdbc.bean.IscrizioneDAO;
 import it.unipv.sfw.esame.progettoC23.model.Badge;
 import it.unipv.sfw.esame.progettoC23.model.GestioneVisite;
 import it.unipv.sfw.esame.progettoC23.model.TipoVisita;
 import it.unipv.sfw.esame.progettoC23.model.Visita;
-import it.unipv.sfw.esame.progettoC23.jdbc.bean.Iscrizione;
-import it.unipv.sfw.esame.progettoC23.jdbc.bean.IscrizioneDAO;
 import it.unipv.sfw.esame.progettoC23.view.InserisciVisitaView;
 
 import javax.swing.*;
@@ -42,19 +42,17 @@ public class VisitaController {
                         if (gestioneVisite.inserisciVisita(v))
                             JOptionPane.showMessageDialog(inserisciVisitaView, "Visita prenotata correttamente");
                         else
-                            JOptionPane.showMessageDialog(inserisciVisitaView, "Data o orario non disponibili!" , "Errore", JOptionPane.WARNING_MESSAGE);
+                            JOptionPane.showMessageDialog(inserisciVisitaView, "Data o orario non disponibili!", "Errore", JOptionPane.WARNING_MESSAGE);
                     } catch (HourException | DayException ex) {
                         if (ex instanceof HourException)
-                            JOptionPane.showMessageDialog(inserisciVisitaView, "L'orario inserito non è corretto!" , "Errore", JOptionPane.WARNING_MESSAGE);
+                            JOptionPane.showMessageDialog(inserisciVisitaView, "L'orario inserito non è corretto!", "Errore", JOptionPane.WARNING_MESSAGE);
                         else
-                            JOptionPane.showMessageDialog(inserisciVisitaView, "Il giorno inserito non è corretto!" , "Errore", JOptionPane.WARNING_MESSAGE);
+                            JOptionPane.showMessageDialog(inserisciVisitaView, "Il giorno inserito non è corretto!", "Errore", JOptionPane.WARNING_MESSAGE);
                     }
-                }
-                else
-                    JOptionPane.showMessageDialog(inserisciVisitaView, "Selezionare un'orario!" , "Errore", JOptionPane.WARNING_MESSAGE);
-            }
-            else
-                JOptionPane.showMessageDialog(inserisciVisitaView, "Codice fiscale non trovato!" , "Errore", JOptionPane.WARNING_MESSAGE);
+                } else
+                    JOptionPane.showMessageDialog(inserisciVisitaView, "Selezionare un'orario!", "Errore", JOptionPane.WARNING_MESSAGE);
+            } else
+                JOptionPane.showMessageDialog(inserisciVisitaView, "Codice fiscale non trovato!", "Errore", JOptionPane.WARNING_MESSAGE);
         });
 
         inserisciVisitaView.getVediData().addActionListener(e -> JOptionPane.showMessageDialog(inserisciVisitaView, "Data Visita Richiesta" + inserisciVisitaView.getCalendar().getDate()));

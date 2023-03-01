@@ -1,19 +1,13 @@
 package it.unipv.sfw.esame.progettoC23.jdbc.bean;
 
-import it.unipv.sfw.esame.progettoC23.model.IDMacchinario;
 import it.unipv.sfw.esame.progettoC23.jdbc.util.Connessione;
+import it.unipv.sfw.esame.progettoC23.model.IDMacchinario;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Locale;
-import java.util.TimeZone;
-
-import it.unipv.sfw.esame.progettoC23.jdbc.util.Connessione;
-import it.unipv.sfw.esame.progettoC23.model.IDMacchinario;
 
 public class GestioneMacchinarioDAO implements IGestioneMacchinarioDAO {
     private Connection connDB;

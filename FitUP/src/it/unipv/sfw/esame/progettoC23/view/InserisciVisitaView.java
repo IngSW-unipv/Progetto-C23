@@ -59,7 +59,6 @@ public class InserisciVisitaView extends JFrame {
                         FormSpecs.DEFAULT_ROWSPEC,}));
 
 
-
         txtrInserisciIDati = new JTextArea();
         txtrInserisciIDati.setBackground(new Color(255, 255, 255));
         txtrInserisciIDati.setFont(new Font("Monospaced", Font.PLAIN, 12));

@@ -1,6 +1,4 @@
 package it.unipv.sfw.esame.progettoC23.model;
-import java.time.LocalDate;
-import java.util.*;
 
 public class Macchinario {
 

@@ -1,38 +1,25 @@
 package it.unipv.sfw.esame.progettoC23.model;
-import java.sql.*;
-
-import java.text.DateFormat;
-import java.util.*;
-
-import javax.swing.JFrame;
 
 import it.unipv.sfw.esame.progettoC23.controller.BenvenutoController;
-import it.unipv.sfw.esame.progettoC23.controller.CorsoController;
-import it.unipv.sfw.esame.progettoC23.controller.IscrizioneController;
-import it.unipv.sfw.esame.progettoC23.controller.MacchinarioController;
-import it.unipv.sfw.esame.progettoC23.jdbc.bean.ControlloDAO;
-import it.unipv.sfw.esame.progettoC23.jdbc.bean.GestioneMacchinario;
-import it.unipv.sfw.esame.progettoC23.jdbc.bean.Iscrizione;
-import it.unipv.sfw.esame.progettoC23.jdbc.bean.IscrizioneDAO;
 import it.unipv.sfw.esame.progettoC23.view.BenvenutoView;
-import it.unipv.sfw.esame.progettoC23.view.CorsoView;
-import it.unipv.sfw.esame.progettoC23.view.IscrizioneView;
 
+import javax.swing.*;
+import java.sql.SQLException;
 
 
 public class Tester {
-	
 
-		public static void main(String[] args) throws SQLException {
-			
-		Badge b = new Badge();
-		Rinnovo r = new Rinnovo();
-		IscrizioneCorso p= new IscrizioneCorso();
-			
-		BenvenutoView iv = new BenvenutoView();
-		BenvenutoController ic = new BenvenutoController(iv,b,r,p);
-		iv.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		iv.setVisible(true);
+
+    public static void main(String[] args) throws SQLException {
+
+        Badge b = new Badge();
+        Rinnovo r = new Rinnovo();
+        IscrizioneCorso p = new IscrizioneCorso();
+
+        BenvenutoView iv = new BenvenutoView();
+        BenvenutoController ic = new BenvenutoController(iv, b, r, p);
+        iv.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        iv.setVisible(true);
 		
 		/*b.setCodiceBadge("mccrcc");
 		

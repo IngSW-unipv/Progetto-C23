@@ -1,6 +1,10 @@
 package it.unipv.sfw.esame.progettoC23.model;
-import it.unipv.ingsfw.esame.progettoC23.exception.*;
-import java.util.*;
+
+import it.unipv.ingsfw.esame.progettoC23.exception.DayException;
+import it.unipv.ingsfw.esame.progettoC23.exception.HourException;
+
+import java.util.ArrayList;
+import java.util.Calendar;
 
 public class GestioneVisite {
 
