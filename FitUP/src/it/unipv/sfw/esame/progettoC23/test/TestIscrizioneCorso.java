@@ -13,8 +13,6 @@ import it.unipv.sfw.esame.progettoC23.model.IscrizioneCorso;
 class TestIscrizioneCorso {
 	
 	private IscrizioneCorso c;
-	private String CF;
-	private String CorsoScelto;
 
 	@Before
 	public void InitTest () {
@@ -27,7 +25,6 @@ class TestIscrizioneCorso {
 		
 		c.riempiElenco("MRS", "CROSSFIT");
 		c.riempiElenco("VRS", "CROSSFIT");
-		        
         assertEquals("Sono state aggiunte due persone alla lista", 2, c.stampaCrossfit().size()); 
        
 	}
