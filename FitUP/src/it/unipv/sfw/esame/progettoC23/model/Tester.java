@@ -14,7 +14,7 @@ public class Tester {
 
         Badge b = new Badge();
         Rinnovo r = new Rinnovo();
-        IscrizioneCorso p = new IscrizioneCorso();
+        IscrizioneCorso p = IscrizioneCorso.getInstance();
 
         BenvenutoView iv = new BenvenutoView();
         BenvenutoController ic = new BenvenutoController(iv, b, r, p);
