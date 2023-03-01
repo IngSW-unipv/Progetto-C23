@@ -10,7 +10,7 @@ import it.unipv.sfw.esame.progettoC23.controller.VisitaController;
 import javax.swing.*;
 import java.awt.*;
 
-public class VisitaView extends JFrame {
+public class InserisciVisitaView extends JFrame {
 
     private JButton submit, vediData;
     private JLabel uscita;
@@ -23,7 +23,7 @@ public class VisitaView extends JFrame {
     private VisitaController controller;
 
 
-    public VisitaView() {
+    public InserisciVisitaView() {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         getContentPane().setBackground(Color.WHITE);
         setSize(590, 368);
