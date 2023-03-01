@@ -1,4 +1,4 @@
-package it.unipv.sfw.esame.progettoC23;
+package it.unipv.sfw.esame.progettoC23.model;
 import java.util.*;
 
 import it.unipv.sfw.esame.progettoC23.jdbc.bean.GestioneMacchinario;

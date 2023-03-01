@@ -1,7 +1,7 @@
 package it.unipv.sfw.esame.progettoC23.jdbc.bean;
 import java.util.*;
 
-import it.unipv.sfw.esame.progettoC23.TipoAbbonamento;
+import it.unipv.sfw.esame.progettoC23.model.TipoAbbonamento;
 
 //DA SISTEMARE PER RISPETTARE PATTERN DAO
 import java.sql.Date;

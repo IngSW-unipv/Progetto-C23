@@ -1,9 +1,9 @@
 package it.unipv.sfw.esame.progettoC23.controller;
 
-import it.unipv.sfw.esame.progettoC23.IscrizioneCorso;
-import it.unipv.sfw.esame.progettoC23.TipoCorso;
+import it.unipv.sfw.esame.progettoC23.model.IscrizioneCorso;
+import it.unipv.sfw.esame.progettoC23.model.TipoCorso;
 import it.unipv.sfw.esame.progettoC23.view.CorsoView;
-import it.unipv.sfw.esame.progettoC23.view.IscrittoView;
+import it.unipv.sfw.esame.progettoC23.view.IscrizioneView;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -12,12 +12,15 @@ import java.awt.event.ActionListener;
 import javax.swing.*;
 
 
-public class CorsoController {
+public class CorsoController{
 	
-	private final CorsoView view;
-	private CorsoView cv;
+	private CorsoView view;
+	
+	
 	
 	public CorsoController (CorsoView view) {
+		
+		
 		
 		this.view = view;
 		setListeners();
@@ -26,11 +29,14 @@ public class CorsoController {
 
 	private void setListeners() {
 		
+		
+		
 		view.getElenco().addActionListener(new ActionListener() {
 			
 	        public void actionPerformed(ActionEvent event) {
 
 	            int selezione = view.Elenco.getSelectedIndex();
+	            
 	            
 	            switch (selezione) {
 	            

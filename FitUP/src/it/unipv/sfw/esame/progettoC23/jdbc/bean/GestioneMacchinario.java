@@ -1,8 +1,8 @@
 package it.unipv.sfw.esame.progettoC23.jdbc.bean;
 import java.util.*;
 
-import it.unipv.sfw.esame.progettoC23.Macchinario;
-import it.unipv.sfw.esame.progettoC23.StatoAttuale;
+import it.unipv.sfw.esame.progettoC23.model.Macchinario;
+import it.unipv.sfw.esame.progettoC23.model.StatoAttuale;
 
 import java.time.*;
 import java.time.format.DateTimeFormatter;

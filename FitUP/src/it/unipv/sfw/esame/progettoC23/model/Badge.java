@@ -1,6 +1,7 @@
-package it.unipv.sfw.esame.progettoC23;
+package it.unipv.sfw.esame.progettoC23.model;
 
 public class Badge {
+	
 	
 	protected String CodiceBadge; 
 	private final String CodicePalestra = "FitUp";

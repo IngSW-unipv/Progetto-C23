@@ -1,12 +1,17 @@
-package it.unipv.sfw.esame.progettoC23;
+package it.unipv.sfw.esame.progettoC23.model;
 
+import java.sql.ResultSet;
+import java.sql.Statement;
 import java.util.*;
 import java.util.function.Consumer;
 
+import it.unipv.sfw.esame.progettoC23.jdbc.bean.Iscrizione;
+import it.unipv.sfw.esame.progettoC23.jdbc.util.Connessione;
+
 public class IscrizioneCorso {
 	
-	private String CodiceBadge;
-	private TipoCorso CorsoScelto;
+	private String CF;
+	private String CorsoScelto;
 	
 	
 	public IscrizioneCorso () {
@@ -19,121 +24,90 @@ public class IscrizioneCorso {
 	static List <String> ElencoPilates = new ArrayList <String> (30);
 	
 	
-	public void riempiElenco (String CodiceBadge, TipoCorso CorsoScelto) {
+	public void riempiElenco (String CF, String CorsoScelto) {
 		
-		this.CodiceBadge = CodiceBadge;
+		this.CF = CF;
 		this.CorsoScelto = CorsoScelto;
 		
 		switch (CorsoScelto) {
 		
-		case CROSSFIT:
+		case "CROSSFIT":
 			
-			ElencoCrossfit.add(CodiceBadge);	
+			ElencoCrossfit.add(CF);	
 			
 			if (ElencoCrossfit.size() >= 30) {
 				
 				throw new ArrayIndexOutOfBoundsException("Raggiunto il numero massimo di iscritti a questo corso.");
 			}
 			
-			System.out.println(CodiceBadge);
+			System.out.println(CF);
 			// System.out.println(ElencoCrossfit);
 			
 			break;
 			
-		case YOGA:
+		case "YOGA":
 			
-			ElencoYoga.add(CodiceBadge);
+			ElencoYoga.add(CF);
 			
 			if (ElencoYoga.size() >= 30) {
 				
 				throw new ArrayIndexOutOfBoundsException("Raggiunto il numero massimo di iscritti a questo corso.");
 			}
 			
-			System.out.println(CodiceBadge);
+			System.out.println(CF);
 			
 			break;
 		
-		case ZUMBA:
+		case "ZUMBA":
 			
-			ElencoZumba.add(CodiceBadge);
+			ElencoZumba.add(CF);
 			
 			if (ElencoZumba.size() >= 30) {
 				
 				throw new ArrayIndexOutOfBoundsException("Raggiunto il numero massimo di iscritti a questo corso.");
 			}
 			
-			System.out.println(CodiceBadge);
+			System.out.println(CF);
 			// System.out.println(ElencoZumba);
 			
 			break;
 		
-		case PILATES:
+		case "PILATES":
 			
-			ElencoPilates.add(CodiceBadge);
+			ElencoPilates.add(CF);
 			
 			if (ElencoPilates.size() >= 30) {
 				
 				throw new ArrayIndexOutOfBoundsException("Raggiunto il numero massimo di iscritti a questo corso.");
 			}
 			
-			System.out.println(CodiceBadge);
+			System.out.println(CF);
 			
 			break;
 			
 		}		
 	}
 	
-	public void svuotaElenco (String CodiceBadge, TipoCorso CorsoScelto) {
-		
-		this.CodiceBadge = CodiceBadge;
-		this.CorsoScelto = CorsoScelto;
-		
-		switch (CorsoScelto) {
-		
-		case CROSSFIT:
-			
-			ElencoCrossfit.remove(CodiceBadge);	
-			System.out.println(ElencoCrossfit);
-			break;
-			
-		case YOGA:
-			
-			ElencoYoga.remove(CodiceBadge);	
-			System.out.println(ElencoYoga);
-			break;
-		
-		case ZUMBA:
-			
-			ElencoZumba.remove(CodiceBadge);	
-			System.out.println(ElencoZumba);
-			break;
-		
-		case PILATES:
-			
-			ElencoPilates.remove(CodiceBadge);	
-			System.out.println(ElencoPilates);
-			break;
-			
-		}
-	}
 	
-	public static List<String> StampaCrossfit () {
+	public   List<String> StampaCrossfit () {
 		
 		return ElencoCrossfit;
 	}
 	
-	public static List<String> StampaYoga () {
+	public   List<String> StampaYoga () {
 		
 		return ElencoYoga;
 	}
 	
-	public static List<String> StampaZumba () {
+	public   List<String> StampaZumba () {
 		
 		return ElencoZumba;
 	}
 
-	public static List<String> StampaPilates () {
+	public   List<String> StampaPilates () {
 	
 		return ElencoPilates;
 	}	
+	
+
 }

@@ -9,8 +9,8 @@ import java.util.Calendar;
 import java.util.Locale;
 import java.util.TimeZone;
 
-import it.unipv.sfw.esame.progettoC23.IDMacchinario;
 import it.unipv.sfw.esame.progettoC23.jdbc.util.Connessione;
+import it.unipv.sfw.esame.progettoC23.model.IDMacchinario;
 
 public class GestioneMacchinarioDAO implements IGestioneMacchinarioDAO {
 	private Connection connDB;

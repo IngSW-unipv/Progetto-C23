@@ -1,4 +1,4 @@
-package it.unipv.sfw.esame.progettoC23;
+package it.unipv.sfw.esame.progettoC23.model;
 import it.unipv.ingsfw.esame.progettoC23.exception.*;
 import java.util.*;
 

@@ -3,8 +3,8 @@ import java.sql.*;
 import java.sql.Date;
 import java.util.*;
 
-import it.unipv.sfw.esame.progettoC23.Badge;
 import it.unipv.sfw.esame.progettoC23.jdbc.util.Connessione;
+import it.unipv.sfw.esame.progettoC23.model.Badge;
 
 public class IscrizioneDAO implements IIscrizioneDAO {
 	
@@ -43,6 +43,8 @@ public class IscrizioneDAO implements IIscrizioneDAO {
 	}
 	
 	
+	
+	
 	@Override
 	public boolean insertIscritto(Iscrizione i)   {
 		
@@ -73,5 +75,28 @@ public class IscrizioneDAO implements IIscrizioneDAO {
 		Connessione.closeConnection(connDB);
 		return esito;
 	}
+	
+	public ArrayList<Iscrizione> selectCF() {
+		
+		iscr= new ArrayList<>();	
+		connDB = Connessione.startConnection(connDB, schema);
+		Statement st1;
+		ResultSet rs1;
+		
+		try
+		{
+			st1= connDB.createStatement();
+			String query= "SELECT CF from ISCRITTO";
+			rs1=st1.executeQuery(query);
+			
+			while(rs1.next())
+			{
+
+				Iscrizione i = new Iscrizione(rs1.getString(1), rs1.getString(2), rs1.getString(3),rs1.getString(4));
+				iscr.add(i);
+			}
+		}catch (Exception e) {e.printStackTrace();}
+		return iscr;
+}
 
 }

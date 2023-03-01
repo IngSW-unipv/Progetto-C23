@@ -1,6 +1,7 @@
 package it.unipv.sfw.esame.progettoC23.controller;
 import java.awt.*;
 
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.lang.reflect.Array;
@@ -11,27 +12,30 @@ import java.util.TimeZone;
 
 import javax.swing.JOptionPane;
 
-
-import it.unipv.sfw.esame.progettoC23.Persona;
-import it.unipv.sfw.esame.progettoC23.Rinnovo;
-
 import it.unipv.sfw.esame.progettoC23.jdbc.bean.Iscrizione;
 import it.unipv.sfw.esame.progettoC23.jdbc.bean.IscrizioneDAO;
 import it.unipv.sfw.esame.progettoC23.jdbc.util.*;
-import it.unipv.sfw.esame.progettoC23.view.IscrittoView;
+import it.unipv.sfw.esame.progettoC23.model.Badge;
+import it.unipv.sfw.esame.progettoC23.model.IscrizioneCorso;
+import it.unipv.sfw.esame.progettoC23.model.IscrizioneCorsoP;
+import it.unipv.sfw.esame.progettoC23.model.Persona;
+import it.unipv.sfw.esame.progettoC23.model.Rinnovo;
+import it.unipv.sfw.esame.progettoC23.view.BenvenutoView;
+import it.unipv.sfw.esame.progettoC23.view.IscrizioneView;
 
-public class IscrittoContoller {
+public class IscrizioneController {
 	
-	//private final Rinnovo rinnovo;
-	private final IscrittoView view;
-	//private final Badge badge;
+	private  Rinnovo rinnovo;
+	private  BenvenutoView view;
+	private  Badge badge;
+	private IscrizioneCorsoP p;
 	private Calendar PrimaIscrizione = Calendar.getInstance(TimeZone.getTimeZone("Europe/Rome"), Locale.ITALY);
-	String[]iscritti= new String[4];
-	public IscrittoContoller (IscrittoView view) {
+	public IscrizioneController (BenvenutoView view, Badge badge, Rinnovo rinnovo, IscrizioneCorsoP p) {
 		
-		//this.rinnovo=rinnovo;
+		this.rinnovo=rinnovo;
 		this.view=view;
-		//this.badge=badge;
+		this.badge=badge;
+		this.p=p;
 		
 		setListeners();
 	}
@@ -42,9 +46,11 @@ public class IscrittoContoller {
 			
 			@Override
 			public void actionPerformed (ActionEvent e) {
+		
+			rinnovo.setDataRinnovo(view.getRinnovo());
+			view.setRinnovo(rinnovo.getDataRinnovo());
 			
 			
-			view.setRinnovo(view.getRinnovo());
 			
 			}
 		});
@@ -55,8 +61,10 @@ public class IscrittoContoller {
 			@Override
 			public void actionPerformed (ActionEvent e) {
 				
-				
-			view.setBadge(view.getCf());
+			
+			badge.setCodiceBadge(view.getCf());	
+			view.setBadge(badge.getCodiceBadge());
+	
 					
 			}
 			
@@ -74,11 +82,18 @@ public class IscrittoContoller {
 			Iscrizione g = new Iscrizione (p.getCF(),p.getNome(),p.getCognome(),p.getDataNascita());
 			System.out.println(id.selectAll());
 			System.out.println(id.insertIscritto(g));
+			
+			
+			
 				
 				
 			}
 
 		});
+		
+
+
+		
 		
 		
 		

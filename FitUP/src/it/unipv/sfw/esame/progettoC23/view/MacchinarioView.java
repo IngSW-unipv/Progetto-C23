@@ -9,11 +9,11 @@ import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.font.*;
 
-import it.unipv.sfw.esame.progettoC23.IDMacchinario;
-import it.unipv.sfw.esame.progettoC23.Macchinario;
-import it.unipv.sfw.esame.progettoC23.ManutenzioneMacchinario;
-import it.unipv.sfw.esame.progettoC23.StatoAttuale;
 import it.unipv.sfw.esame.progettoC23.jdbc.bean.GestioneMacchinario;
+import it.unipv.sfw.esame.progettoC23.model.IDMacchinario;
+import it.unipv.sfw.esame.progettoC23.model.Macchinario;
+import it.unipv.sfw.esame.progettoC23.model.ManutenzioneMacchinario;
+import it.unipv.sfw.esame.progettoC23.model.StatoAttuale;
 
 public class MacchinarioView extends JFrame {
 	

@@ -8,7 +8,6 @@ import javax.swing.*;
 
 public class CorsoView extends JFrame {
 	
-	private JFrame f;
 	private JLabel l;
 	private JLabel l1;
 	public JComboBox Elenco;
@@ -19,7 +18,6 @@ public class CorsoView extends JFrame {
 	
 	public CorsoView() {
 		
-		f = new JFrame("frame");
 		
 		setLayout(new FlowLayout());
 		setSize(lunghezza,altezza);
@@ -40,9 +38,10 @@ public class CorsoView extends JFrame {
 		Elenco = new JComboBox(s);
 		Elenco.setPreferredSize(new Dimension(lunghezza_e,altezza_e));
 		c.add(Elenco);
-		
+
 		
 	}
+	
 	
 	public JComboBox getElenco() {
 		
