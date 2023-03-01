@@ -1,11 +1,13 @@
 package it.unipv.sfw.esame.progettoC23.controller;
-import java.awt.*;
+
+import it.unipv.sfw.esame.progettoC23.Persona;
+import it.unipv.sfw.esame.progettoC23.jdbc.bean.Iscrizione;
+import it.unipv.sfw.esame.progettoC23.jdbc.bean.IscrizioneDAO;
+import it.unipv.sfw.esame.progettoC23.view.IscrittoView;
 
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.lang.reflect.Array;
-import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Locale;
 import java.util.TimeZone;
@@ -105,6 +107,5 @@ public class IscrizioneController {
 		
 	
 
-	
 
 }

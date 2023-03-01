@@ -4,6 +4,8 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.*;
 import java.util.function.Consumer;
+import java.util.ArrayList;
+import java.util.List;
 
 import it.unipv.sfw.esame.progettoC23.jdbc.bean.Iscrizione;
 import it.unipv.sfw.esame.progettoC23.jdbc.util.Connessione;

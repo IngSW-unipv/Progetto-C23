@@ -1,10 +1,8 @@
 package it.unipv.sfw.esame.progettoC23.view;
 
-import java.awt.*;
-import java.util.*;
-import java.util.List;
-
 import javax.swing.*;
+import java.awt.*;
+import java.util.List;
 
 public class CorsoView extends JFrame {
 	

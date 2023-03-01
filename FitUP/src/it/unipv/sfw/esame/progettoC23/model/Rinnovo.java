@@ -36,7 +36,5 @@ public class Rinnovo {
 			return PrimaIscrizione;
 		}
 
-	
-	
 
 }
