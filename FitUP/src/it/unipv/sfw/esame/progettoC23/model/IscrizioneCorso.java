@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class IscrizioneCorso {
+	
     private static volatile IscrizioneCorso INSTANCE = null;
     private String CF;
     private String CorsoScelto;
@@ -12,7 +13,8 @@ public class IscrizioneCorso {
     private static List<String> ElencoZumba = new ArrayList<String>(30);
     private static List<String> ElencoPilates = new ArrayList<String>(30);
 
-    private IscrizioneCorso() {
+    public IscrizioneCorso() {
+    	
         ElencoCrossfit = new ArrayList<String>(30);
         ElencoYoga = new ArrayList<String>(30);
         ElencoZumba = new ArrayList<String>(30);
@@ -47,8 +49,7 @@ public class IscrizioneCorso {
                 }
 
                 System.out.println(CF);
-                // System.out.println(ElencoCrossfit);
-
+                
                 break;
 
             case "YOGA":
@@ -74,7 +75,6 @@ public class IscrizioneCorso {
                 }
 
                 System.out.println(CF);
-                // System.out.println(ElencoZumba);
 
                 break;
 
@@ -114,6 +114,5 @@ public class IscrizioneCorso {
 
         return ElencoPilates;
     }
-
 
 }

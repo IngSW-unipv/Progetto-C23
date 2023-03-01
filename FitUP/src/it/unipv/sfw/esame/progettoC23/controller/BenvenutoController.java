@@ -85,7 +85,6 @@ public class BenvenutoController {
 
                 int selezione = view.Elenco.getSelectedIndex();
 
-
                 switch (selezione) {
 
                     case 0:

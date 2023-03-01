@@ -73,6 +73,8 @@ public class Tester {
 	MacchinarioController mc1 = new MacchinarioController(s1, M1, id1);
 	M.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	M.setVisible(true); */
+        
+        
     }
 
 }
