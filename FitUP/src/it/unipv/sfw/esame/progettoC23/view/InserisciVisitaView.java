@@ -30,7 +30,7 @@ public class InserisciVisitaView extends JFrame {
 	private JComboBox<String[]> tipovisit;
 	private JTextArea txtrTipoVisita;
 
-	public InserisciVisitaView() throws ParseException {
+	public InserisciVisitaView(){
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		getContentPane().setBackground(Color.WHITE);
 		setSize(590, 368);
@@ -95,7 +95,13 @@ public class InserisciVisitaView extends JFrame {
 		calendar.setMinSelectableDate(new Date()); // sets today as minimum selectable date
 		String dateMax = "31/12/2024";
 		SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
-		Date date = dateFormat.parse(dateMax);
+		Date date=new Date();
+		try {
+			date = dateFormat.parse(dateMax);
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		calendar.setMaxSelectableDate(date); // sets a specific day as max selectable date
 
 		vediData = new JButton("show date");
