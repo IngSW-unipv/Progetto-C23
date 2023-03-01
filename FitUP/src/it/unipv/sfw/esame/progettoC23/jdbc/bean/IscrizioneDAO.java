@@ -17,12 +17,10 @@ public class IscrizioneDAO implements IIscrizioneDAO {
     public IscrizioneDAO() {
         super();
         this.schema = "palestra";
-
     }
 
     @Override
     public ArrayList<Iscrizione> selectAll() {
-
         iscr = new ArrayList<>();
         connDB = Connessione.startConnection(connDB, schema);
         Statement st1;
@@ -44,10 +42,32 @@ public class IscrizioneDAO implements IIscrizioneDAO {
         return iscr;
     }
 
+    @Override
+    public Iscrizione getFromCF(String CF) {
+        Iscrizione i = null;
+        connDB = Connessione.startConnection(connDB, schema);
+        PreparedStatement st1;
+        ResultSet rs1;
+
+        try {
+            String query = "SELECT * from ISCRITTO WHERE CF = ?";
+            st1 = connDB.prepareStatement(query);
+            st1.setString(1, CF);
+
+            rs1 = st1.executeQuery(query);
+            while (rs1.next()) {
+                i = new Iscrizione(rs1.getString(1), rs1.getString(2), rs1.getString(3), rs1.getString(4));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return i;
+    }
+
 
     @Override
     public boolean insertIscritto(Iscrizione i) {
-
         connDB = Connessione.startConnection(connDB, schema);
         PreparedStatement st1;
 
@@ -63,13 +83,10 @@ public class IscrizioneDAO implements IIscrizioneDAO {
             st1.setString(4, i.getDatadiNascita());
 
             st1.executeUpdate();
-
-
         } catch (Exception e) {
             e.printStackTrace();
             esito = false;
         }
-
 
         Connessione.closeConnection(connDB);
         return esito;

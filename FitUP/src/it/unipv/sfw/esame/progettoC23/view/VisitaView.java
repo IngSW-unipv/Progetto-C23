@@ -15,7 +15,7 @@ public class VisitaView extends JFrame {
     private JButton submit, vediData;
     private JLabel uscita;
     private JTextField badge;
-    private JComboBox<int[]> orario;
+    private JComboBox<Integer> orario;
     public static final int altezza = 300;
     public static final int lunghezza = 200;
     private JTextArea txtrOra, txtrCodicebadge, txtrData, txtrInserisciIDati;
@@ -58,7 +58,7 @@ public class VisitaView extends JFrame {
                         FormSpecs.RELATED_GAP_ROWSPEC,
                         FormSpecs.DEFAULT_ROWSPEC,}));
 
-        int[] ora = {10, 11, 12, 14, 15, 16};
+
 
         txtrInserisciIDati = new JTextArea();
         txtrInserisciIDati.setBackground(new Color(255, 255, 255));
@@ -70,7 +70,9 @@ public class VisitaView extends JFrame {
         c.add(uscita, "8, 4, left, center");
 
         orario = new JComboBox<>();
-        orario.addItem(ora);
+        for (int i = 0; i < 23; i++) {
+            orario.addItem(i);
+        }
 
         txtrCodicebadge = new JTextArea();
         txtrCodicebadge.setFont(new Font("Monospaced", Font.PLAIN, 12));
@@ -119,5 +121,9 @@ public class VisitaView extends JFrame {
 
     public JTextArea getTxtrCodicebadge() {
         return txtrCodicebadge;
+    }
+
+    public Object getSelectedItemCombo() {
+        return orario.getSelectedItem();
     }
 }

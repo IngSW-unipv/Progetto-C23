@@ -13,6 +13,7 @@ public class GestioneVisite {
      *  so I can have 6 visits per day at most.
      *  Visits are not possible on Sundays
      */
+    private static volatile GestioneVisite INSTANCE = null;
 
     private static final int GIORNO_FESTIVO = Calendar.SUNDAY;
     private static final int INIZIO_GIORNATA = 10;
@@ -21,8 +22,19 @@ public class GestioneVisite {
 
     private ArrayList<Visita> elencoVisite;
 
-    public GestioneVisite() {
+    private GestioneVisite() {
         elencoVisite = new ArrayList<>();
+    }
+
+    public static GestioneVisite getInstance() {
+        if (INSTANCE == null) {
+            synchronized (GestioneVisite.class) {
+                if (INSTANCE == null) {
+                    INSTANCE = new GestioneVisite();
+                }
+            }
+        }
+        return INSTANCE;
     }
 
     // To be entered, the visit must:
