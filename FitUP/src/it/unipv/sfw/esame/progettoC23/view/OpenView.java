@@ -21,7 +21,7 @@ public class OpenView extends JFrame {
 		scritta = new JLabel("Scegli un'operazione tra le seguenti");
 		p.add(scritta);
 		
-		String s[] = {"PRIMA ISCRIZIONE", "PRENOTA VISITE", "MACCHINARI"};
+		String s[] = {"PRIMA ISCRIZIONE", "PRENOTA VISITE", "CERCA VISITE", "MACCHINARI"};
 		
 		scelte = new JComboBox(s);
 		scelte.setPreferredSize(new Dimension(200,20));
