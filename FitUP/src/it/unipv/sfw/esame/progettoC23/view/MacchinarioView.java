@@ -15,14 +15,15 @@ public class MacchinarioView extends JFrame {
 	private JTextField DataAcquisto;
 	public static final int altezza = 400;
 	public static final int lunghezza = 700;
-
-	IDMacchinario id = new IDMacchinario();
+	private IDMacchinario id;
 	
 	public MacchinarioView() {
 		
 		this.setLayout(new BorderLayout());
 		setSize(lunghezza, altezza);
 		setTitle("Macchinari");
+		
+		id = new IDMacchinario();
 		
 		JPanel sp = new JPanel();
 		sp.setBackground(new Color(255,0,0));
@@ -80,7 +81,7 @@ public class MacchinarioView extends JFrame {
         uscita1.setText("IDMacchinario: " + macchinario.getNomeMacchinario() + macchinario.getDataAcquisto().replace("/", "") + "\n");
     }*/
 
-    public void setNuovoMacchinario(String idMacchinario) {
+/*    public void setNuovoMacchinario(String idMacchinario) {
         uscita1.setText("IDMacchinario: " + idMacchinario);
     }
 
@@ -92,6 +93,6 @@ public class MacchinarioView extends JFrame {
         uscita1.setText("IDMacchinario: " + id.getIDMacchinario() + "  " + "Data Acquisto: " + m.getDataAcquisto());
         uscita2.setText("  DataManutenzione: " + m.getDataManutenzione() + "\n");
         uscita3.setText("  Stato: " + m.getStato() + "\n");
-    }
+    }*/
 
 }
