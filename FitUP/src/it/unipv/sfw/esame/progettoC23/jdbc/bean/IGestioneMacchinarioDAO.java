@@ -6,6 +6,5 @@ public interface IGestioneMacchinarioDAO {
 
 	
 	public boolean insertMacchinario(GestioneMacchinario gm);
-	public ArrayList<GestioneMacchinario> selectMacchinario(GestioneMacchinario gm);
 
 }
