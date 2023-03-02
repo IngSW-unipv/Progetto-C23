@@ -23,13 +23,6 @@ import java.util.*;
 public class MacchinarioController {
 	
 	private  MacchinarioView view;
-	
-
-    public MacchinarioController(ManutenzioneMacchinario dataAcquisto, MacchinarioView view, IDMacchinario idMacchinario) {
-
-        this.dataAcquisto = dataAcquisto;
-        this.view = view;
-        this.idMacchinario = idMacchinario;
 
 	
 	public MacchinarioController(MacchinarioView view) {
@@ -61,5 +54,6 @@ public class MacchinarioController {
 		});
 		
 	
-	}	
+	}
+}
 

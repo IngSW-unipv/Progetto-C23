@@ -45,16 +45,7 @@ public class BenvenutoView extends JFrame {
 		add(wp, BorderLayout.WEST);
 		
 		
-		
-		
-
-
-    
-
- 
-
-
-        l = new JLabel("Seleziona il corso a cui ti vuoi iscrivere:");
+		l = new JLabel("Seleziona il corso a cui ti vuoi iscrivere:");
         l.setForeground(Color.black);
         cp.add(l);
 
@@ -78,7 +69,6 @@ public class BenvenutoView extends JFrame {
         cf = new JTextField("INSERIRE CF");
         np.add(cf);
         cf.setColumns(20);
-        cf.setOpaque(true);
 
         nome = new JTextField("INSERIRE NOME");
         np.add(nome);

@@ -10,27 +10,11 @@ public class GestioneMacchinario {
 	   
 
 public GestioneMacchinario(String nomeMacchinario,String dataAcquisto) {
-	this.NomeMacchinario = nomeMacchinario;
-	this.DataAcquisto = dataAcquisto;
+	this.nomeMacchinario = nomeMacchinario;
+	this.dataAcquisto = dataAcquisto;
 }
 
-public String getDataAcquisto() {
-	return DataAcquisto; 
-}
-
-public String setDataAcquisto(Macchinario M) {
-	return DataAcquisto;
-}
- public GestioneMacchinario(String nomeMacchinario, String iDMacchinario, String dataAcquisto) {
-        this.nomeMacchinario = nomeMacchinario;
-        this.dataAcquisto = dataAcquisto;
-        this.IDMacchinario = iDMacchinario;
-    }
-
-
-@Override
-public String toString() {
-	return "Macchinario: ("+NomeMacchinario+", "+DataAcquisto+")" +"\n";
+ 
 
     public String getDataAcquisto() {
         return dataAcquisto;
@@ -61,4 +45,3 @@ public String toString() {
 
     }
 
-}

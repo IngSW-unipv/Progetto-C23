@@ -8,6 +8,7 @@ import it.unipv.sfw.esame.progettoC23.model.Badge;
 import it.unipv.sfw.esame.progettoC23.model.IscrizioneCorso;
 import it.unipv.sfw.esame.progettoC23.model.Rinnovo;
 import it.unipv.sfw.esame.progettoC23.view.BenvenutoView;
+import it.unipv.sfw.esame.progettoC23.view.InserisciVisitaView;
 import it.unipv.sfw.esame.progettoC23.view.MacchinarioView;
 import it.unipv.sfw.esame.progettoC23.view.OpenView;
 import it.unipv.sfw.esame.progettoC23.view.VisitaView;
@@ -48,10 +49,10 @@ public class OpenController {
 	                	
 	                case 1:
 	                	
-	                	VisitaView vv = new VisitaView();
-	                	VisitaController vc = new VisitaController(vv);
-	                	vv.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-	            		vv.setVisible(true);
+	                	InserisciVisitaView ivv = new InserisciVisitaView();
+	                	InserisciVisitaController ivc = new InserisciVisitaController(ivv);
+	                	ivv.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	            		ivv.setVisible(true);
 	                	
 	                    break;
 

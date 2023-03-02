@@ -1,14 +1,15 @@
 package it.unipv.sfw.esame.progettoC23.view;
 
 import javax.swing.JFrame;
-import com.jgoodies.forms.layout.FormLayout;
+
+/*import com.jgoodies.forms.layout.FormLayout;
 import com.jgoodies.forms.layout.ColumnSpec;
 import com.jgoodies.forms.layout.RowSpec;
 import com.jgoodies.forms.layout.FormSpecs;
 import javax.swing.JList;
 import javax.swing.ListModel;
 
-import com.toedter.calendar.JCalendar;
+import com.toedter.calendar.JCalendar;*/
 
 import it.unipv.sfw.esame.progettoC23.model.Visita;
 
