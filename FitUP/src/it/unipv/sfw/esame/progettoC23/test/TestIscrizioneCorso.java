@@ -1,11 +1,7 @@
 package it.unipv.sfw.esame.progettoC23.test;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.jupiter.api.Assertions.*;
-
 import org.junit.Before;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import it.unipv.sfw.esame.progettoC23.model.IscrizioneCorso;

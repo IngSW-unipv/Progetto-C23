@@ -3,13 +3,13 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
-//import com.jgoodies.forms.layout.FormLayout;
-//import com.jgoodies.forms.layout.ColumnSpec;
-//import com.jgoodies.forms.layout.FormSpecs;
-//import com.jgoodies.forms.layout.RowSpec;
+import com.jgoodies.forms.layout.FormLayout;
+import com.jgoodies.forms.layout.ColumnSpec;
+import com.jgoodies.forms.layout.FormSpecs;
+import com.jgoodies.forms.layout.RowSpec;
 import java.awt.Font;
 import java.awt.Color;
-//import com.toedter.calendar.JCalendar;
+import com.toedter.calendar.JCalendar;
 
 public class VisitaView extends JFrame {
 	

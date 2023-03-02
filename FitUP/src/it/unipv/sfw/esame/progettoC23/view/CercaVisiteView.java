@@ -2,28 +2,17 @@ package it.unipv.sfw.esame.progettoC23.view;
 
 import javax.swing.JFrame;
 
-/*import com.jgoodies.forms.layout.FormLayout;
-import com.jgoodies.forms.layout.ColumnSpec;
-import com.jgoodies.forms.layout.RowSpec;
-import com.jgoodies.forms.layout.FormSpecs;
 import javax.swing.JList;
-import javax.swing.ListModel;
 
-import com.toedter.calendar.JCalendar;*/
+import com.toedter.calendar.JCalendar;
 
 import it.unipv.sfw.esame.progettoC23.model.Visita;
 
 import javax.swing.DefaultListModel;
 import javax.swing.JButton;
 import javax.swing.JLabel;
-import java.awt.Color;
 import java.util.Calendar;
-import javax.swing.SpringLayout;
-import java.awt.FlowLayout;
-import java.awt.CardLayout;
 import javax.swing.JTextField;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
 
 public class CercaVisiteView  extends JFrame{
 	private JCalendar calendar;

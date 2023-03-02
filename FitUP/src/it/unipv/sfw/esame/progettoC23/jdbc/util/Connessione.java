@@ -1,10 +1,4 @@
 package it.unipv.sfw.esame.progettoC23.jdbc.util;
-import it.unipv.sfw.esame.progettoC23.controller.*;
-
-import java.io.FileInputStream;
-import java.sql.*;
-
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -20,26 +14,26 @@ public class Connessione {
     private static Connessione conn;
 
 
-    public static Connection startConnection(Connection conn, String schema) {
+    public static Connection startConnection(Connection connDB, String schema) {
 
         //DbDriver = "com.mysql.cj.jdbc.Driver";
         DbURL = "jdbc:mysql://34.154.46.196:3306/" + schema;
         username = "root";
         password = "";
 
-        if (isOpen(conn))
-            closeConnection(conn);
+        if (isOpen(connDB))
+            closeConnection(connDB);
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
 
-            conn = DriverManager.getConnection(DbURL, username, password);
+            connDB = DriverManager.getConnection(DbURL, username, password);
         } catch (Exception e) {
 
             e.printStackTrace();
             return null;
 
         }
-        return conn;
+        return connDB;
 
 
     }
