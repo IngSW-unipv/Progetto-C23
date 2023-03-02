@@ -7,7 +7,7 @@ public class ManutenzioneMacchinario {
     private String dataAcquisto;
     private String dataManutenzione;
     private String IDMacchinario;
-    public StatoAttuale stato;
+    private StatoAttuale stato;
 
     public ManutenzioneMacchinario(String IDMacchinario, String dataAcquisto) {
         this.IDMacchinario = IDMacchinario;
@@ -66,4 +66,5 @@ public class ManutenzioneMacchinario {
         }
         return dataManutenzione;
     }
+
 }

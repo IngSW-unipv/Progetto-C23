@@ -7,24 +7,25 @@ import java.util.TimeZone;
 
 public class Rinnovo {
 
-    private Calendar PrimaIscrizione = Calendar.getInstance(TimeZone.getTimeZone("Europe/Rome"), Locale.ITALY);
-    private Calendar DataRinnovo;
-    private String Abbonamento;
+    private Calendar primaIscrizione = Calendar.getInstance(TimeZone.getTimeZone("Europe/Rome"), Locale.ITALY);
+    private Calendar dataRinnovo;
+    private String abbonamento;
 
     public Rinnovo() {
+    	
     }
 
-    public void setDataRinnovo(String Abbonamento) {
+    public void setDataRinnovo(String abbonamento) {
 
-        switch (Abbonamento) {
+        switch (abbonamento) {
             case "MENSILE":
-                PrimaIscrizione.add(Calendar.MONTH, +1);
+                primaIscrizione.add(Calendar.MONTH, +1);
                 break;
             case "SEMESTRALE":
-                PrimaIscrizione.add(Calendar.MONTH, +6);
+                primaIscrizione.add(Calendar.MONTH, +6);
                 break;
             case "ANNUALE":
-                PrimaIscrizione.add(Calendar.YEAR, +1);
+                primaIscrizione.add(Calendar.YEAR, +1);
                 break;
 
         }
@@ -34,7 +35,7 @@ public class Rinnovo {
 
     public Calendar getDataRinnovo() {
 
-        return PrimaIscrizione;
+        return primaIscrizione;
     }
 
 
