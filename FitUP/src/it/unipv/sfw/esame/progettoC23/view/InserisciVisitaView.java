@@ -131,8 +131,8 @@ public class InserisciVisitaView extends JFrame {
 		return calendar;
 	}
 
-	public JTextArea getTxtrCf() {
-		return txtrCf;
+	public JTextField getTxtrCf() {
+		return cf_insert;
 	}
 
 	public int getHourItemCombo() {

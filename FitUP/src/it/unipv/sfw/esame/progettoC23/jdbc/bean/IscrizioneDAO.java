@@ -52,14 +52,13 @@ public class IscrizioneDAO<Connection> implements IIscrizioneDAO {
 
 		try {
 			
-			String query = "SELECT * from ISCRITTO WHERE CF = ?";
+			String query = "SELECT * from ISCRITTO WHERE CF = '" + CF + "'";
 			st1 = connDB.prepareStatement(query);
-			st1.setString(1, CF);
+			//st1.setString(1, CF);
 
 			rs1 = st1.executeQuery(query);
 			while (rs1.next()) {
-				new Iscrizione(rs1.getString(1), rs1.getString(2), rs1.getString(3), rs1.getString(4));
-				iscr.add(i);
+				i = new Iscrizione(rs1.getString(1), rs1.getString(2), rs1.getString(3), rs1.getString(4));
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
