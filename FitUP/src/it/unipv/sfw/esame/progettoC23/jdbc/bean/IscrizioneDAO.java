@@ -51,6 +51,7 @@ public class IscrizioneDAO<Connection> implements IIscrizioneDAO {
 		ResultSet rs1;
 
 		try {
+			
 			String query = "SELECT * from ISCRITTO WHERE CF = ?";
 			st1 = connDB.prepareStatement(query);
 			st1.setString(1, CF);
@@ -58,6 +59,7 @@ public class IscrizioneDAO<Connection> implements IIscrizioneDAO {
 			rs1 = st1.executeQuery(query);
 			while (rs1.next()) {
 				i = new Iscrizione(rs1.getString(1), rs1.getString(2), rs1.getString(3), rs1.getString(4));
+				iscr.add(i);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -92,26 +94,5 @@ public class IscrizioneDAO<Connection> implements IIscrizioneDAO {
 		return esito;
 	}
 
-	public ArrayList<Iscrizione> selectCF() {
-
-		iscr = new ArrayList<>();
-		connDB = Connessione.startConnection(connDB, schema);
-		Statement st1;
-		ResultSet rs1;
-
-		try {
-			st1 = connDB.createStatement();
-			String query = "SELECT CF from ISCRITTO";
-			rs1 = st1.executeQuery(query);
-
-			while (rs1.next()) {
-
-				Iscrizione i = new Iscrizione(rs1.getString(1), rs1.getString(2), rs1.getString(3), rs1.getString(4));
-				iscr.add(i);
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		return iscr;
-	}
+	
 }

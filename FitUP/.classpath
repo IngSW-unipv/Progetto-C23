@@ -7,5 +7,15 @@
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="lib"/>
+	<classpathentry kind="lib" path="C:/Users/Reb20/Documents/GitHub/Progetto-C23/FitUP/lib/mysql-connector-java-8.0.19 (1).jar"/>
+
+	<classpathentry kind="lib" path="C:/Users/Reb20/Documents/GitHub/Progetto-C23/FitUP/lib/jdatepicker-1.3.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Reb20/Documents/GitHub/Progetto-C23/FitUP/lib/jgoodies-common-1.8.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Reb20/Documents/GitHub/Progetto-C23/FitUP/lib/jgoodies-common-1.8.0-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Reb20/Documents/GitHub/Progetto-C23/FitUP/lib/jgoodies-forms-1.8.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Reb20/Documents/GitHub/Progetto-C23/FitUP/lib/jgoodies-forms-1.8.0-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Reb20/Downloads/jcalendar-1.4.jar"/>
+
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

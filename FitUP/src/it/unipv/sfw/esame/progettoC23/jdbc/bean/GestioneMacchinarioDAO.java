@@ -20,16 +20,19 @@ public class GestioneMacchinarioDAO<Connection> implements IGestioneMacchinarioD
 	}
 
 	@Override
-	public ArrayList<GestioneMacchinario> selectAll() {
+	public ArrayList<GestioneMacchinario> selectMacchinario (GestioneMacchinario gestione) {
 
 		gm = new ArrayList<>();
 		connDB = Connessione.startConnection(connDB, schema);
-		Statement st1;
+		PreparedStatement st1;
 		ResultSet rs1;
 
 		try {
-			st1 = ((java.sql.Connection) connDB).createStatement();
-			String query = "SELECT * from MACCHINARIO";
+			
+			String query = "SELECT * from MACCHINARIO where NOME = ?";
+			
+			st1 = connDB.prepareStatement(query);
+			st1.setString(1,gestione.getNomeMacchinario());
 			rs1 = st1.executeQuery(query);
 
 			while (rs1.next()) {

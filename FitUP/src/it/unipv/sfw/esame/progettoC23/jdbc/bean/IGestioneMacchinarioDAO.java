@@ -4,7 +4,8 @@ import java.util.ArrayList;
 
 public interface IGestioneMacchinarioDAO {
 
-	public ArrayList<GestioneMacchinario> selectAll();
+	
 	public boolean insertMacchinario(GestioneMacchinario gm);
+	public ArrayList<GestioneMacchinario> selectMacchinario(GestioneMacchinario gm);
 
 }

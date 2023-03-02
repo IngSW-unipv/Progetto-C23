@@ -5,9 +5,8 @@ public class Macchinario {
     private String nomeMacchinario;
     private String dataAcquisto;
 
-    public Macchinario(String nomeMacchinario, String DataAcquisto) {
-        this.nomeMacchinario = nomeMacchinario;
-        this.dataAcquisto = DataAcquisto;
+    public Macchinario() {
+       
     }
 
 
@@ -19,8 +18,20 @@ public class Macchinario {
     public String getNomeMacchinario() {
         return nomeMacchinario;
     }
+    
+    
 
-    @Override
+    public void setNomeMacchinario(String nomeMacchinario) {
+		this.nomeMacchinario = nomeMacchinario;
+	}
+
+
+	public void setDataAcquisto(String dataAcquisto) {
+		this.dataAcquisto = dataAcquisto;
+	}
+
+
+	@Override
     public String toString() {
         return "Macchinario: (" + nomeMacchinario + ", " + dataAcquisto + ")" + "\n";
     }
