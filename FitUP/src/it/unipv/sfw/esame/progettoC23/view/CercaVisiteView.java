@@ -14,7 +14,9 @@ import javax.swing.JLabel;
 import java.util.Calendar;
 import javax.swing.JTextField;
 
-public class CercaVisiteView  extends JFrame{
+public class CercaVisiteView  extends JFrame {
+	private static final int lunghezza = 535;
+	private static final int altezza = 500;
 	private JCalendar calendar;
 	private JButton btnVai, eliminaButton, btnRicercaCF;
 	private JLabel RisultatiLabel;
@@ -23,6 +25,7 @@ public class CercaVisiteView  extends JFrame{
 	
 	public CercaVisiteView() {
 		setTitle("Ricerca Visite");
+		setSize(lunghezza, altezza);
 		getContentPane().setLayout(null);
 		
 		calendar = new JCalendar();
@@ -30,7 +33,7 @@ public class CercaVisiteView  extends JFrame{
 		getContentPane().add(calendar);
 		
 		btnVai = new JButton("Cerca per data");
-		btnVai.setBounds(274, 35, 112, 28);
+		btnVai.setBounds(243, 35, 112, 28);
 		getContentPane().add(btnVai);
 		
 		RisultatiLabel = new JLabel("Risultati");
@@ -52,18 +55,18 @@ public class CercaVisiteView  extends JFrame{
 		getContentPane().add(lblInsertDate);
 		
 		JLabel lblFindCF = new JLabel("Inserisci il codice fiscale");
-		lblFindCF.setBounds(453, 10, 118, 13);
+		lblFindCF.setBounds(365, 18, 152, 13);
 		getContentPane().add(lblFindCF);
 		
 		txtCF = new JTextField();
+		txtCF.setBounds(365, 35, 152, 19);
 		txtCF.setText("here");
-		txtCF.setBounds(453, 35, 152, 19);
 		getContentPane().add(txtCF);
 		txtCF.setColumns(10);
 		
 		btnRicercaCF = new JButton("Cerca per CF");
+		btnRicercaCF.setBounds(375, 64, 96, 21);
 		btnRicercaCF.setToolTipText(" ");
-		btnRicercaCF.setBounds(649, 35, 96, 21);
 		getContentPane().add(btnRicercaCF);
 		
 	}

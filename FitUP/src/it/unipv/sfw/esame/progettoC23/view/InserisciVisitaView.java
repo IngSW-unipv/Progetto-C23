@@ -26,8 +26,7 @@ public class InserisciVisitaView extends JFrame {
 	public static final int lunghezza = 200;
 	private JTextArea txtrOra, txtrCf, txtrData, txtrInserisciIDati;
 	private JCalendar calendar;
-	private InserisciVisitaController controller;
-	private JComboBox<String[]> tipovisit;
+	private JComboBox<String> tipovisit;
 	private JTextArea txtrTipoVisita;
 
 	public InserisciVisitaView(){
@@ -36,7 +35,6 @@ public class InserisciVisitaView extends JFrame {
 		setSize(590, 368);
 		setTitle("Prenotazione visita");
 		Container c = getContentPane();
-		controller = new InserisciVisitaController(this);
 
 		getContentPane().setLayout(new FormLayout(
 				new ColumnSpec[] { ColumnSpec.decode("79px:grow"), ColumnSpec.decode("7px"),
@@ -71,7 +69,7 @@ public class InserisciVisitaView extends JFrame {
 		c.add(uscita, "8, 4, left, center");
 
 		orario = new JComboBox<>();
-		for (int i = 0; i < 23; i++) {
+		for (int i = 0; i < 25; i++) {
 			orario.addItem(i);
 		}
 		orario.setSelectedIndex(11);
@@ -81,7 +79,10 @@ public class InserisciVisitaView extends JFrame {
 		getContentPane().add(txtrTipoVisita, "1, 6, fill, fill");
 
 		tipovisit = new JComboBox<>();
-		tipovisit.addItem(TipoVisita.getNames(TipoVisita.class));
+		String[] tmp = TipoVisita.getNames(TipoVisita.class);
+		for (int i = 0; i < tmp.length; i++) {
+			tipovisit.addItem(tmp[i]);
+		}
 		getContentPane().add(tipovisit, "4, 6, fill, default");
 		tipovisit.setSelectedIndex(0);
 
@@ -139,6 +140,5 @@ public class InserisciVisitaView extends JFrame {
 
 	public TipoVisita getTipoVisitaItemCombo() {
 		return TipoVisita.valueOf((String) tipovisit.getSelectedItem());
-
 	}
 }

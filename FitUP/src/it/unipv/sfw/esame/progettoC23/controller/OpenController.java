@@ -9,6 +9,7 @@ import it.unipv.sfw.esame.progettoC23.model.Badge;
 import it.unipv.sfw.esame.progettoC23.model.IscrizioneCorso;
 import it.unipv.sfw.esame.progettoC23.model.Rinnovo;
 import it.unipv.sfw.esame.progettoC23.view.BenvenutoView;
+import it.unipv.sfw.esame.progettoC23.view.CercaVisiteView;
 import it.unipv.sfw.esame.progettoC23.view.InserisciVisitaView;
 import it.unipv.sfw.esame.progettoC23.view.MacchinarioView;
 import it.unipv.sfw.esame.progettoC23.view.OpenView;
@@ -56,8 +57,17 @@ public class OpenController {
 	            		ivv.setVisible(true);
 	                	
 	                    break;
-
+	                    
 	                case 2:
+	                	
+	                	CercaVisiteView cvv = new CercaVisiteView();
+	                	CercaVisiteController cvc = new CercaVisiteController(cvv);
+	                	cvv.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	                	cvv.setVisible(true);
+	                	
+	                    break;
+
+	                case 3:
 	                	
 	                	MacchinarioView mv = new MacchinarioView();
 	                	MacchinarioController mc = new MacchinarioController(mv);
