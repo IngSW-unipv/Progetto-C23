@@ -2,10 +2,10 @@ package it.unipv.sfw.esame.progettoC23.controller;
 
 import it.unipv.sfw.esame.progettoC23.jdbc.bean.Iscrizione;
 import it.unipv.sfw.esame.progettoC23.jdbc.bean.IscrizioneDAO;
-import it.unipv.sfw.esame.progettoC23.model.Badge;
-import it.unipv.sfw.esame.progettoC23.model.IscrizioneCorso;
-import it.unipv.sfw.esame.progettoC23.model.Persona;
-import it.unipv.sfw.esame.progettoC23.model.Rinnovo;
+import it.unipv.sfw.esame.progettoC23.model.corso.IscrizioneCorso;
+import it.unipv.sfw.esame.progettoC23.model.iscrizione.Badge;
+import it.unipv.sfw.esame.progettoC23.model.iscrizione.Rinnovo;
+import it.unipv.sfw.esame.progettoC23.model.utente.Persona;
 import it.unipv.sfw.esame.progettoC23.view.BenvenutoView;
 
 import java.awt.event.ActionEvent;

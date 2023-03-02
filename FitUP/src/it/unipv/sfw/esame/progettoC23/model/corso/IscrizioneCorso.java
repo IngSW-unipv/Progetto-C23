@@ -1,4 +1,4 @@
-package it.unipv.sfw.esame.progettoC23.model;
+package it.unipv.sfw.esame.progettoC23.model.corso;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,7 +7,7 @@ public class IscrizioneCorso {
 	
     private static volatile IscrizioneCorso INSTANCE = null;
     private String CF;
-    private String CorsoScelto;
+    private String corsoScelto;
     private static List<String> ElencoCrossfit = new ArrayList<String>(30);
     private static List<String> ElencoYoga = new ArrayList<String>(30);
     private static List<String> ElencoZumba = new ArrayList<String>(30);
@@ -15,10 +15,6 @@ public class IscrizioneCorso {
 
     public IscrizioneCorso() {
     	
-        ElencoCrossfit = new ArrayList<String>(30);
-        ElencoYoga = new ArrayList<String>(30);
-        ElencoZumba = new ArrayList<String>(30);
-        ElencoPilates = new ArrayList<String>(30);
     }
 
     public static IscrizioneCorso getInstance() {
@@ -32,12 +28,12 @@ public class IscrizioneCorso {
         return INSTANCE;
     }
 
-    public void riempiElenco(String CF, String CorsoScelto) {
+    public void riempiElenco(String CF, String corsoScelto) {
 
         this.CF = CF;
-        this.CorsoScelto = CorsoScelto;
+        this.corsoScelto = corsoScelto;
 
-        switch (CorsoScelto) {
+        switch (corsoScelto) {
 
             case "CROSSFIT":
 

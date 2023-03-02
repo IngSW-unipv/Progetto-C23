@@ -1,4 +1,4 @@
-package it.unipv.sfw.esame.progettoC23.model;
+package it.unipv.sfw.esame.progettoC23.model.utente;
 
 public class Persona {
     private String nome, cognome, CF;

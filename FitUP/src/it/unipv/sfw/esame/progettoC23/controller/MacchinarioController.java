@@ -1,8 +1,8 @@
 package it.unipv.sfw.esame.progettoC23.controller;
 
-import it.unipv.sfw.esame.progettoC23.model.IDMacchinario;
-import it.unipv.sfw.esame.progettoC23.model.Macchinario;
-import it.unipv.sfw.esame.progettoC23.model.ManutenzioneMacchinario;
+import it.unipv.sfw.esame.progettoC23.model.macchinario.IDMacchinario;
+import it.unipv.sfw.esame.progettoC23.model.macchinario.Macchinario;
+import it.unipv.sfw.esame.progettoC23.model.macchinario.ManutenzioneMacchinario;
 import it.unipv.sfw.esame.progettoC23.view.MacchinarioView;
 
 import java.awt.event.ActionEvent;

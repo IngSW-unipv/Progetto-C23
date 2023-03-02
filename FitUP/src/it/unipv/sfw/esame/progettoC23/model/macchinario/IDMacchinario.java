@@ -1,5 +1,4 @@
-package it.unipv.sfw.esame.progettoC23.model;
-
+package it.unipv.sfw.esame.progettoC23.model.macchinario;
 
 public class IDMacchinario {
     private String IDMacchinario;

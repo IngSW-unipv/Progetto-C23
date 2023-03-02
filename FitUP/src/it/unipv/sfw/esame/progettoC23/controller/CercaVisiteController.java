@@ -9,8 +9,8 @@ import javax.swing.JOptionPane;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 
-import it.unipv.sfw.esame.progettoC23.model.GestioneVisite;
-import it.unipv.sfw.esame.progettoC23.model.Visita;
+import it.unipv.sfw.esame.progettoC23.model.visita.GestioneVisite;
+import it.unipv.sfw.esame.progettoC23.model.visita.Visita;
 import it.unipv.sfw.esame.progettoC23.view.CercaVisiteView;
 
 public class CercaVisiteController {

@@ -5,11 +5,11 @@ import java.awt.event.ActionListener;
 import javax.swing.JFrame;
 
 import it.unipv.sfw.esame.progettoC23.jdbc.bean.GestioneMacchinario;
-import it.unipv.sfw.esame.progettoC23.model.Badge;
-import it.unipv.sfw.esame.progettoC23.model.IDMacchinario;
-import it.unipv.sfw.esame.progettoC23.model.IscrizioneCorso;
-import it.unipv.sfw.esame.progettoC23.model.Macchinario;
-import it.unipv.sfw.esame.progettoC23.model.Rinnovo;
+import it.unipv.sfw.esame.progettoC23.model.corso.IscrizioneCorso;
+import it.unipv.sfw.esame.progettoC23.model.iscrizione.Badge;
+import it.unipv.sfw.esame.progettoC23.model.iscrizione.Rinnovo;
+import it.unipv.sfw.esame.progettoC23.model.macchinario.IDMacchinario;
+import it.unipv.sfw.esame.progettoC23.model.macchinario.Macchinario;
 import it.unipv.sfw.esame.progettoC23.view.BenvenutoView;
 import it.unipv.sfw.esame.progettoC23.view.CercaVisiteView;
 import it.unipv.sfw.esame.progettoC23.view.InserisciVisitaView;

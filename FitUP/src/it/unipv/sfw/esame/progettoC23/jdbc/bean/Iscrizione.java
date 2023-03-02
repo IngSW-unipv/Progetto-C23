@@ -1,7 +1,5 @@
 package it.unipv.sfw.esame.progettoC23.jdbc.bean;
 
-//DA SISTEMARE PER RISPETTARE PATTERN DAO
-
 
 public class Iscrizione {
     protected String CF;

@@ -7,7 +7,7 @@ import javax.swing.JList;
 
 import com.toedter.calendar.JCalendar;
 
-import it.unipv.sfw.esame.progettoC23.model.Visita;
+import it.unipv.sfw.esame.progettoC23.model.visita.Visita;
 
 import javax.swing.DefaultListModel;
 import javax.swing.JButton;

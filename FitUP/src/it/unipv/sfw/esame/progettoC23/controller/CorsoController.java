@@ -1,6 +1,6 @@
 package it.unipv.sfw.esame.progettoC23.controller;
 
-import it.unipv.sfw.esame.progettoC23.model.IscrizioneCorso;
+import it.unipv.sfw.esame.progettoC23.model.corso.IscrizioneCorso;
 import it.unipv.sfw.esame.progettoC23.view.CorsoView;
 
 import java.awt.event.ActionEvent;
