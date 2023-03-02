@@ -13,6 +13,11 @@ public class BenvenutoView extends JFrame {
 	private JButton AggiungiIscritto;
 	private JLabel uscita1;
 	private JLabel uscita2;
+	private JLabel inscf;
+	private JLabel insnome;
+	private JLabel inscognome;
+	private JLabel insdata;
+	private JLabel insrinnovo;
 	private JTextField cf;
 	private JTextField nome;
 	private JTextField cognome;
@@ -21,7 +26,7 @@ public class BenvenutoView extends JFrame {
 	private JLabel l;
 	private JLabel l1;
 	public JComboBox Elenco;
-	public static final int altezzab = 150;
+	public static final int altezzab = 100;
 	public static final int lunghezzab = 100;
 	public static final int lunghezzad = 200;
 	public static final int altezzad = 20;
@@ -40,63 +45,77 @@ public class BenvenutoView extends JFrame {
 		JPanel np= new JPanel();
 		np.setBackground(new Color(255,0,0));
 		add(np, BorderLayout.NORTH);
-		JPanel wp= new JPanel();
-		wp.setBackground(new Color(255,0,0));
-		add(wp, BorderLayout.WEST);
-		
-		
-		l = new JLabel("Seleziona il corso a cui ti vuoi iscrivere:");
+
+        String s[] = {"Elenco di Crossfit", "Elenco di Yoga", "Elenco di Zumba", "Elenco di Pilates"};
+        
+        inscf= new JLabel("Inserire codice fiscale:      ");
+        cp.add(inscf);
+
+        cf = new JTextField();
+        cp.add(cf);
+        cf.setColumns(30);
+        
+        insnome= new JLabel("Inserire nome:                        ");
+        cp.add(insnome);
+
+        nome = new JTextField();
+        cp.add(nome);
+        nome.setColumns(30);
+        
+        
+        inscognome= new JLabel("Inserire cognome:                  ");
+        cp.add(inscognome);
+
+        cognome = new JTextField();
+        cp.add(cognome);
+        cognome.setColumns(30);
+        
+        insdata= new JLabel("Inserire data di nascita:          ");
+        cp.add(insdata);
+
+        datadinascita = new JTextField();
+        cp.add(datadinascita);
+        datadinascita.setColumns(30);
+        
+        insrinnovo= new JLabel("Inserire tipo di abbonamento:");
+        cp.add(insrinnovo);
+
+        rinnovo = new JTextField();
+        cp.add(rinnovo);
+        rinnovo.setColumns(30);
+        
+        l = new JLabel("Seleziona il corso a cui ti vuoi iscrivere:");
         l.setForeground(Color.black);
         cp.add(l);
-
-
+        
+        Elenco = new JComboBox(s);
+        Elenco.setPreferredSize(new Dimension(lunghezzad, altezzad));
+        cp.add(Elenco, BorderLayout.CENTER);
+        
         l1 = new JLabel();
         l1.setForeground(Color.black);
         cp.add(l1);
 
-        String s[] = {"Elenco di Crossfit", "Elenco di Yoga", "Elenco di Zumba", "Elenco di Pilates"};
-
-        Elenco = new JComboBox(s);
-        Elenco.setPreferredSize(new Dimension(lunghezzad, altezzad));
-        cp.add(Elenco, BorderLayout.CENTER);
-
-        uscita1 = new JLabel();
-        sp.add(uscita1);
-
-        uscita2 = new JLabel();
-        sp.add(uscita2);
-
-        cf = new JTextField("INSERIRE CF");
-        np.add(cf);
-        cf.setColumns(20);
-
-        nome = new JTextField("INSERIRE NOME");
-        np.add(nome);
-        nome.setColumns(20);
-
-        cognome = new JTextField("INSERIRE COGNOME");
-        np.add(cognome);
-        cognome.setColumns(20);
-
-        datadinascita = new JTextField("INSERIRE DATA DI NASCITA");
-        np.add(datadinascita);
-        datadinascita.setColumns(20);
-
-        rinnovo = new JTextField("INSERIRE TIPO DI ABBONAMENTO");
-        np.add(rinnovo);
-        rinnovo.setColumns(20);
-
         VediRinnovo = new JButton("RINNOVO");
         VediRinnovo.setPreferredSize(new Dimension(altezzab, lunghezzab));
-        wp.add(VediRinnovo);
+        VediRinnovo.setBackground(new Color(255,255,255));
+        sp.add(VediRinnovo);
 
         VediBadge = new JButton("BADGE");
         VediBadge.setPreferredSize(new Dimension(altezzab, lunghezzab));
-        wp.add(VediBadge);
+        VediBadge.setBackground(new Color(255,255,255));
+        sp.add(VediBadge);
 
         AggiungiIscritto = new JButton("ISCRIVI");
         AggiungiIscritto.setPreferredSize(new Dimension(altezzab, lunghezzab));
-        wp.add(AggiungiIscritto);
+        AggiungiIscritto.setBackground(new Color(255,255,255));
+        sp.add(AggiungiIscritto);
+        
+        uscita1 = new JLabel();
+        cp.add(uscita1);
+
+        uscita2 = new JLabel();
+        cp.add(uscita2);
     }
 
     public JComboBox getElenco() {
