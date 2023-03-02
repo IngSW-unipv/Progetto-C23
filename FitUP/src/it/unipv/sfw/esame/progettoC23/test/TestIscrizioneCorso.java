@@ -24,7 +24,4 @@ class TestIscrizioneCorso {
         assertEquals("Sono state aggiunte due persone alla lista", 2, c.stampaCrossfit().size()); 
        
 	}
-	
-
-	
 }

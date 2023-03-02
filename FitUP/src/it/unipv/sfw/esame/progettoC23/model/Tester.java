@@ -63,6 +63,7 @@ public class Tester {
 	M.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	M.setVisible(true); */
         
+			
         
     }
 
