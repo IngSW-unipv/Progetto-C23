@@ -7,7 +7,7 @@ import com.jgoodies.forms.layout.FormSpecs;
 import com.jgoodies.forms.layout.RowSpec;
 import com.toedter.calendar.JCalendar;
 import it.unipv.sfw.esame.progettoC23.controller.InserisciVisitaController;
-import it.unipv.sfw.esame.progettoC23.model.TipoVisita;
+import it.unipv.sfw.esame.progettoC23.model.visita.TipoVisita;
 
 import javax.swing.*;
 import java.awt.*;

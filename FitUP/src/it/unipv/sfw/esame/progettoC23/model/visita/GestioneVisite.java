@@ -1,4 +1,4 @@
-package it.unipv.sfw.esame.progettoC23.model;
+package it.unipv.sfw.esame.progettoC23.model.visita;
 
 import it.unipv.ingsfw.esame.progettoC23.exception.DayException;
 import it.unipv.ingsfw.esame.progettoC23.exception.HourException;
@@ -67,7 +67,7 @@ public class GestioneVisite {
         }
     }
 
-    // Search for a visit by Badge
+    // Search for a visit by cf
     public ArrayList<Visita> cercaVisitaPerCf(String codicebadge) {
         ArrayList<Visita> tmp = new ArrayList<>();
         for (Visita v1 : elencoVisite) {

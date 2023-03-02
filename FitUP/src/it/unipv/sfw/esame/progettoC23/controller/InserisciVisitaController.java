@@ -4,10 +4,10 @@ import it.unipv.ingsfw.esame.progettoC23.exception.DayException;
 import it.unipv.ingsfw.esame.progettoC23.exception.HourException;
 import it.unipv.sfw.esame.progettoC23.jdbc.bean.Iscrizione;
 import it.unipv.sfw.esame.progettoC23.jdbc.bean.IscrizioneDAO;
-import it.unipv.sfw.esame.progettoC23.model.Badge;
-import it.unipv.sfw.esame.progettoC23.model.GestioneVisite;
-import it.unipv.sfw.esame.progettoC23.model.TipoVisita;
-import it.unipv.sfw.esame.progettoC23.model.Visita;
+import it.unipv.sfw.esame.progettoC23.model.iscrizione.Badge;
+import it.unipv.sfw.esame.progettoC23.model.visita.GestioneVisite;
+import it.unipv.sfw.esame.progettoC23.model.visita.TipoVisita;
+import it.unipv.sfw.esame.progettoC23.model.visita.Visita;
 import it.unipv.sfw.esame.progettoC23.view.InserisciVisitaView;
 
 import javax.swing.*;

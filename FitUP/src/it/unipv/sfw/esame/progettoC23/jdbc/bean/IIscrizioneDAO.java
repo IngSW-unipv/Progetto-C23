@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public interface IIscrizioneDAO {
 
     ArrayList<Iscrizione> selectAll();
-    Iscrizione getFromCF(String CF);
     boolean insertIscritto(Iscrizione i);
+	Iscrizione getFromCF(String CF);
 
 }

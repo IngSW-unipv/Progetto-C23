@@ -1,4 +1,4 @@
-package it.unipv.sfw.esame.progettoC23.model;
+package it.unipv.sfw.esame.progettoC23.model.visita;
 
 import java.util.Arrays;
 

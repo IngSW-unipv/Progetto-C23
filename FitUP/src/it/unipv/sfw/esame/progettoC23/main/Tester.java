@@ -1,19 +1,7 @@
-package it.unipv.sfw.esame.progettoC23.model;
-
-import java.sql.*;
-
+package it.unipv.sfw.esame.progettoC23.main;
 import javax.swing.JFrame;
-
 import it.unipv.sfw.esame.progettoC23.controller.OpenController;
 import it.unipv.sfw.esame.progettoC23.view.OpenView;
-
-
-
-import it.unipv.sfw.esame.progettoC23.controller.BenvenutoController;
-import it.unipv.sfw.esame.progettoC23.view.BenvenutoView;
-
-
-import javax.swing.*;
 import java.sql.SQLException;
 
 

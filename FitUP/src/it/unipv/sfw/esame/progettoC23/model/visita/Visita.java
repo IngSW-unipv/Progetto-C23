@@ -1,6 +1,8 @@
-package it.unipv.sfw.esame.progettoC23.model;
+package it.unipv.sfw.esame.progettoC23.model.visita;
 
 import java.util.Calendar;
+
+import it.unipv.sfw.esame.progettoC23.model.iscrizione.Badge;
 
 public class Visita {
     private Badge paziente;
