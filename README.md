@@ -14,4 +14,4 @@ PRENOTAZIONE DI VISITE MEDICHE: al momento dell'iscrizione viene prenotata una p
 MANUTENZIONE DEI MACCHINARI: è necessario avere una completa visione dello stato dei macchinari con lo scopo di garantire la sicurezza degli utenti abbonati.
 
 Link presentazione:
-https://www.canva.com/design/DAFbteiipZI/P63BK6gk90358HWaN-MWAw/edit?utm_content=DAFbteiipZI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+https://www.canva.com/design/DAFbteiipZI/p-yr8OVknv3FKgFqExamtw/view?utm_content=DAFbteiipZI&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink
