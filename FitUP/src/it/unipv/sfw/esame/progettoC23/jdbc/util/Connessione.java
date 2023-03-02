@@ -17,7 +17,7 @@ public class Connessione {
     public static Connection startConnection(Connection connDB, String schema) {
 
         //DbDriver = "com.mysql.cj.jdbc.Driver";
-        DbURL = "jdbc:mysql://34.154.46.196:3306/" + schema;
+        DbURL = "jdbc:mysql://34.154.113.169:3306/" + schema;
         username = "root";
         password = "";
 

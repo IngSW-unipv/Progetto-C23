@@ -13,17 +13,14 @@ public class MacchinarioView extends JFrame {
 	private JButton Cerca;
 	private JTextField NomeMacchinario;
 	private JTextField DataAcquisto;
-	public static final int altezza = 400;
-	public static final int lunghezza = 700;
 	private IDMacchinario id;
 	
 	public MacchinarioView() {
 		
 		this.setLayout(new BorderLayout());
-		setSize(lunghezza, altezza);
+		setSize(500, 500);
 		setTitle("Macchinari");
-		
-		id = new IDMacchinario();
+
 		
 		JPanel sp = new JPanel();
 		sp.setBackground(new Color(255,0,0));
@@ -36,23 +33,25 @@ public class MacchinarioView extends JFrame {
 		add(np, BorderLayout.NORTH);
 		
 		JLabel NomeM = new JLabel("Nome Macchinario: ");
-		NomeM.setFont( new Font("Arial", Font.BOLD, 16));
 		np.add(NomeM);
-		JTextField NomeMacchinario = new JTextField();
+		
+		NomeMacchinario = new JTextField();
 		NomeMacchinario.setColumns(30);
 		np.add(NomeMacchinario);
 		
 		JLabel DataA = new JLabel ("       Data Acquisto:");
-		DataA.setFont( new Font("Arial", Font.BOLD, 16));
 		cp.add(DataA);
+		
 		DataAcquisto = new JTextField();
 		DataAcquisto.setColumns(30);
 		cp.add(DataAcquisto); 
 		
 		NuovoMacchinario = new JButton("AGGIUNGI MACCHINARIO");
+		NuovoMacchinario.setBackground(new Color(255,255,255));
 	    sp.add(NuovoMacchinario);
 		
 		Cerca = new JButton("CERCA MACCHINARIO");
+		Cerca.setBackground(new Color(255,255,255));
 		sp.add(Cerca);
 			
 	}
@@ -74,25 +73,4 @@ public class MacchinarioView extends JFrame {
 	}
 	
 	
-
-
-
-/*    public void setNuovoMacchinario(GestioneMacchinario macchinario) {
-        uscita1.setText("IDMacchinario: " + macchinario.getNomeMacchinario() + macchinario.getDataAcquisto().replace("/", "") + "\n");
-    }*/
-
-/*    public void setNuovoMacchinario(String idMacchinario) {
-        uscita1.setText("IDMacchinario: " + idMacchinario);
-    }
-
-    public String getIDMacchinario() {
-        return null;
-    }
-
-    public void setDataManutenzione(ManutenzioneMacchinario m) {
-        uscita1.setText("IDMacchinario: " + id.getIDMacchinario() + "  " + "Data Acquisto: " + m.getDataAcquisto());
-        uscita2.setText("  DataManutenzione: " + m.getDataManutenzione() + "\n");
-        uscita3.setText("  Stato: " + m.getStato() + "\n");
-    }*/
-
 }

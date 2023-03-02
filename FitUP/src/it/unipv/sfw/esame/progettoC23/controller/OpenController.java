@@ -4,6 +4,7 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JFrame;
 
+import it.unipv.sfw.esame.progettoC23.jdbc.bean.GestioneMacchinario;
 import it.unipv.sfw.esame.progettoC23.model.Badge;
 import it.unipv.sfw.esame.progettoC23.model.IscrizioneCorso;
 import it.unipv.sfw.esame.progettoC23.model.Rinnovo;
