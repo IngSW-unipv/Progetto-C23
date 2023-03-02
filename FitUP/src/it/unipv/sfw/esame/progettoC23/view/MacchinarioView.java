@@ -10,10 +10,10 @@ import java.awt.*;
 public class MacchinarioView extends JFrame {
 	
 	private JButton NuovoMacchinario;
-	private JButton Cerca;
+	private JButton generaId;
 	private JTextField NomeMacchinario;
 	private JTextField DataAcquisto;
-	private IDMacchinario id;
+	private JLabel uscita;
 	
 	public MacchinarioView() {
 		
@@ -46,13 +46,16 @@ public class MacchinarioView extends JFrame {
 		DataAcquisto.setColumns(30);
 		cp.add(DataAcquisto); 
 		
+		uscita= new JLabel();
+        cp.add(uscita);
+		
 		NuovoMacchinario = new JButton("AGGIUNGI MACCHINARIO");
 		NuovoMacchinario.setBackground(new Color(255,255,255));
 	    sp.add(NuovoMacchinario);
 		
-		Cerca = new JButton("CERCA MACCHINARIO");
-		Cerca.setBackground(new Color(255,255,255));
-		sp.add(Cerca);
+		generaId = new JButton("GENERA ID");
+		generaId.setBackground(new Color(255,255,255));
+		sp.add(generaId);
 			
 	}
 
@@ -60,8 +63,8 @@ public class MacchinarioView extends JFrame {
 		return NuovoMacchinario;
 	}
 
-	public JButton getCerca() {
-		return Cerca;
+	public JButton getID() {
+		return generaId;
 	}
 
 	public String getNomeMacchinario() {
@@ -71,6 +74,12 @@ public class MacchinarioView extends JFrame {
 	public String getDataAcquisto() {
 		return DataAcquisto.getText();
 	}
+	
+	 public void setID(String codiceID) {
+
+	        uscita.setText("Questo è l'ID: " + codiceID);
+
+	    }
 	
 	
 }

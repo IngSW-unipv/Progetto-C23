@@ -6,7 +6,9 @@ import javax.swing.JFrame;
 
 import it.unipv.sfw.esame.progettoC23.jdbc.bean.GestioneMacchinario;
 import it.unipv.sfw.esame.progettoC23.model.Badge;
+import it.unipv.sfw.esame.progettoC23.model.IDMacchinario;
 import it.unipv.sfw.esame.progettoC23.model.IscrizioneCorso;
+import it.unipv.sfw.esame.progettoC23.model.Macchinario;
 import it.unipv.sfw.esame.progettoC23.model.Rinnovo;
 import it.unipv.sfw.esame.progettoC23.view.BenvenutoView;
 import it.unipv.sfw.esame.progettoC23.view.CercaVisiteView;
@@ -69,8 +71,10 @@ public class OpenController {
 
 	                case 3:
 	                	
+	                	Macchinario m = new Macchinario();
+	                	IDMacchinario idm = new IDMacchinario();
 	                	MacchinarioView mv = new MacchinarioView();
-	                	MacchinarioController mc = new MacchinarioController(mv);
+	                	MacchinarioController mc = new MacchinarioController(mv,m,idm);
 	                	mv.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	            		mv.setVisible(true);
 

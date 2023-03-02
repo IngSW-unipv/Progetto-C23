@@ -8,8 +8,6 @@ public class IDMacchinario {
     public IDMacchinario() {
     }
 
-    public void setDataAcquisto(Macchinario m) {
-    }
 
     public String getDataAcquisto(Macchinario m) {
         return m.getDataAcquisto();
