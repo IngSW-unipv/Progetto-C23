@@ -45,12 +45,12 @@ public class Tester {
 		s.setDataManutenzione(StatoAttuale.FUNZIONANTE); 
 		System.out.println("ID Macchinario: " + g.getIDMacchinario() + "\n" + "Data Acquisto: " + g.getDataAcquisto());
 		System.out.println("Manutenzione prevista: " + s.getDataManutenzione());
-		System.out.println("Stato Macchinario: " + s.Stato);
+		System.out.println("Stato Macchinario: " + s.getStato());
 		System.out.println("");
 		s1.setDataManutenzione(StatoAttuale.GUASTO);
 		System.out.println("ID Macchinario: " + g1.getIDMacchinario() + "\n" +"Data Acquisto: " + g1.getDataAcquisto());
 		System.out.println("Manutenzione prevista: " + s1.getDataManutenzione());
-		System.out.println("Stato Macchinario: " + s1.Stato);
+		System.out.println("Stato Macchinario: " + s1.getStato());
 		
 		/*GestioneMacchinarioDAO gm = new GestioneMacchinarioDAO();
 		System.out.println(gm.selectAll());
