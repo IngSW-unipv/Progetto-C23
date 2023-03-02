@@ -67,7 +67,7 @@ public class GestioneVisite {
         }
     }
 
-    // Search for a visit by cf
+
     public ArrayList<Visita> cercaVisitaPerCf(String codicebadge) {
         ArrayList<Visita> tmp = new ArrayList<>();
         for (Visita v1 : elencoVisite) {
