@@ -5,7 +5,7 @@ drop TABLE IF EXISTS MACCHINARIO;
 
 
 CREATE TABLE ISCRITTO
-        ( CF CHAR(40),
+        ( CF CHAR(50),
           NOME CHAR(40),
           COGNOME CHAR(40),
           DATADINASCITA CHAR(40));

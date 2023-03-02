@@ -27,7 +27,7 @@ public class Tester {
 		ov.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		ov.setVisible(true);
 
-        
+
     }
 
 }

@@ -29,6 +29,7 @@ class TestIscrizioneCorso {
         assertEquals("Sono state aggiunte due persone alla lista", 1, c.stampaYoga().size()); 
        
 	}
+
 	
 	@Test
 	void TestPilates() {
@@ -50,7 +51,5 @@ class TestIscrizioneCorso {
 	}
 	
 	
-	
-
 	
 }
