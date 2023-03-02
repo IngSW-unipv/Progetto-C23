@@ -12,3 +12,6 @@ ISCRIZIONE A CORSI: l'abbonato ha la possibilità, oltre a quella di esercitarsi
 PRENOTAZIONE DI VISITE MEDICHE: al momento dell'iscrizione viene prenotata una prima visita medica, a cui possono fare seguito altre a discrezione della singola persona.
 
 MANUTENZIONE DEI MACCHINARI: è necessario avere una completa visione dello stato dei macchinari con lo scopo di garantire la sicurezza degli utenti abbonati.
+
+Link presentazione:
+https://www.canva.com/design/DAFbteiipZI/p-yr8OVknv3FKgFqExamtw/view?utm_content=DAFbteiipZI&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink

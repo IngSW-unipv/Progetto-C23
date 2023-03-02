@@ -19,31 +19,6 @@ public class GestioneMacchinarioDAO<Connection> implements IGestioneMacchinarioD
 
 	}
 
-	@Override
-	public ArrayList<GestioneMacchinario> selectMacchinario (GestioneMacchinario gestione) {
-
-		gm = new ArrayList<>();
-		connDB = Connessione.startConnection(connDB, schema);
-		PreparedStatement st1;
-		ResultSet rs1;
-
-		try {
-			
-			String query = "SELECT * from MACCHINARIO where NOME = ?";
-			
-			st1 = connDB.prepareStatement(query);
-			st1.setString(1,gestione.getNomeMacchinario());
-			rs1 = st1.executeQuery(query);
-
-			while (rs1.next()) {
-				GestioneMacchinario gest = new GestioneMacchinario(rs1.getString(1), rs1.getString(2));
-				gm.add(gest);
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		return gm;
-	}
 
 	@Override
 	public boolean insertMacchinario(GestioneMacchinario gm) {
